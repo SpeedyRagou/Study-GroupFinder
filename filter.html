@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link rel="stylesheet" type="text/css" href="filterStyles.css">
+
+        <script src = "filterFunctions.js"></script>
+
+    </head>
+
+    <body>
+
+        <div class = "tabContainer">
+
+            
+
+            <div class = "buttonContainer">
+                <button class = "selctButton" onclick="selectTab(0)">Groups</button>
+                <button class = "selctButton" onclick="selectTab(1)">Person</button>
+            </div>
+            <div class = "tabContent">
+
+                <button class = "helpButton innerText" onclick="showHelp(0)">?</button>
+                
+                <div class="row">
+                    <div class="textContainer"><label for="studiengang" class="text">Studiengang:</label></div>
+                    <input list="studiengang" name = "studiengang" class = "textInput innerText">
+                    <datalist id="studiengang">
+                        <option value="Informatik (B.Sc.)"></option>
+                        <option value="Informatik (M.Sc.)"></option>
+                        <option value="BWL (B.Sc.)"></option>
+                        <option value="BWL (M.Sc.)"></option>
+                        <option value="Chemie (B.Sc.)"></option>
+                        <option value="Chemie (M.Sc.)"></option> 
+                    </datalist>                
+                </div>
+                
+                <div class = "row">
+                    <div class="textContainer"><label for="modul" class="text">Modul:</label></div>
+                    <input list="modul" name = "modul" class = "textInput innerText">
+                    <datalist id="modul">
+                        <option value="Informatik (B.Sc.)"></option>
+                        <option value="Informatik (M.Sc.)"></option>
+                        <option value="BWL (B.Sc.)"></option>
+                        <option value="BWL (M.Sc.)"></option>
+                        <option value="Chemie (B.Sc.)"></option>
+                        <option value="Chemie (M.Sc.)"></option>
+                    </datalist>
+                </div>
+            
+                <button class = "timeButton innerText" onclick="selectTab(2)">Zeiten</button>
+
+                <div class = "row">
+                    <div class="textContainer"><label for="maxPerson" class="text">Max. Personen:</label></div>  
+                    <input type="number", id="maxPerson" min = "2" max = "20" value = "2" class = "numberInput innerText"/>
+                </div>
+
+                <div class = "row">
+                    <div class="textContainer"><label for="maxPerson" class = "text">Nur offene Gruppen:</label></div>
+                    <input type ="checkbox" id= "maxPerson" class = "inputCheckbox innerText" />
+                </div>
+
+
+                <div class = "text media row">Media:</div>
+                <div class = "row">
+
+                    <div class="mediaBar">
+                        <label for="whatsApp" class = "text">WhatsApp:</label>
+                        <input type ="checkbox" id= "whatsApp" class = "inputCheckbox" />
+                    </div>
+                    
+                    <div class ="mediaBar">
+                        <label for="discord" class = "text">Discord:</label>
+                        <input type ="checkbox" id= "discord" class = "inputCheckbox" />
+                    </div>
+                    
+                    <div class ="mediaBar">
+                        <label for="mail" class = "text">E-Mail:</label>
+                        <input type ="checkbox" id= "mail" class = "inputCheckbox" />
+                    </div> 
+                    
+                    <div class="mediaBar">
+                        <label for="teams" class = "text">MS-Teams:</label>
+                        <input type ="checkbox" id= "teams" class = "inputCheckbox" />
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+
+            <div class = "tabContent">
+                <button class = "helpButton innerText" onclick="showHelp(1)">?</button>
+                <div class="row">
+                    <div class="textContainer"><label for="studiengang" class="text">Studiengang:</label></div>
+                    <input list="studiengang" name = "studiengang" class = "textInput innerText">
+                    <datalist id="studiengang">
+                        <option value="Informatik (B.Sc.)"></option>
+                        <option value="Informatik (M.Sc.)"></option>
+                        <option value="BWL (B.Sc.)"></option>
+                        <option value="BWL (M.Sc.)"></option>
+                        <option value="Chemie (B.Sc.)"></option>
+                        <option value="Chemie (M.Sc.)"></option>
+                    </datalist>                
+                </div>
+
+                 <div class = "row">
+                    <div class="textContainer"><div<label for="semester" class="text">Semester:</label></div>  
+                    <input type="number", id="semester" min ="1" max = "6" value="1" class = "numberInput innerText"/>
+                </div>
+
+                <div class = "text media row">Media:</div>
+                <div class = "row">
+
+                    <div class="mediaBar">
+                        <label for="whatsApp" class = "text">WhatsApp:</label>
+                        <input type ="checkbox" id= "whatsApp" class = "inputCheckbox" />
+                    </div>
+                    
+                    <div class ="mediaBar">
+                        <label for="discord" class = "text">Discord:</label>
+                        <input type ="checkbox" id= "discord" class = "inputCheckbox" />
+                    </div>
+                    
+                    <div class ="mediaBar">
+                        <label for="mail" class = "text">E-Mail:</label>
+                        <input type ="checkbox" id= "mail" class = "inputCheckbox" />
+                    </div> 
+                    
+                    <div class="mediaBar">
+                        <label for="teams" class = "text">MS-Teams:</label>
+                        <input type ="checkbox" id= "teams" class = "inputCheckbox" />
+                    </div>
+                    
+                </div>
+            </div>
+
+
+            <div class = "tabContent">
+
+                <button class = "helpButton innerText" onclick="showHelp(2)">?</button>
+                <div class = "row">
+                    <input type="checkbox" name="montag" id="montag" class = "dateCheck">
+                    <div class = "timeblock"><label for="mittwoch" class="text">Mo:</label></div>
+                    <input type="time" name="montagStart" id="montagStart" class = "dateInput">
+                    <input type="time" name="montagEnd" id="montagEnd" class = "dateInput">
+                </div>
+
+                <div class = "row">
+                    <input type="checkbox" name="dienstag" id="dienstag" class = "dateCheck">
+                    <div class = "timeblock"><label for="mittwoch" class="text">Di:</label></div>
+                    <input type="time" name="dienstagStart" id="dienstagStart" class = "dateInput">
+                    <input type="time" name="dienstagEnd" id="dienstagEnd" class = "dateInput">
+                </div>
+                    
+                <div class="row">
+                    <input type="checkbox" name="mittwoch" id="mittwoch" class = "dateCheck">
+                    <div class = "timeblock"><label for="mittwoch" class="text">Mi:</label></div>
+                    <input type="time" name="mittwochStart" id="mittwochStart" class = "dateInput">
+                    <input type="time" name="mittwochEnd" id="mittwochEnd" class = "dateInput">
+                </div>
+                    
+                <div class="row">
+                    <input type="checkbox" name="donnerstag" id="donnerstag" class = "dateCheck">
+                    <div class = "timeblock"><label for="mittwoch" class="text">Do:</label></div>
+                    <input type="time" name="donnerstagStart" id="donnerstagStart" class = "dateInput">
+                    <input type="time" name="donnerstagEnd" id="donnerstagEnd" class = "dateInput">
+                </div>
+                    
+                <div class="row">
+                    <input type="checkbox" name="freitag" id="freitag" class = "dateCheck">
+                    <div class = "timeblock"><label for="mittwoch" class="text">Fr:</label></div>
+                    <input type="time" name="freitagStart" id="freitagStart" class = "dateInput">
+                    <input type="time" name="freitagEnd" id="freitagEnd" class = "dateInput">
+                </div>
+                    
+                <div class="row">
+                    <input type="checkbox" name="samstag" id="samstag" class = "dateCheck">
+                    <div class = "timeblock"><label for="mittwoch" class="text">Sa:</label></div>
+                    <input type="time" name="samstagStart" id="samstagStart" class = "dateInput">
+                    <input type="time" name="samstagEnd" id="samstagEnd" class = "dateInput">
+                </div>
+
+                <div class="row">
+                    <input type="checkbox" name="sonntag" id="sonntag" class = "dateCheck">
+                    <div class = "timeblock"><label for="mittwoch" class="text">So:</label></div>
+                    <input type="time" name="sonntagStart" id="sonntagStart" class = "dateInput">
+                    <input type="time" name="sonntagEnd" id="sonntagEnd" class = "dateInput">
+                </div>
+
+                <button class="safeDate innerText" onclick="safeDate()">safe</button>
+            </div>
+        </div>
+        
+    </body> 
+
+
+</html>
