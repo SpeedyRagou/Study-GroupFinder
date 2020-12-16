@@ -44,7 +44,9 @@
     margin-bottom: 10px;
     margin-left: 30px;
     border: none;
+    border-radius: 25px;
     cursor: pointer;
+    outline: none;
     background-color: #a5c8fa;
     width: 300px;
     height: 50px;
@@ -54,6 +56,7 @@
     background-color: #a5c8fa;
     border: none;
     height: 30px;
+    outline: none;
 }
 
 .numberInput {
@@ -62,6 +65,7 @@
     width: 50px;
     height: 30px;
     text-align: center;
+    outline: none;
 }
 
 .row {
@@ -74,6 +78,7 @@
 .dateInput {
     height: 20px;
     margin-top: 4px;
+    outline: none;
 }
 
 .timeblock {
@@ -91,6 +96,7 @@
     width: 20px;
     height: 20px;
     background-color: #a5c8fa;
+    outline: none;
 }
 
 .media {
@@ -111,6 +117,7 @@
     background-color: #a5c8fa;
     width: 60px;
     height: 30px;
+    outline: none;
 }
 
 .textContainer {
