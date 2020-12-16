@@ -129,6 +129,7 @@ input[type="checkbox"] {
     outline: none;
     border-radius: 10px;
     transition: .5s;
+    cursor: pointer;
 }
 
 input:checked[type="checkbox"] {

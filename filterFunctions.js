@@ -13,9 +13,11 @@ function selectTab(index){
     });
 
     if(index == 2){
-        buttons[index-2].style.backgroundColor = '#808080';
+        buttons[index-2].style.backgroundColor = '#28497c';
+        buttons[index-2].style.color = "#a5c8fa";
     }else{
-        buttons[index].style.backgroundColor = '#808080';                          
+        buttons[index].style.backgroundColor = '#28497c';   
+        buttons[index].style.color = "#a5c8fa";                       
     }
 
     
@@ -25,7 +27,7 @@ function selectTab(index){
     });
 
     tabs[index].style.display="block";
-    tabs[index].style.backgroundColor = '#808080'; 
+    tabs[index].style.backgroundColor = '#28497c'; 
 }
 
 function safeDate(){
