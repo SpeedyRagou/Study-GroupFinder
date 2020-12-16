@@ -1,6 +1,11 @@
 window.onload = () => {
     selectTab(0);
+    showHelp(3)
 };
+
+var help2 = 0;
+var help1 = 0;
+var help0 = 0;
 
 function selectTab(index){
 
@@ -34,6 +39,33 @@ function safeDate(){
     selectTab(0);
 }
 
-function showHelp(){
-    
+function showHelp(index){
+
+    var container = document.querySelectorAll(".helpContainer");
+ 
+    container.forEach(function(node){
+        node.style.display="none";
+    })
+    if(index == 2){
+        help2 +=1;
+        if(help2%2 == 1){
+            container[index].style.display = "block";
+        }else{
+            container[index].style.display = "none";
+        }   
+    } else if(index == 1){
+        help1 +=1;
+        if(help1%2 == 1){
+            container[index].style.display = "block";
+        }else{
+            container[index].style.display = "none";
+        }
+    }else if(index == 0){
+        help0 +=1;
+        if(help0%2 == 1){
+            container[index].style.display = "block";
+        }else{
+            container[index].style.display = "none";
+        }
+    } 
 }

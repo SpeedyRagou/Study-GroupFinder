@@ -97,6 +97,7 @@
     height: 20px;
     background-color: #a5c8fa;
     outline: none;
+    cursor: pointer;
 }
 
 .media {
@@ -158,4 +159,13 @@ input[type="checkbox"]:before {
 
 input:checked[type="checkbox"]:before {
     left: 20px;
+}
+
+
+.helpContainer{
+    background-color: #a5c8fa;
+
+   width: 200px;
+   height: auto;
+   float: right;
 }
