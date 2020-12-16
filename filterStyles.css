@@ -1,13 +1,13 @@
-.tabContainer{
+.tabContainer {
     width: 100%;
     height: 720px;
 }
 
-.buttonContainer{
+.buttonContainer {
     height: 10%;
 }
 
-.selctButton{
+.selctButton {
     width: 50%;
     height: 100%;
     float: left;
@@ -17,73 +17,71 @@
     padding: 10px;
     font-size: 50px;
     font-family: sans-serif;
-    background-color: #D3D3D3; 
+    background-color: #a5c8fa;
+    color: #28497c;
 }
 
-.tabContent{
+.tabContent {
     height: 85%;
     font-size: 18px;
     font-family: sans-serif;
-    padding-top:60px;
+    padding-top: 60px;
 }
 
-.text{
+.text {
     font-size: 30px;
-    font-family: sans-serif;  
+    font-family: sans-serif;
+    color: #a5c8fa;
 }
 
-.innerText{
+.innerText {
     font-size: 20px;
-    font-family: sans-serif; 
+    font-family: sans-serif;
 }
 
-.timeButton{
+.timeButton {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 30px;
     border: none;
     cursor: pointer;
-    background-color: #D3D3D3;
+    background-color: #a5c8fa;
     width: 300px;
     height: 50px;
 }
 
-.textInput{
-    background-color: #D3D3D3;
+.textInput {
+    background-color: #a5c8fa;
     border: none;
     height: 30px;
 }
 
-.numberInput{
-    background-color: #D3D3D3;
+.numberInput {
+    background-color: #a5c8fa;
     border: none;
     width: 50px;
     height: 30px;
     text-align: center;
 }
 
-
-
-.row{
+.row {
     padding-left: 20px;
     width: 100%;
     padding-top: 25px;
     padding-bottom: 25px;
 }
 
-.dateInput{
+.dateInput {
     height: 20px;
-    margin-top: 5px;
+    margin-top: 4px;
 }
 
-.timeblock{
+.timeblock {
     width: 60px;
     float: left;
 }
 
-
-
-.helpButton{
+.helpButton {
     float: right;
     margin-right: 30px;
     margin-top: -15px;
@@ -92,37 +90,35 @@
     border: none;
     width: 20px;
     height: 20px;
-    background-color: #D3D3D3;
+    background-color: #a5c8fa;
 }
 
-.media{
+.media {
     margin-bottom: -52px;
 }
 
-.mediaBar{
+.mediaBar {
     text-align: left;
     width: 25%;
     float: left;
-   
 }
 
-.safeDate{
+.safeDate {
     float: right;
     margin-right: 20px;
     margin-top: -25px;
     border: none;
-    background-color: #D3D3D3;
+    background-color: #a5c8fa;
     width: 60px;
     height: 30px;
 }
 
-.textContainer{
+.textContainer {
     width: 280px;
     float: left;
 }
 
-
-input[type="checkbox"]{
+input[type="checkbox"] {
     margin-top: 8px;
     margin-bottom: -3px;
     position: relative;
@@ -135,24 +131,23 @@ input[type="checkbox"]{
     transition: .5s;
 }
 
-input:checked[type="checkbox"]{
-    background:rgb(15, 153, 15);
+input:checked[type="checkbox"] {
+    background: rgb(15, 153, 15);
 }
 
-input[type="checkbox"]:before{
-
+input[type="checkbox"]:before {
     content: '';
     position: absolute;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     background: #ffffff;
     transform: scale(1.1);
     transition: .5s;
 }
 
-input:checked[type="checkbox"]:before{
-    left:20px;
+input:checked[type="checkbox"]:before {
+    left: 20px;
 }
