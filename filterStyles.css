@@ -62,12 +62,7 @@
     text-align: center;
 }
 
-.inputCheckbox{
-    margin-top: 8px;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-}
+
 
 .row{
     padding-left: 20px;
@@ -86,13 +81,7 @@
     float: left;
 }
 
-.dateCheck{
-    margin-top: 6px;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    float: left;
-}
+
 
 .helpButton{
     float: right;
@@ -130,4 +119,40 @@
 .textContainer{
     width: 280px;
     float: left;
+}
+
+
+input[type="checkbox"]{
+    margin-top: 8px;
+    margin-bottom: -3px;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    -webkit-appearance: none;
+    background: rgb(223, 24, 24);
+    outline: none;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+input:checked[type="checkbox"]{
+    background:rgb(15, 153, 15);
+}
+
+input[type="checkbox"]:before{
+
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top:0;
+    left:0;
+    background: #ffffff;
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+input:checked[type="checkbox"]:before{
+    left:20px;
 }
