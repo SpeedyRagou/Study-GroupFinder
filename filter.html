@@ -47,8 +47,11 @@
                         <option value="Chemie (M.Sc.)"></option>
                     </datalist>
                 </div>
-            
-                <button class = "timeButton innerText" onclick="selectTab(2)">Zeiten</button>
+                
+                <div class="row">
+                    <button class = "timeButton innerText" onclick="selectTab(2)">Zeiten</button>
+                </div>
+                
 
                 <div class = "row">
                     <div class="textContainer"><label for="maxPerson" class="text">Max. Personen:</label></div>  
@@ -142,49 +145,49 @@
                 <button class = "helpButton innerText" onclick="showHelp(2)">?</button>
                 <div class="helpContainer innerText" id="help">Klicken Sie auf den Button links neben dem Wochentag, wenn Sie den ganzen Tag haben oder geben Sie recht vom Wochentag einen spezifischen Zeitraum an</div>
 
-                <div class = "row">
+                <div class = "rowdate">
                     <input type="checkbox" name="montag" id="montag">
                     <div class = "timeblock"><label for="mittwoch" class="text">Mo:</label></div>
                     <input type="time" name="montagStart" id="montagStart" class = "dateInput">
                     <input type="time" name="montagEnd" id="montagEnd" class = "dateInput">
                 </div>
 
-                <div class = "row">
+                <div class = "rowdate">
                     <input type="checkbox" name="dienstag" id="dienstag">
                     <div class = "timeblock"><label for="mittwoch" class="text">Di:</label></div>
                     <input type="time" name="dienstagStart" id="dienstagStart" class = "dateInput">
                     <input type="time" name="dienstagEnd" id="dienstagEnd" class = "dateInput">
                 </div>
                     
-                <div class="row">
+                <div class="rowdate">
                     <input type="checkbox" name="mittwoch" id="mittwoch">
                     <div class = "timeblock"><label for="mittwoch" class="text">Mi:</label></div>
                     <input type="time" name="mittwochStart" id="mittwochStart" class = "dateInput">
                     <input type="time" name="mittwochEnd" id="mittwochEnd" class = "dateInput">
                 </div>
                     
-                <div class="row">
+                <div class="rowdate">
                     <input type="checkbox" name="donnerstag" id="donnerstag">
                     <div class = "timeblock"><label for="mittwoch" class="text">Do:</label></div>
                     <input type="time" name="donnerstagStart" id="donnerstagStart" class = "dateInput">
                     <input type="time" name="donnerstagEnd" id="donnerstagEnd" class = "dateInput">
                 </div>
                     
-                <div class="row">
+                <div class="rowdate">
                     <input type="checkbox" name="freitag" id="freitag">
                     <div class = "timeblock"><label for="mittwoch" class="text">Fr:</label></div>
                     <input type="time" name="freitagStart" id="freitagStart" class = "dateInput">
                     <input type="time" name="freitagEnd" id="freitagEnd" class = "dateInput">
                 </div>
                     
-                <div class="row">
+                <div class="rowdate">
                     <input type="checkbox" name="samstag" id="samstag">
                     <div class = "timeblock"><label for="mittwoch" class="text">Sa:</label></div>
                     <input type="time" name="samstagStart" id="samstagStart" class = "dateInput">
                     <input type="time" name="samstagEnd" id="samstagEnd" class = "dateInput">
                 </div>
 
-                <div class="row">
+                <div class="rowdate">
                     <input type="checkbox" name="sonntag" id="sonntag">
                     <div class = "timeblock"><label for="mittwoch" class="text">So:</label></div>
                     <input type="time" name="sonntagStart" id="sonntagStart" class = "dateInput">
