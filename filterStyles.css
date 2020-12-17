@@ -107,7 +107,7 @@
 }
 
 .media {
-    margin-bottom: -52px;
+    margin-bottom: -60px;
 }
 
 .mediaBar {
@@ -115,11 +115,12 @@
     width: 25%;
     float: left;
     min-width: 250px;
+    
 }
 
 .mediaicons{
     height: 30px;
-    width: auto;
+    width: auto; 
 }
 
 .safeDate {
