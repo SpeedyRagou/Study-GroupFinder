@@ -1,6 +1,6 @@
 .tabContainer {
     width: 100%;
-    height: 720px;
+    height: 750px;
 }
 
 .buttonContainer {
@@ -33,6 +33,8 @@
     font-family: sans-serif;
     color: #a5c8fa;
 }
+
+
 
 .innerText {
     font-size: 20px;
@@ -112,6 +114,12 @@
     text-align: left;
     width: 25%;
     float: left;
+    min-width: 250px;
+}
+
+.mediaicons{
+    height: 30px;
+    width: auto;
 }
 
 .safeDate {
