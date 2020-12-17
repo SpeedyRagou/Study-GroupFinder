@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link rel="stylesheet" type="text/css" href="createGroup.css">
+
+        <script src = "createGroup.js"></script>
+
+    </head>
+
+    <body>
+
+        <div class = "tabContainer">
+
+            <div class = "buttonContainer">
+                <button class = "selctButton" onclick="selectTab(0)">Create Group Tab</button>
+            </div>
+            <div class = "tabContent">
+
+                <button class = "helpButton innerText" onclick="showHelp(0)">?</button>
+                
+				<div class = "row">
+                    <div class="textContainer"><label for="name" class="text">Name:</label></div>
+                    <input list="modul" name = "modul" class = "textInput innerText">
+                </div>
+				
+				<div class = "row">
+                    <div class="textContainer"><label for="beschreibung" class="text">Beschreibung:</label></div>
+                    <input list="beschreibung" name = "beschreibung" class = "textInput innerText">
+                </div>
+				
+                <div class="row">
+                    <div class="textContainer"><label for="studiengang" class="text">Studiengang:</label></div>
+                    <input list="studiengang" name = "studiengang" class = "textInput innerText">
+                    <datalist id="studiengang">
+                        <option value="Informatik (B.Sc.)"></option>
+                        <option value="Informatik (M.Sc.)"></option>
+                        <option value="BWL (B.Sc.)"></option>
+                        <option value="BWL (M.Sc.)"></option>
+                        <option value="Chemie (B.Sc.)"></option>
+                        <option value="Chemie (M.Sc.)"></option> 
+                    </datalist>                
+                </div>
+                
+                <div class = "row">
+                    <div class="textContainer"><label for="modul" class="text">Modul:</label></div>
+                    <input list="modul" name = "modul" class = "textInput innerText">
+                    <datalist id="modul">
+                        <option value="Grundlagen Digitaler Systeme"></option>
+                        <option value="It-Sicherheit"></option>
+                        <option value="Lineare Algebra 1"></option>
+                        <option value="Lineare Algebra 2"></option>
+                        <option value="Mensch Comupter Interaktion"></option>
+                        <option value="Analysis 1"></option>
+                    </datalist>
+                </div>
+				
+				<div class = "row">
+                    <div class="textContainer"><label for="personzahl" class="text">Personzahl:</label></div>  
+                    <input type="number", id="personzahl" min = "2" max = "8" value = "2" class = "numberInput innerText"/>
+                </div>
+				
+				<div class = "row">
+                    <div class="textContainer"><label for="name" class="text">Orte:</label></div>
+                    <input list="modul" name = "modul" class = "textInput innerText">
+                </div>
+				
+                <button class = "timeButton innerText" onclick="selectTab(1)">Zeiten</button>
+
+				<div class = "row">
+                    <div class="textContainer"><label for="semester" class="text">Semester:</label></div>  
+                    <input type="number", id="semester" min = "2" max = "20" value = "2" class = "numberInput innerText"/>
+                </div>
+
+                <div class = "text media row">Media:</div>
+                <div class = "row">
+
+                    <div class="mediaBar">
+                        <label for="whatsApp" class = "text">WhatsApp:</label>
+                        <input type ="checkbox" id= "whatsApp" />
+                    </div>
+                    
+                    <div class ="mediaBar">
+                        <label for="discord" class = "text">Discord:</label>
+                        <input type ="checkbox" id= "discord"/>
+                    </div>
+                    
+                    <div class ="mediaBar">
+                        <label for="mail" class = "text">E-Mail:</label>
+                        <input type ="checkbox" id= "mail"/>
+                    </div> 
+                    
+                    <div class="mediaBar">
+                        <label for="teams" class = "text">MS-Teams:</label>
+                        <input type ="checkbox" id= "teams"/>
+                    </div>
+                    
+                </div>
+				<p>
+				<hr>
+                
+				<div class = "row">
+                        <label for="searching" class = "text">Searching:</label>
+                        <input type ="checkbox" id= "teams"/>
+						<button  class="create" onclick="createGroup()">Create Group</button>
+				</div>
+			</div>
+
+
+            <div class = "tabContent">
+
+                <button class = "helpButton innerText" onclick="showHelp(2)">?</button>
+                <div class = "row">
+                    <input type="checkbox" name="montag" id="montag">
+                    <div class = "timeblock"><label for="mittwoch" class="text">Mo:</label></div>
+                    <input type="time" name="montagStart" id="montagStart" class = "dateInput">
+                    <input type="time" name="montagEnd" id="montagEnd" class = "dateInput">
+                </div>
+
+                <div class = "row">
+                    <input type="checkbox" name="dienstag" id="dienstag">
+                    <div class = "timeblock"><label for="mittwoch" class="text">Di:</label></div>
+                    <input type="time" name="dienstagStart" id="dienstagStart" class = "dateInput">
+                    <input type="time" name="dienstagEnd" id="dienstagEnd" class = "dateInput">
+                </div>
+                    
+                <div class="row">
+                    <input type="checkbox" name="mittwoch" id="mittwoch">
+                    <div class = "timeblock"><label for="mittwoch" class="text">Mi:</label></div>
+                    <input type="time" name="mittwochStart" id="mittwochStart" class = "dateInput">
+                    <input type="time" name="mittwochEnd" id="mittwochEnd" class = "dateInput">
+                </div>
+                    
+                <div class="row">
+                    <input type="checkbox" name="donnerstag" id="donnerstag">
+                    <div class = "timeblock"><label for="mittwoch" class="text">Do:</label></div>
+                    <input type="time" name="donnerstagStart" id="donnerstagStart" class = "dateInput">
+                    <input type="time" name="donnerstagEnd" id="donnerstagEnd" class = "dateInput">
+                </div>
+                    
+                <div class="row">
+                    <input type="checkbox" name="freitag" id="freitag">
+                    <div class = "timeblock"><label for="mittwoch" class="text">Fr:</label></div>
+                    <input type="time" name="freitagStart" id="freitagStart" class = "dateInput">
+                    <input type="time" name="freitagEnd" id="freitagEnd" class = "dateInput">
+                </div>
+                    
+                <div class="row">
+                    <input type="checkbox" name="samstag" id="samstag">
+                    <div class = "timeblock"><label for="mittwoch" class="text">Sa:</label></div>
+                    <input type="time" name="samstagStart" id="samstagStart" class = "dateInput">
+                    <input type="time" name="samstagEnd" id="samstagEnd" class = "dateInput">
+                </div>
+
+                <div class="row">
+                    <input type="checkbox" name="sonntag" id="sonntag">
+                    <div class = "timeblock"><label for="mittwoch" class="text">So:</label></div>
+                    <input type="time" name="sonntagStart" id="sonntagStart" class = "dateInput">
+                    <input type="time" name="sonntagEnd" id="sonntagEnd" class = "dateInput">
+                </div>
+
+                <button class="safeDate innerText" onclick="safeDate()">safe</button>
+            </div>
+        </div>
+        
+    </body> 
+
+
+</html>
