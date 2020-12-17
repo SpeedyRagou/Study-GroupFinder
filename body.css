@@ -1,0 +1,146 @@
+body{
+    background-color: blanchedalmond;
+}
+
+.top{
+    display: flex;
+    flex-direction: column;
+    
+    padding: 0px;
+    margin: 0px;
+
+}
+
+
+/*
+Alles im Aktionsleistenbereich
+*/
+
+.bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+    background-color: goldenrod;
+    width: 100%;
+    margin-bottom: 10px;
+
+    box-sizing: border-box;
+    border-radius: 0px 0px 20px 20px;
+
+}
+
+.suchleiste{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.kompakt{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.eingabefeld{
+
+    font-size: 20px;
+    text-align: center;
+
+    margin: 10px;
+    box-sizing: border-box;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.filter{
+
+    max-width: 10%;
+    height: auto;
+    padding: 10px;
+}
+
+.button{
+    margin: 10px;
+    padding: 20px;
+    background-color: blue;
+    color: red;
+
+    box-sizing: border-box;
+    border-radius: 3px 15px 5px 30px;
+}
+
+
+
+
+/*
+Alles im Körperbereich
+*/
+
+.inhalt{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+
+
+    
+    width: 100%;
+    
+
+}
+
+.list{
+    width: 20%;
+
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-around;
+
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: black;
+}
+
+.tabs{
+    overflow: hidden;
+    justify-content: center;
+}
+
+.tabs button {
+    background-color: yellowgreen;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    width: 50%;
+  }
+
+/* Change background color of buttons on hover */
+.tabs button:hover {
+    background-color: #ddd;
+}
+  
+  /* Create an active/current tablink class */
+.tabs button.active {
+    background-color: #ccc;
+}
+
+.tabinhalt{
+    width: 100%;
+    list-style: none;
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: black;
+}
+
+
+
+.workbench{
+    width: 80%;
+    
+}
+
