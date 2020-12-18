@@ -10,28 +10,29 @@
                 
                 <div id="suchleiste" class="suchleiste">
                     <div class="kompakt">
-                        <input id="feld" placeholder="Eingabe ..." type="text" class="eingabefeld">
-                        <img src="images/filter.png" alt="A filter" class="filter">
-                        <div id="suchen" class="button">Suchen</div>
+                        <input id="feld" placeholder="Eingabe ..." type="text" class="eingabefeld" >
+                        <img src="images/filter.png" alt="A filter" class="filter" onclick="filter();">
+                        <div id="suchen" class="button" onclick="search();">Suchen</div>
                     </div>
                     
                 </div>
                
-                <div id="neu" class="button">Neue Gruppe</div>
-                <div id="profil" class="button">Profil</div>
+                <div id="neu" class="button" onclick="newGroup();">Neue Gruppe</div>
+                <div id="profil" class="button" onclick="openProfil();">Profil</div>
             </div>
 
             <div id="inhalt" class="inhalt">
                 
                 <div id="list" class="list">
                     <div id="tabs" class="tabs">
-                        <button id="gruppenbutton" class="tablinks" onclick="tabopen(event, 'gruppen')">Gruppen</button>
-                        <button id="chatbutton" class="tablinks" onclick="tabopen(event, 'chats')">Chats</button>
+                        <button id="gruppenbutton" class="tablinks eck2" onclick="tabopen(event, 'gruppen')">Gruppen</button>
+                        <button id="chatbutton" class="tablinks eck" onclick="tabopen(event, 'chats')">Chats</button>
                     </div>
 
                     <div id="gruppen" class="tabinhalt">
                         <div>Gr1</div>
                         <div>Gr2</div>
+                        
                     </div>
 
                     <div id="chats" class="tabinhalt">
@@ -40,10 +41,13 @@
                     </div>
                 </div>
 
-                <div id="workbench" class="workbench">b</div>
+                <div id="workbench" class="workbench"></div>
             </div>
-
+            
         </div>
+        <script>
+            init();
+        </script>
     </body>
-
+    
 </html>

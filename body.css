@@ -1,14 +1,21 @@
+
 body{
     background-color: blanchedalmond;
+
+    margin: 0;
+    padding: 0;
+
+    min-height: calc(100vh - 82px);
+    height: calc(100vh - 82px);
+    max-height: calc(100vh - 82px);
 }
 
 .top{
     display: flex;
     flex-direction: column;
+    height: 100%;
+    width: 100%;
     
-    padding: 0px;
-    margin: 0px;
-
 }
 
 
@@ -23,11 +30,12 @@ Alles im Aktionsleistenbereich
 
 
     background-color: goldenrod;
-    width: 100%;
-    margin-bottom: 10px;
+
+    
+
 
     box-sizing: border-box;
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 0px 0px 20px 0px;
 
 }
 
@@ -55,19 +63,37 @@ Alles im Aktionsleistenbereich
 
 .filter{
 
+    border: 1px solid goldenrod;
+
     max-width: 10%;
     height: auto;
     padding: 10px;
 }
 
+.filter:hover{
+    cursor: pointer;
+    border: 1px solid black;
+}
+
 .button{
     margin: 10px;
     padding: 20px;
-    background-color: blue;
-    color: red;
+    
+    
+    background-color: lightgray;
+    color: black;
 
+    border: 1px solid black;
     box-sizing: border-box;
     border-radius: 3px 15px 5px 30px;
+}
+
+.button:hover{
+    
+    cursor: pointer;
+    background-color: lightgreen;
+    color: black;
+
 }
 
 
@@ -80,36 +106,45 @@ Alles im Körperbereich
 .inhalt{
     display: flex;
     flex-direction: row;
+    
+    min-height: 100%;
+    max-height: 100%;
+
+
     justify-content: left;
 
 
     
-    width: 100%;
+
     
 
 }
 
 .list{
     width: 20%;
-    height: auto;
+    height: 100%;
+
 
     display: flex;
     flex-direction: column;
-    
-    justify-content: space-around;
 
-    outline-width: 1px;
-    outline-style: solid;
-    outline-color: black;
+    background-color: yellowgreen;
+
+    border: 1px solid yellowgreen;
+
+    border-radius: 0px 0px 0px 0px;
 }
 
 .tabs{
     overflow: hidden;
     justify-content: center;
+
+
 }
 
 .tabs button {
-    background-color: yellowgreen;
+
+    background-color: white;
     float: left;
     border: none;
     outline: none;
@@ -122,19 +157,30 @@ Alles im Körperbereich
 
 /* Change background color of buttons on hover */
 .tabs button:hover {
-    background-color: #ddd;
+    background-color: rgb(0, 255, 255);
 }
   
   /* Create an active/current tablink class */
 .tabs button.active {
-    background-color: #ccc;
+    background-color:  yellowgreen;
+}
+
+.eck {
+    border-radius: 0px 0px 0px 15px;
+}
+
+.eck2 {
+    border-radius: 0px 0px 15px 0px;
 }
 
 .tabinhalt{
 
-    overflow: auto;
+    overflow: scroll;
+    display: none;
+    
+    height: 100%;
 
-    background-color: red;
+    overflow-x: hidden;
     
 }
 
@@ -149,15 +195,15 @@ Alles im Körperbereich
 
     margin: 5px;
 
-    outline-style: solid;
-    outline-width: 1px;
-    outline-color: black;
+    background-color: lightgreen;
+
+    border: 1px solid black;
 }
 
 
 
 .workbench{
-    width: 80%;
-    
+    min-width: 80%;
+
 }
 
