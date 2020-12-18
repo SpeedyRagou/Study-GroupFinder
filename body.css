@@ -91,6 +91,7 @@ Alles im Körperbereich
 
 .list{
     width: 20%;
+    height: auto;
 
     display: flex;
     flex-direction: column;
@@ -130,8 +131,24 @@ Alles im Körperbereich
 }
 
 .tabinhalt{
-    width: 100%;
-    list-style: none;
+
+    overflow: auto;
+
+    background-color: red;
+    
+}
+
+.tabinhalt div{
+
+   
+
+    font-size: 30px;
+
+    padding: 15px;
+    text-align: center;
+
+    margin: 5px;
+
     outline-style: solid;
     outline-width: 1px;
     outline-color: black;

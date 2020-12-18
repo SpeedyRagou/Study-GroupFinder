@@ -2,7 +2,7 @@
 <html>
     <head>
         <link href="body.css" type="text/css" rel="stylesheet" />
-
+        <script language="javascript" type="text/javascript" src="body.js"></script>
     </head>
     <body>
         <div id="body" class="top">
@@ -25,19 +25,19 @@
                 
                 <div id="list" class="list">
                     <div id="tabs" class="tabs">
-                        <button id="gruppenbutton" class="tablinks">Gruppen</button>
-                        <button id="chatbutton" class="tablinks">Chats</button>
+                        <button id="gruppenbutton" class="tablinks" onclick="tabopen(event, 'gruppen')">Gruppen</button>
+                        <button id="chatbutton" class="tablinks" onclick="tabopen(event, 'chats')">Chats</button>
                     </div>
 
-                    <ul id="gruppen" >
-                        <li class="tabinhalt">Gr1</li>
-                        <li class="tabinhalt">Gr2</li>
-                    </ul>
+                    <div id="gruppen" class="tabinhalt">
+                        <div>Gr1</div>
+                        <div>Gr2</div>
+                    </div>
 
-                    <ul id="chats" >
-                        <li class="tabinhalt">Chat 1</li>
-                        <li class="tabinhalt">Chat 2</li>
-                    </ul>
+                    <div id="chats" class="tabinhalt">
+                        <div>Chat1</div>
+                        <div>Chat2</div>
+                    </div>
                 </div>
 
                 <div id="workbench" class="workbench">b</div>
