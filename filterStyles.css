@@ -17,8 +17,8 @@
     padding: 10px;
     font-size: 50px;
     font-family: sans-serif;
-    background-color: #a5c8fa;
-    color: #28497c;
+    background-color: #1e3d59;
+    color: #f5f0e1;
 }
 
 .tabContent {
@@ -31,7 +31,7 @@
 .text {
     font-size: 30px;
     font-family: sans-serif;
-    color: #a5c8fa;
+    color: #1e3d59;
 }
 
 .innerText {
@@ -44,22 +44,28 @@
     border-radius: 25px;
     cursor: pointer;
     outline: none;
-    background-color: #a5c8fa;
+    background-color: #ff6e40;
     width: 300px;
     height: 50px;
     box-shadow: 0px 0px 3px 1px grey inset;
 }
 
+.timeButton:hover{
+    background-color: #ffc13b;
+}
+
 .textInput {
-    background-color: #a5c8fa;
+    background-color:white;
     border: none;
     height: 30px;
     outline: none;
     box-shadow: 0px 0px 3px 1px grey inset;
+
+    text-align: center;
 }
 
 .numberInput {
-    background-color: #a5c8fa;
+    background-color: white;
     border: none;
     width: 50px;
     height: 30px;
@@ -102,7 +108,7 @@
     border: none;
     width: 20px;
     height: 20px;
-    background-color: #a5c8fa;
+    background-color: #ff6e40;
     outline: none;
     cursor: pointer;
 }
@@ -129,7 +135,6 @@
     position: absolute;
     width: 200px;
     height: auto;
-    background-color: #a5c8fa;
     font-size: 15px;
     visibility: hidden;
 }
@@ -148,11 +153,15 @@
     margin-right: 20px;
     margin-top: -25px;
     border: none;
-    background-color: #a5c8fa;
+    background-color:  #ff6e40;
     width: 60px;
     height: 30px;
     outline: none;
     cursor:pointer;
+}
+
+.safeDate:hover{
+    background-color: #ffc13b;
 }
 
 .textContainer {
@@ -198,8 +207,7 @@ input:checked[type="checkbox"]:before {
 
 
 .helpContainer{
-    background-color: #a5c8fa;
-
+   background-color: white;
    width: 200px;
    height: auto;
    float: right;

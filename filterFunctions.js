@@ -19,11 +19,11 @@ function selectTab(index){
     });
 
     if(index == 2){
-        buttons[index-2].style.backgroundColor = '#28497c';
-        buttons[index-2].style.color = "#a5c8fa";
+        buttons[index-2].style.backgroundColor = '#f5f0e1';
+        buttons[index-2].style.color = "#1e3d59";
     }else{
-        buttons[index].style.backgroundColor = '#28497c';   
-        buttons[index].style.color = "#a5c8fa";                       
+        buttons[index].style.backgroundColor = '#f5f0e1';   
+        buttons[index].style.color = "#1e3d59";                       
     }
 
     
@@ -33,7 +33,7 @@ function selectTab(index){
     });
 
     tabs[index].style.display="block";
-    tabs[index].style.backgroundColor = '#28497c'; 
+    tabs[index].style.backgroundColor = '#f5f0e1'; 
 }
 
 function getStud(){
