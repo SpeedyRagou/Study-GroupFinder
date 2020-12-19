@@ -46,3 +46,19 @@ function filter(){
 function openProfil(){
     console.log("Todo: Profil implementieren");
 }
+
+function eingabePlaceholder(event){
+    var leiste = event.currentTarget;
+    
+    leiste.removeAttribute("placeholder");
+
+    leiste.style.textAlign = "left";
+    
+}
+
+function returnPlaceholder(event){
+    var leiste = event.currentTarget;
+
+    leiste.setAttribute("placeholder", "Eingabe ...");
+    leiste.style.textAlign = "center";
+}

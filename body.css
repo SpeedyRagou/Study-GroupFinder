@@ -1,6 +1,6 @@
 
 body{
-    background-color: blanchedalmond;
+    background-color: #1e3d59;
 
     margin: 0;
     padding: 0;
@@ -29,13 +29,13 @@ Alles im Aktionsleistenbereich
     justify-content: space-between;
 
 
-    background-color: goldenrod;
+    background-color: #1e3d59;
 
     
 
 
     box-sizing: border-box;
-    border-radius: 0px 0px 20px 0px;
+    border-radius: 0px 0px 0px 0px;
 
 }
 
@@ -56,14 +56,17 @@ Alles im Aktionsleistenbereich
     font-size: 20px;
     text-align: center;
 
-    margin: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    margin: 20px;
     box-sizing: border-box;
     border-radius: 20px 20px 20px 20px;
 }
 
 .filter{
 
-    border: 1px solid goldenrod;
+    border: 1px solid #1e3d59;
 
     max-width: 10%;
     height: auto;
@@ -72,7 +75,7 @@ Alles im Aktionsleistenbereich
 
 .filter:hover{
     cursor: pointer;
-    border: 1px solid black;
+    border: 1px solid #ffc13b;
 }
 
 .button{
@@ -80,7 +83,7 @@ Alles im Aktionsleistenbereich
     padding: 20px;
     
     
-    background-color: lightgray;
+    background-color: #ff6e40;
     color: black;
 
     border: 1px solid black;
@@ -91,7 +94,7 @@ Alles im Aktionsleistenbereich
 .button:hover{
     
     cursor: pointer;
-    background-color: lightgreen;
+    background-color: #ffc13b;
     color: black;
 
 }
@@ -111,7 +114,7 @@ Alles im Körperbereich
     max-height: 100%;
 
 
-    justify-content: left;
+    justify-content: ;
 
 
     
@@ -128,9 +131,11 @@ Alles im Körperbereich
     display: flex;
     flex-direction: column;
 
-    background-color: yellowgreen;
+    justify-content: end;
 
-    border: 1px solid yellowgreen;
+    background-color: #1e3d59;
+
+    border: 1px solid #1e3d59;
 
     border-radius: 0px 0px 0px 0px;
 }
@@ -138,13 +143,13 @@ Alles im Körperbereich
 .tabs{
     overflow: hidden;
     justify-content: center;
-
+    background-color: #f5f0e1;
 
 }
 
 .tabs button {
-
-    background-color: white;
+    color: #f5f0e1;
+    background-color: #1e3d59;
     float: left;
     border: none;
     outline: none;
@@ -157,12 +162,14 @@ Alles im Körperbereich
 
 /* Change background color of buttons on hover */
 .tabs button:hover {
-    background-color: rgb(0, 255, 255);
+    background-color: #ffc13b;
+    color: #1e3d59;
 }
   
   /* Create an active/current tablink class */
 .tabs button.active {
-    background-color:  yellowgreen;
+    background-color: #f5f0e1;
+    color:  #1e3d59;
 }
 
 .eck {
@@ -177,8 +184,10 @@ Alles im Körperbereich
 
     overflow: scroll;
     display: none;
+
+    background-color: #f5f0e1;
     
-    height: 100%;
+    height: 89%;
 
     overflow-x: hidden;
     
@@ -195,15 +204,25 @@ Alles im Körperbereich
 
     margin: 5px;
 
-    background-color: lightgreen;
+    color: #1e3d59;
+    background-color: #ff6e40;
 
-    border: 1px solid black;
+    border: 1px solid #1e3d59;
+}
+
+.tabinhalt div:hover{
+    cursor: pointer;
+    background-color: #ffc13b;
 }
 
 
 
 .workbench{
     min-width: 80%;
+    max-width: 80%;
 
+    background-color: white;
+
+    border-radius: 50px 0px 0px 0px;
 }
 
