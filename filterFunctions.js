@@ -1,6 +1,7 @@
 window.onload = () => {
     selectTab(0);
     showHelp(3)
+    getStud();
 };
 
 var help2 = 0;
@@ -33,6 +34,9 @@ function selectTab(index){
 
     tabs[index].style.display="block";
     tabs[index].style.backgroundColor = '#28497c'; 
+}
+
+function getStud(){
 }
 
 function safeDate(){

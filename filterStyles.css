@@ -34,8 +34,6 @@
     color: #a5c8fa;
 }
 
-
-
 .innerText {
     font-size: 20px;
     font-family: sans-serif;
@@ -111,6 +109,7 @@
 
 .media {
     margin-bottom: -60px;
+    cursor:default;
 }
 
 .mediaBar {
@@ -126,6 +125,24 @@
     width: auto; 
 }
 
+ .credits{
+    position: absolute;
+    width: 200px;
+    height: auto;
+    background-color: #a5c8fa;
+    font-size: 15px;
+    visibility: hidden;
+}
+
+.creditsBox{
+    float:left
+}
+
+.creditsBox:hover .credits{
+    visibility: visible;
+
+}
+
 .safeDate {
     float: right;
     margin-right: 20px;
@@ -135,6 +152,7 @@
     width: 60px;
     height: 30px;
     outline: none;
+    cursor:pointer;
 }
 
 .textContainer {
