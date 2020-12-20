@@ -1,0 +1,244 @@
+/* TIM */
+
+.tabContainer {
+    width: 100%;
+    height: 95%;
+    justify-content: center;
+}
+
+.buttonContainer {
+    height: 10%;
+    background-color: #1e3d59;
+}
+
+.selectButton {
+    width: 50%;
+    height: 100%;
+    float: left;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 50px;
+    font-family: sans-serif;
+    background-color: #1e3d59;
+    color: #f5f0e1;
+    border: none;
+    border-top: 2px #f5f0e1 solid;
+    border-left: 2px  #f5f0e1 solid;
+}
+
+.selectButtonBorder {
+    border-radius: 50px 0px 0px 0px;
+    outline: none;
+}
+
+.selectButton:hover {
+    background-color: #ffc13b;
+    color: #1e3d59;
+}
+
+.tabContent {
+    height: 85%;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding-top: 60px;
+}
+
+.text {
+    font-size: 30px;
+    font-family: sans-serif;
+    color: #1e3d59;
+}
+
+.innerText {
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.timeButton {
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+    background-color: #ff6e40;
+    width: 300px;
+    height: 50px;
+    box-shadow: 0px 0px 3px 1px grey inset;
+}
+
+.timeButton:hover {
+    background-color: #ffc13b;
+}
+
+.searchButton{
+    border:none;
+    border-radius: 25px;
+    cursor:pointer;
+    outline:none;
+    background-color: #ff6e40;
+    width: 150px;
+    height: 50px;
+    box-shadow: 0px 0px 3px 1px grey inset;
+}
+
+.searchButton:hover{
+    background-color: #ffc13b;
+}
+
+.textInput {
+    background-color: white;
+    border: none;
+    height: 30px;
+    outline: none;
+    box-shadow: 0px 0px 3px 1px grey inset;
+    text-align: center;
+}
+
+.numberInput {
+    background-color: white;
+    border: none;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    outline: none;
+    box-shadow: 0px 0px 3px 1px grey inset;
+}
+
+.row {
+    padding-left: 20px;
+    width: 100%;
+    height: 12%;
+    vertical-align: middle;
+}
+
+.rowdate {
+    padding-left: 20px;
+    width: 100%;
+    height: 14%;
+    vertical-align: middle;
+}
+
+.dateInput {
+    height: 20px;
+    margin-top: 4px;
+    outline: none;
+}
+
+.timeblock {
+    width: 60px;
+    float: left;
+}
+
+.helpButton {
+    float: right;
+    margin-right: 30px;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    border: none;
+    width: 35px;
+    height: 35px;
+    background-color: #ff6e40;
+    outline: none;
+    cursor: pointer;
+}
+
+.media {
+    padding-left: 20px;
+    vertical-align: bottom;
+    cursor: default;
+}
+
+.mediaBar {
+    text-align: left;
+    width: 25%;
+    float: left;
+    min-width: 250px;
+}
+
+.mediaicons {
+    padding-right: 5px;
+    height: 35px;
+    width: auto;
+}
+
+.credits {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    font-size: 15px;
+    visibility: hidden;
+}
+
+.creditsBox {
+    float: left
+}
+
+.creditsBox:hover .credits {
+    visibility: visible;
+}
+
+.safeDate {
+    float: left;
+    margin-left: 20px;
+    margin-top: -25px;
+    border: none;
+    background-color: #ff6e40;
+    width: 60px;
+    height: 30px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.safeDate:hover {
+    background-color: #ffc13b;
+}
+
+.textContainer {
+    width: 280px;
+    float: left;
+}
+
+input[type="checkbox"] {
+    margin-top: 8px;
+    margin-bottom: -3px;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    -webkit-appearance: none;
+    background: grey;
+    outline: none;
+    border-radius: 10px;
+    transition: .5s;
+    cursor: pointer;
+    box-shadow: 0px 0px 3px 1px grey inset;
+}
+
+input:checked[type="checkbox"] {
+    background: rgb(15, 153, 15);
+}
+
+input[type="checkbox"]:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    background: #1e3d59;
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+input:checked[type="checkbox"]:before {
+    left: 20px;
+}
+
+.helpContainer {
+    background-color: white;
+    width: 200px;
+    height: auto;
+    float: right;
+}

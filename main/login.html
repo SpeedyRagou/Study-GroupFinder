@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+.all {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+    padding-bottom: 20%;
+    background-image:url("pngs/3_Personen_Icon_LL.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.center {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    width: 60%;
+    max-width: 550px;
+    min-width: 550px;
+}
+
+.finder {
+    height: 100px;
+    
+    justify-content: center;
+    display: -webkit-flex;
+    display: flex;
+    
+    background: url("pngs/Schriftzug.png") no-repeat center;
+    background-size: 450px 100px;
+    
+    margin-bottom: 10px;
+}
+
+.window {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    
+    height: 280px;
+    
+    border: 2pt solid black;
+    
+    background-image:url("pngs/white.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+    font-size: 25pt;
+    padding: 15px;
+    font-family: sans-serif;
+}
+
+.firstrow {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+.login {
+    margin: 5px;
+    padding: 10px;
+    font-weight: bold
+}
+.beschreibung {
+    margin: 5px;
+    padding: 10px;
+    font-size: 15pt;
+    margin-top: 16px;
+    width: 70%;
+}
+.id {
+    margin-top: 15px;
+    margin-left: 15px;
+    font-size: 20pt;
+}
+.password {
+    margin-top: 15px;
+    margin-left: 15px;
+    font-size: 20pt;
+}
+
+input[type=text] {
+    border: 2px solid rgb(220, 220, 220);
+    width: 60%;
+    margin-left: 15px;
+
+    color: rgb(0, 0, 0);
+    font-size: 15pt;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input[type=password] {
+    border: 2px solid rgb(220, 220, 220);
+    width: 60%;
+    margin-left: 15px;
+
+    color: rgb(0, 0, 0);
+    font-size: 15pt;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.anmelden {
+    width: 40%;
+    font-size: 20pt;
+    margin: 15px;
+    box-sizing: border-box;
+    border-radius: 8px 8px 8px 8px;
+    color: white;
+    background-color: rgb(40,60,160);
+    
+    cursor: pointer;
+}
+.hilfe {
+    font-size: 20pt;
+    color: white;
+    box-sizing: border-box;
+    border-radius: 100%;
+    background: #dfdfdf;
+    background-color: rgb(40,60,160);
+    
+    cursor: help;
+    
+}
+.inputerror {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    font-size: 10pt;
+    color: rgb(250,30,10);
+}
+.error {
+    margin-left: 10px;
+    margin-top: 2px;
+    
+    height: 1px;
+    visibility: hidden;
+}
+.passwort_vergessen {
+    width: 40%;
+    margin: 15px;
+    margin-top: 40px;
+    margin-left: 40px;
+    
+    cursor: pointer;
+}
+
+.helper {
+    font-size: 10pt;
+    position: relative;
+    background: rgb(240,240,240);
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 300px;
+    
+    left: 338px;
+    top: -234px;
+    
+    visibility: hidden;
+}
+.helper::after {
+    content: '';
+    border: 20px solid transparent;
+    border-bottom-color: rgb(240,240,240);
+    border-top: 0;
+    
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    margin-left: -20px;
+}
+
+.forgotten {
+    font-size: 10pt;
+    position: relative;
+    background: rgb(240,240,240);
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 300px;
+    
+    left: 180px;
+    top: -96px;
+    
+    visibility: hidden;
+}
+.forgotten::after {
+    content: '';
+    border: 20px solid transparent;
+    border-bottom-color: rgb(240,240,240);
+    border-top: 0;
+    
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    margin-left: -20px;
+}
+</style>
+
+<script>
+    
+    function hide(){
+        document.getElementById("idError").style.visibility ='hidden';
+        document.getElementById("passwordError").style.visibility ='hidden';
+    }
+
+    function validateInput(){
+        var id = document.getElementById("inputID").value;
+        var password = document.getElementById("inputPassword").value;
+
+        //Login für Beispielaccount
+        if(id === "14P-KRL"){
+            if(password === "123456") {
+                document.getElementById("idError").style.visibility ='hidden';
+                document.getElementById("passwordError").style.visibility ='hidden';
+                window.location.assign("sgf.html");
+                //goto startpage
+            } else {
+                document.getElementById("inputPassword").value ='';
+                document.getElementById("passwordError").style.visibility ='visible';
+                document.getElementById("idError").style.visibility ='hidden';
+            }
+        } else {
+            document.getElementById("inputPassword").value ='';
+            document.getElementById("passwordError").style.visibility ='hidden';
+            document.getElementById("idError").style.visibility ='visible';
+        }
+    }
+    
+    function getHelp(){
+        if(!(document.getElementById("helper").style.visibility == 'visible')){
+            document.getElementById("helper").style.visibility ='visible';
+        } else {
+            document.getElementById("helper").style.visibility ='hidden';
+        }
+    }
+    
+    function forgotPassword(){
+        if(!(document.getElementById("forgotten").style.visibility == 'visible')){
+            document.getElementById("forgotten").style.visibility ='visible';
+        } else {
+            document.getElementById("forgotten").style.visibility ='hidden';
+        }
+    }
+
+
+     
+</script>
+</head>
+<body>
+    
+    <div class="all">
+    <div class="center">
+    
+    <div class="finder"> </div>
+    <section class="window">
+
+        <div class="firstrow">
+            <div class="login">
+                Login
+            </div>
+            <div class="beschreibung">
+                 
+            </div>
+            <div>
+                <input class="hilfe" id="help" type="button" onclick="getHelp()" value="?">
+            </div>
+        </div>
+
+        <div class="id">
+            ID
+        </div>
+            
+        <div class="inputerror">
+            <input type="text" id="inputID" placeholder="Enter your WebSSO-ID" onclick="hide()">
+            <div class="error" id="idError" style="margin-top:10px">
+                Please enter a valid ID.
+            </div>
+        </div>
+        <div class="password">
+            Passwort
+        </div>
+        
+        <div class="inputerror">
+            <input type="password" id="inputPassword" placeholder="Enter your WebSSO-Password" onclick="hide()">
+            <div class="error" id="passwordError">
+                Please enter a valid password.
+            </div>
+        </div>
+        
+        <div class="inputerror">
+            <input class="anmelden" id="anmelden" type="button" onclick="validateInput()" value="Anmelden">
+                
+            <div class="passwort_vergessen" onclick="forgotPassword()">
+                Passwort vergessen?
+            </div>
+        </div>
+        
+        <p class="helper" id="helper">
+            Der WebSSO-Login wird auch für dein StudIP-Account verwendet. <br/> Du kannst ihn im <a href="https://login.uni-hannover.de/ui/"  target="_blank"> Account-Manager</a> finden.
+        </p>
+        
+        <p class="forgotten" id="forgotten">
+             Das WebSSO-Passwort kannst du im <a href="https://login.uni-hannover.de/ui/"  target="_blank"> Account-Manager</a> finden und ggf. ändern.
+        </p>
+    </section>
+    
+    </div>
+    </div>
+      
+</body>
+</html>
+
