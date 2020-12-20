@@ -1,17 +1,19 @@
-window.onload = () => {
+function filterinit(){
+
     selectTab(0);
-    showHelp(3)
+    showHelp(3);
     getStud();
-};
 
-var help2 = 0;
-var help1 = 0;
-var help0 = 0;
+}
 
-function selectTab(index){
+var help2C = 0;
+var help1C = 0;
+var help0C = 0;
 
-    var buttons = document.querySelectorAll("button");
-    var tabs = document.querySelectorAll(".tabContent");
+function selectTabC(index){
+
+    var buttons = document.querySelectorAll(".selectButtonC");
+    var tabs = document.querySelectorAll(".tabContentC");
     
     buttons.forEach(function(node){
         node.style.backgroundColor = "";
@@ -36,37 +38,37 @@ function selectTab(index){
     tabs[index].style.backgroundColor = '#f5f0e1'; 
 }
 
-function getStud(){
+function getStudC(){
 }
 
-function safeDate(){
+function safeDateC(){
     selectTab(0);
 }
 
-function showHelp(index){
+function showHelpC(index){
 
-    var container = document.querySelectorAll(".helpContainer");
+    var container = document.querySelectorAll(".helpContainerC");
  
     container.forEach(function(node){
         node.style.display="none";
     })
     if(index == 2){
-        help2 +=1;
-        if(help2%2 == 1){
+        help2C +=1;
+        if(help2C%2 == 1){
             container[index].style.display = "block";
         }else{
             container[index].style.display = "none";
         }   
     } else if(index == 1){
-        help1 +=1;
-        if(help1%2 == 1){
+        help1C +=1;
+        if(help1C%2 == 1){
             container[index].style.display = "block";
         }else{
             container[index].style.display = "none";
         }
     }else if(index == 0){
-        help0 +=1;
-        if(help0%2 == 1){
+        help0C +=1;
+        if(help0C%2 == 1){
             container[index].style.display = "block";
         }else{
             container[index].style.display = "none";
