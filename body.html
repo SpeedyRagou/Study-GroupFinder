@@ -8,17 +8,16 @@
         <div id="body" class="top">
             <div id="aktionsleiste" class="bar">
                 
-                <div id="suchleiste" class="suchleiste">
-                    <div class="kompakt">
-                        <input id="feld" placeholder="Eingabe ..." type="text" class="eingabefeld" onfocus="eingabePlaceholder(event);" onblur="returnPlaceholder(event);" >
-                        <img src="images/filter.png" alt="A filter" class="filter" onclick="filter();">
-                        <div id="suchen" class="button" onclick="search();">Suchen</div>
-                    </div>
-                    
+                
+                <div class="suchleiste">
+                    <input id="feld" placeholder="Eingabe ..." type="text" class="eingabefeld" onfocus="eingabePlaceholder(event);" onblur="returnPlaceholder(event);" >
+                    <div id="filter" class="filter" onclick="filter();"></div>
+                    <div id="suchen" class="button" onclick="search();">Suchen</div>
                 </div>
+
                
                 <div id="neu" class="button" onclick="newGroup();">Neue Gruppe</div>
-                <div id="profil" class="button" onclick="openProfil();">Profil</div>
+                <div id="profil" class="profil" onclick="openProfil();"></div>
             </div>
 
             <div id="inhalt" class="inhalt">
