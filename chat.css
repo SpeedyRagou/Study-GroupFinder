@@ -1,0 +1,77 @@
+body {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px;
+  background-color: #f5f0e1;
+}
+
+.container {
+  border: 2px solid #1e3d59;
+  background-color: #ffc13b;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.user{
+	margin: -10px 0;
+}
+
+.darker {
+  border-color: #1e3d59;
+  background-color: #ff6e40;
+  text-align: right;
+}
+
+.chatInput{
+  float: left;
+  border: 2px solid #1e3d59;
+  border-radius: 4px;
+  height: 80%;
+  font-size: 24px;
+  font-family: sans-serif;
+  width:94%;
+}
+
+.send{
+  height: 28px;
+  transform: scaleX(-1);
+  border: 2px solid #1e3d59;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.send:hover{
+  background-color: #ddd;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #090909;
+}
+
+.time-left {
+  float: left;
+  color: #090909;
+}
