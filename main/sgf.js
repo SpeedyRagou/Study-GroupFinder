@@ -43,7 +43,7 @@ function selectKategorie(index){
 
 
     /*
-    Order: Home, Filter, Suchergebnisse, Neue Gruppe, Profil, Gruppen, Chats 
+    Order: Home, Filter, Suchergebnisse, Neue Gruppe, Profil, Gruppen, Chats, Person
     */
     var kat = document.querySelectorAll(".kategorien");
     var workbenches = document.querySelectorAll(".workbench");
@@ -79,6 +79,11 @@ function openChat(index){
        chats[index].style.display = "block"; 
     }
 }
+function addMessage(){
+    document.getElementById("newMessage").style.display = "block";
+    document.getElementById("sent").value = '';
+    document.getElementById("newChat").style.display = 'block';
+}
 
 function newGroup(){
     selectKategorie(3);
@@ -90,6 +95,10 @@ function search(){
 
 function openProfil(){
     selectKategorie(4)
+}
+
+function openPerson(){
+    selectKategorie(7);
 }
 
 function eingabePlaceholder(event){
@@ -186,7 +195,7 @@ function showHelp(index){
 }
 
 function searchPerson(){
-    selectKategorie(2);
+    selectKategorie(7);
 }
 
 function searchGroup(){

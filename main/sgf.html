@@ -11,13 +11,17 @@
     <link href="chat.css" type="text/css" rel="stylesheet" />
     <link href="icons.css" type="text/css" rel="stylesheet" />
     <link href="colors.css" type="text/css" rel="stylesheet" />
+    
+    <link href="person.css" type="text/css" rel="stylesheet" />
     <script language="javascript" type="text/javascript" src="sgf.js"></script>
+    
+    <meta charset="UTF-8">
 </head>
 
 <body>
     <div id="body" class="top">
         <div id="aktionsleiste" class="bar">
-            <div class="home box"><img src="icons/house.png" class="homeicon" onclick="selectKategorie(0)"></div>
+            <div class="home box"><img src="pngs/Home.png" class="homeicon" onclick="selectKategorie(0)"></div>
             <div id="suchleiste" class="suchleiste">
                 <div class="kompakt">
                     <div id="suchen" class="taskButton" onclick="search();"><img src="icons/lupe.png"
@@ -28,7 +32,7 @@
             </div>
 
             <div id="neu" class="taskButton kategorien" onclick="newGroup();">Neue Gruppe</div>
-            <div id="profil" class="taskButton kategorien" onclick="openProfil();">Profil</div>
+            <div id="profil" class="taskButton kategorien" onclick="selectKategorie(0);">Profil</div>
         </div>
 
         <div id="inhalt" class="inhalt">
@@ -52,6 +56,7 @@
                 </div>
 
                 <div id="chats" class="tabinhalt">
+                    <button class="chatButton" onclick="openChat(0)" id="newChat" style="display: none">Max Mustermann</button>
                     <button class="chatButton" onclick="openChat(0)">Chat1</button>
                     <button class="chatButton" onclick="openChat(1)">Chat2</button>
                 </div>
@@ -554,6 +559,53 @@
                             <input name="studiengang" class="chatInput ">
                         </div>
                     </div>
+                </div>
+                
+                <div class="chatNumber">
+                    <div class="chats">
+                        <h2>Max Mustermann</h2>
+
+                        <div class="container left" id="newMessage" style="display: none">
+                            <div class="user">
+                                <p>Avatar 1</p>
+                                <img src="pngs/avatar_1.png" alt="Avatar" style="width:100%;">
+                            </div>
+                            <p>Lamas sind geil</p>
+                            <span class="time-right">20:13</span>
+                        </div>
+
+                        <div class="container">
+                            <input type="image" class="send"
+                                src="https://www.flaticon.com/svg/static/icons/svg/1621/1621595.svg" onclick="addMessage()"/>
+                            <input class="chatInput " id="sent">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="workbench" name="PersonWB" class="workbench">
+                <div class="content">
+                <div class="row">
+                    <div class="col">
+                        <div class="items">Max Mustermann</div>
+                        <div class="items">🌵🦙🦙 Lama lover 🦙🦙🌵</div>
+                        <div class="items">Informatik (B.Sc.)</div>
+                        <div class="items">Semester: 1</div>
+                    </div>
+                    <div class="pic">
+                        <img src="pngs/Person_Icon.png" alt="Profilbild" height="300px">
+                    </div>
+                </div>
+                <div class="row"> <a href="http://lamas.vela.uberspace.de/Homepage/aktuelle-beitrage/" target="_blank">Lama-Blog</a> </div>
+                <div class="row">
+                    <div class="items">Gruppen:</div>
+                    <div>
+                        <div class="items">Gruppe 1</div>
+                        <div class="items">Gruppe 2</div>
+                        <div class="items">Gruppe 3</div>
+                    </div>
+                </div>
+                <input type="button" class="newChatButton" id="selectButton" onclick="openChat(2)" value="Chat">
                 </div>
             </div>
 
