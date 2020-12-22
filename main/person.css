@@ -35,6 +35,19 @@
     margin-right: 20px;
 }
 
+.groups {
+    font-size: 30px;
+    font-family: sans-serif;
+    color: #1e3d59;
+    border: none;
+    margin-top: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    background-color: #f5f0e1;
+    text-align: left;
+    justify-content: top;
+}
+
 .newChatButton {
     border: none;
     border-radius: 25px;
