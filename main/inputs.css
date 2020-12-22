@@ -1,0 +1,34 @@
+.textInput {
+    background-color: white;
+    border: none;
+    height: 30px;
+    outline: none;
+    box-shadow: 0px 0px 3px 1px grey inset;
+    text-align: center;
+}
+
+.numberInput {
+    background-color: white;
+    border: none;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    outline: none;
+    box-shadow: 0px 0px 3px 1px grey inset;
+}
+
+.dateInput {
+    height: 20px;
+    margin-top: 4px;
+    outline: none;
+}
+
+.chatInput {
+    float: left;
+    border: 2px solid #1e3d59;
+    border-radius: 4px;
+    height: 80%;
+    font-size: 24px;
+    font-family: sans-serif;
+    width: 94%;
+}

@@ -1,0 +1,203 @@
+/*Select Button for filter (Person/Group)*/
+
+.buttonContainer {
+    height: 10%;
+    background-color: #1e3d59;
+}
+
+.selectButton {
+    width: 50%;
+    height: 100%;
+    float: left;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 50px;
+    font-family: sans-serif;
+    background-color: #1e3d59;
+    color: #f5f0e1;
+    border: none;
+    border-top: 2px #f5f0e1 solid;
+    border-left: 2px #f5f0e1 solid;
+}
+
+.selectButtonBorder {
+    border-radius: 50px 0px 0px 0px;
+    outline: none;
+}
+
+.selectButton:hover {
+    background-color: #ffc13b;
+    color: #1e3d59;
+}
+
+.timeButton {
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+    background-color: #ff6e40;
+    width: 300px;
+    height: 50px;
+    box-shadow: 0px 0px 3px 1px grey inset;
+}
+
+.timeButton:hover {
+    background-color: #ffc13b;
+}
+
+.searchButton {
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+    background-color: #ff6e40;
+    width: 150px;
+    height: 50px;
+    box-shadow: 0px 0px 3px 1px grey inset;
+}
+
+.searchButton:hover {
+    background-color: #ffc13b;
+}
+
+.safeDate {
+    float: left;
+    margin-left: 20px;
+    margin-top: -25px;
+    border: none;
+    background-color: #ff6e40;
+    width: 60px;
+    height: 30px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.safeDate:hover {
+    background-color: #ffc13b;
+}
+
+.helpContainer {
+    background-color: white;
+    width: 200px;
+    height: auto;
+    float: right;
+}
+
+.helpButton {
+    float: right;
+    margin-right: 30px;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    border: none;
+    width: 35px;
+    height: 35px;
+    background-color: #ff6e40;
+    outline: none;
+    cursor: pointer;
+}
+
+.createButton {
+    float: left;
+    border: none;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+    background-color: #ff6e40;
+    box-shadow: 0px 0px 3px 1px grey inset;
+}
+
+.createButton:hover {
+    background-color: #ffc13b;
+}
+
+.taskButton {
+    margin: 10px;
+    padding: 20px;
+    background-color: #ff6e40;
+    color: black;
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 3px 15px 5px 30px;
+}
+
+.taskButton:hover {
+    cursor: pointer;
+    background-color: #ffc13b;
+    color: black;
+}
+
+.tabs {
+    overflow: hidden;
+    justify-content: center;
+    background-color: #f5f0e1;
+}
+
+.tabs button {
+    color: #f5f0e1;
+    background-color: #1e3d59;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    width: 50%;
+}
+
+/* Change background color of buttons on hover */
+
+.tabs button:hover {
+    background-color: #ffc13b;
+    color: #1e3d59;
+}
+
+/* Create an active/current tablink class */
+
+.tabs button.active {
+    background-color: #f5f0e1;
+    color: #1e3d59;
+}
+
+.eck {
+    border-radius: 0px 0px 0px 15px;
+}
+
+.eck2 {
+    border-radius: 0px 0px 15px 0px;
+}
+
+.send {
+    height: 28px;
+    transform: scaleX(-1);
+    border: 2px solid #1e3d59;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.send:hover {
+    background-color: #ddd;
+}
+
+.chatButton, .groupButton{
+    user-select: none;
+    font-size: 30px;
+    padding: 15px;
+    text-align: center;
+    margin: 5px;
+    color: black;
+    background-color: #ff6e40;
+    border: 1px solid #1e3d59;
+    width:95%;
+    justify-content: center;
+}
+
+.chatButton:hover, .groupButton:hover{
+    cursor: pointer;
+    background-color: #ffc13b;
+}

@@ -1,0 +1,39 @@
+/*
+Alles im Körperbereich
+*/
+
+.list {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-color: #1e3d59;
+    border: 1px solid #1e3d59;
+    margin-top: 50px;
+    height: calc(100% - 51px);
+    border-radius: 0px 0px 0px 0px;
+}
+
+.tabinhalt {
+    display: none;
+    background-color: #f5f0e1;
+    height: 89%;
+    overflow-y: auto;
+}
+
+.tabinhalt div {
+    user-select: none;
+    font-size: 30px;
+    padding: 15px;
+    text-align: center;
+    margin: 5px;
+    color: black;
+    background-color: #ff6e40;
+    border: 1px solid #1e3d59;
+}
+
+.tabinhalt div:hover {
+    cursor: pointer;
+    background-color: #ffc13b;
+}

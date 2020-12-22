@@ -6,7 +6,8 @@ function init(){
     id = "gruppenbutton"; 
     var tab = document.getElementById(id);
     tab.className += " active";
-
+    openChat(-1);
+    openGroup(-1);
     selectTab(0);
     showHelp(3);
     getStud();
@@ -14,8 +15,6 @@ function init(){
     showHelpC(3);
     getStudC();
     selectKategorie(0);
-    window.opener.close();
-
 }
 
 function tabopen(event, id){
@@ -44,7 +43,7 @@ function selectKategorie(index){
 
 
     /*
-    Order: Home, Filter, Suchergebnisse, Neue Gruppe, Prfil, Gruppen, Chats 
+    Order: Home, Filter, Suchergebnisse, Neue Gruppe, Profil, Gruppen, Chats 
     */
     var kat = document.querySelectorAll(".kategorien");
     var workbenches = document.querySelectorAll(".workbench");
@@ -53,6 +52,32 @@ function selectKategorie(index){
         node.style.display ="none";
     });
     workbenches[index].style.display = "block";
+}
+
+function openGroup(index){
+    selectKategorie(5);
+    var buttons = document.querySelectorAll(".groupButtons");
+    var group = document.querySelectorAll(".groupNumber");
+
+    group.forEach(function (node){
+        node.style.display ="none";
+    });
+    if(index != -1){
+       group[index].style.display = "block"; 
+    }
+}
+
+function openChat(index){
+    selectKategorie(6);
+    var buttons = document.querySelectorAll(".chatButtons");
+    var chats = document.querySelectorAll(".chatNumber");
+
+    chats.forEach(function (node){
+        node.style.display ="none";
+    });
+    if(index != -1){
+       chats[index].style.display = "block"; 
+    }
 }
 
 function newGroup(){
@@ -239,4 +264,9 @@ function showHelpC(index){
 function createGroup(){
     selectKategorie(0);
 }
+
+
+
+
+
 

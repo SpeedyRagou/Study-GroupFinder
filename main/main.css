@@ -1,0 +1,30 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #1e3d59;
+    margin: 0;
+    padding: 0;
+    min-height: calc(100vh - 82px);
+    height: calc(100vh - 82px);
+    max-height: calc(100vh - 82px);
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.text {
+    font-size: 30px;
+    font-family: sans-serif;
+    color: #1e3d59;
+}
+
+.innerText {
+    font-size: 20px;
+    font-family: sans-serif;
+}
