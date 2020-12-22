@@ -11,10 +11,10 @@
     <link href="chat.css" type="text/css" rel="stylesheet" />
     <link href="icons.css" type="text/css" rel="stylesheet" />
     <link href="colors.css" type="text/css" rel="stylesheet" />
-    
+
     <link href="person.css" type="text/css" rel="stylesheet" />
     <script language="javascript" type="text/javascript" src="sgf.js"></script>
-    
+
     <meta charset="UTF-8">
 </head>
 
@@ -80,8 +80,8 @@
                             wollen. Diese Filter beziehen sich nur auf Gruppen. Lassen Sie diese Seite unausgefüllt um
                             nur nach Personen zu suchen.</div>
                         <div class="row">
-                            <div class="textContainer"><label for="studiengang" class="text">Name:</label></div>
-                            <input list="studiengang" name="studiengang" class="textInput innerText">
+                            <div class="textContainer"><label for="name" class="text">Name:</label></div>
+                            <input type="text" name="name" class="textInput innerText">
                         </div>
                         <div class="row">
                             <div class="textContainer"><label for="studiengang" class="text">Studiengang:</label></div>
@@ -100,12 +100,12 @@
                             <div class="textContainer"><label for="modul" class="text">Modul:</label></div>
                             <input list="modul" name="modul" class="textInput innerText">
                             <datalist id="modul">
-                                <option value="Informatik (B.Sc.)"></option>
-                                <option value="Informatik (M.Sc.)"></option>
-                                <option value="BWL (B.Sc.)"></option>
-                                <option value="BWL (M.Sc.)"></option>
-                                <option value="Chemie (B.Sc.)"></option>
-                                <option value="Chemie (M.Sc.)"></option>
+                                <option value="Grundlagen Digitaler Systeme"></option>
+                                <option value="It-Sicherheit"></option>
+                                <option value="Lineare Algebra 1"></option>
+                                <option value="Lineare Algebra 2"></option>
+                                <option value="Mensch Comupter Interaktion"></option>
+                                <option value="Analysis 1"></option>
                             </datalist>
                         </div>
 
@@ -171,8 +171,8 @@
                             wollen. Diese Filter beziehen sich nur auf Personen. Lassen Sie diese Seite unausgefüllt um
                             nur nach Gruppen zu suchen.</div>
                         <div class="row">
-                            <div class="textContainer"><label for="studiengang" class="text">Name:</label></div>
-                            <input list="studiengang" name="studiengang" class="textInput innerText">
+                            <div class="textContainer"><label for="name" class="text">Name:</label></div>
+                            <input type="text" name="name" class="textInput innerText">
                         </div>
                         <div class="row">
                             <div class="textContainer"><label for="studiengang" class="text">Studiengang:</label></div>
@@ -306,10 +306,12 @@
                     <div class="tabContentC">
 
                         <button class="helpButton innerText" onclick="showHelpC(0)">?</button>
+                        <div class="helpContainerC innerText" id="help">Pflicht-Felder sind mit einem * gekennzeichnet. Um die Gruppe zu ertstellen, drücken Sie auf "Create Group"</div>
 
                         <div class="rowC">
                             <div class="textContainer"><label for="name" class="text">Name:</label></div>
                             <input type="text" list="name" name="name" class="textInput innerText">
+                            <div class="stern">*</div>
                         </div>
 
                         <div class="rowC">
@@ -334,6 +336,7 @@
                         <div class="rowC">
                             <div class="textContainer"><label for="modul" class="text">Modul:</label></div>
                             <input list="modul" name="modul" class="textInput innerText">
+                            <div class="stern">*</div>
                             <datalist id="modul">
                                 <option value="Grundlagen Digitaler Systeme"></option>
                                 <option value="It-Sicherheit"></option>
@@ -348,11 +351,12 @@
                             <div class="textContainer"><label for="personzahl" class="text">Personzahl:</label></div>
                             <input type="number" , id="personzahl" min="2" max="8" value="2"
                                 class="numberInput innerText" />
+                                <div class="stern">*</div>
                         </div>
 
                         <div class="rowC">
-                            <div class="textContainer"><label for="name" class="text">Orte:</label></div>
-                            <input list="modul" name="modul" class="textInput innerText">
+                            <div class="textContainer"><label for="orte" class="text">Orte:</label></div>
+                            <input type="text" name="orte" class="textInput innerText">
                         </div>
                         <div class="rowC">
                             <button class="timeButton innerText" onclick="selectTabC(1)">Zeiten</button>
@@ -403,7 +407,10 @@
 
                     <div class="tabContentC center">
 
-                        <button class="helpButton innerText" onclick="showHelpC(2)">?</button>
+                        <button class="helpButton innerText" onclick="showHelpC(1)">?</button>
+                        <div class="helpContainerC innerText" id="help">Klicken Sie auf den Button links neben dem
+                            Wochentag, wenn Sie den ganzen Tag haben oder geben Sie recht vom Wochentag einen
+                            spezifischen Zeitraum an</div>
                         <div class="rowdate">
                             <input type="checkbox" name="montag" id="montag">
                             <div class="timeblock"><label for="mittwoch" class="text">Mo:</label></div>
@@ -463,15 +470,29 @@
 
             <div id="workbench" name="profilWB" class="workbench"></div>
             <div id="workbench" name="gruppenWB" class="workbench">
-                
-                <div class="groupNumber"><div class="row innerText">Info zur Gruppe 1</div></div>
-                <div class="groupNumber"><div class="row innerText">Info zur Gruppe 2</div></div>
-                <div class="groupNumber"><div class="row innerText">Info zur Gruppe 3</div></div>
-                <div class="groupNumber"><div class="row innerText">Info zur Gruppe 4</div></div>
-                <div class="groupNumber"><div class="row innerText">Info zur Gruppe 5</div></div>
-                <div class="groupNumber"><div class="row innerText">Info zur Gruppe 6</div></div>
-                <div class="groupNumber"><div class="row innerText">Info zur Gruppe 7</div></div>
-                
+
+                <div class="groupNumber">
+                    <div class="row innerText">Info zur Gruppe 1</div>
+                </div>
+                <div class="groupNumber">
+                    <div class="row innerText">Info zur Gruppe 2</div>
+                </div>
+                <div class="groupNumber">
+                    <div class="row innerText">Info zur Gruppe 3</div>
+                </div>
+                <div class="groupNumber">
+                    <div class="row innerText">Info zur Gruppe 4</div>
+                </div>
+                <div class="groupNumber">
+                    <div class="row innerText">Info zur Gruppe 5</div>
+                </div>
+                <div class="groupNumber">
+                    <div class="row innerText">Info zur Gruppe 6</div>
+                </div>
+                <div class="groupNumber">
+                    <div class="row innerText">Info zur Gruppe 7</div>
+                </div>
+
             </div>
             <div id="workbench" name="chatsWB" class="workbench">
 
@@ -560,7 +581,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="chatNumber">
                     <div class="chats">
                         <h2>Max Mustermann</h2>
@@ -576,25 +597,38 @@
 
                         <div class="container">
                             <input type="image" class="send"
-                                src="https://www.flaticon.com/svg/static/icons/svg/1621/1621595.svg" onclick="addMessage()"/>
+                                src="https://www.flaticon.com/svg/static/icons/svg/1621/1621595.svg"
+                                onclick="addMessage()" />
                             <input class="chatInput " id="sent">
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div id="workbench" name="PersonWB" class="workbench">
                 <div class="content">
-                <div class="row">
-                    <div class="col">
-                        <div class="items">Max Mustermann</div>
-                        <div class="items">🌵🦙🦙 Lama lover 🦙🦙🌵</div>
-                        <div class="items">Informatik (B.Sc.)</div>
-                        <div class="items">Semester: 1</div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="items">Max Mustermann</div>
+                            <div class="items">🌵🦙🦙 Lama lover 🦙🦙🌵</div>
+                            <div class="items">Informatik (B.Sc.)</div>
+                            <div class="items">Semester: 1</div>
+                        </div>
+                        <div class="pic">
+                            <img src="pngs/Person_Icon.png" alt="Profilbild" height="300px">
+                        </div>
                     </div>
-                    <div class="pic">
-                        <img src="pngs/Person_Icon.png" alt="Profilbild" height="300px">
-                    </div>
+<<<<<<< HEAD
+                    <div class="row"> <a href="http://lamas.vela.uberspace.de/Homepage/aktuelle-beitrage/"
+                            target="_blank">Lama-Blog</a> </div>
+                    <div class="row">
+                        <div class="items">Gruppen:</div>
+                        <div>
+                            <div class="items">Gruppe 1</div>
+                            <div class="items">Gruppe 2</div>
+                            <div class="items">Gruppe 3</div>
+                        </div>
+=======
                 </div>
                 <div class="row"> <a href="http://lamas.vela.uberspace.de/Homepage/aktuelle-beitrage/" target="_blank">Lama-Blog</a> </div>
                 <div class="row">
@@ -603,9 +637,9 @@
                         <input type="button" class="groups" onclick="openGroup(0)" value="Gruppe 1">
                         <input type="button" class="groups" onclick="openGroup(1)"  value="Gruppe 2">
                         <input type="button" class="groups" onclick="openGroup(2)"  value="Gruppe 3">
+>>>>>>> 1f04dcea89437b0dd203f324c6bedb5b1cc13892
                     </div>
-                </div>
-                <input type="button" class="newChatButton" id="selectButton" onclick="openChat(2)" value="Chat">
+                    <input type="button" class="newChatButton" id="selectButton" onclick="openChat(2)" value="Chat">
                 </div>
             </div>
 

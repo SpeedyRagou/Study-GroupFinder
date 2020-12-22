@@ -89,7 +89,7 @@ Alles im Aktionsleistenbereich
 
 .row {
     padding-left: 20px;
-    width: 100%;
+    width: auto;
     height: 12%;
     vertical-align: middle;
 }

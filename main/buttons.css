@@ -78,7 +78,7 @@
     background-color: #ffc13b;
 }
 
-.helpContainer {
+.helpContainer, .helpContainerC {
     background-color: white;
     width: 200px;
     height: auto;
