@@ -257,8 +257,15 @@ Alles im Körperbereich
     min-width: 80%;
     max-width: 80%;
 
-    background-color:  whitesmoke;
+    background-color: #f5f0e1;
 
     border-radius: 50px 0px 0px 0px;
+}
+
+.groupbody{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-content: center;
 }
 

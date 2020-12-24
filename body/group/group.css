@@ -1,0 +1,166 @@
+body{
+
+    width: clsc(100vw - 16px);
+    height: calc(100vh - 16px);
+
+    
+}
+
+.groupbench{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+}
+
+.titel{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 10px;
+    color: #1e3d59;
+}
+
+.groupbody{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    width: 90%;
+    height: 90%;
+    
+
+    margin-top: 10px;
+
+
+
+}
+
+.personlist{
+
+    width: 20%;
+    height: 100%;
+    
+    
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: start;
+    
+    background-color: #f5f0e1;
+    
+    border: 1px solid #1e3d59;
+    
+    
+
+    height: 100%;
+    
+    border-radius: 0px 0px 0px 0px;
+
+}
+
+.persontitel{
+    text-align: center;
+    font-size: 30px;
+}
+
+.persontabinhalt{
+
+    background-color: #f5f0e1;
+    
+    
+    height: 100%;
+
+    overflow-y: auto;
+    
+}
+
+.persontabinhalt div{
+
+    user-select: none;
+
+    font-size: 30px;
+
+    padding: 15px;
+    text-align: center;
+
+    margin: 5px;
+
+    color: #1e3d59;
+    background-color: #ff6e40;
+
+    border: 1px solid #1e3d59;
+}
+
+.persontabinhalt div:hover{
+    cursor: pointer;
+    background-color: #ffc13b;
+}
+
+.informationcontainer{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-left: 5px;
+    width: 80%;
+    height: 100%;
+
+    border: 1px solid #1e3d59;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    margin: 20px;
+
+
+}
+
+.time{
+    width: 20%;
+    padding: 25px;
+    font-size: 30px;
+    align-self: center;
+    background-color: #ff6e40;
+}
+
+.time:hover{
+    cursor: pointer;
+    background-color: #ffc13b;
+}
+
+.infotext{
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    color: #ff6e40;
+    background-color: #1e3d59;
+}
+
+.groupbeschreibung{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 50%;
+    height: 100%;
+    margin-bottom: 5px;
+}
+
+.beschreibungtitel{
+    font-size: 30px;
+    text-align: left;
+    color: #1e3d59;
+}
+
+.beschreibunginhalt{
+    overflow-y: auto;
+    border: 1px solid #1e3d59;
+    width: 100%;
+    height: 100%;
+    word-wrap: normal;
+    padding: 5px;
+}
