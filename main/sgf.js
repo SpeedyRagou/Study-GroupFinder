@@ -458,7 +458,11 @@ function createGroup() {
 
     groupList.innerHTML += div;
 
+    loadGroup(numberOfGroups);
+
     numberOfGroups +=1;
+
+    
 
 }
 
