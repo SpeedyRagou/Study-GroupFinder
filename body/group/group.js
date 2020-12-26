@@ -42,7 +42,7 @@ for (let index = 0; index < names.length; index++) {
     persons.push(new Person(names[index]));
 }
 
-var titel = ["Die furiosen Fünf", "1, 2, 3 und 4", "Öfter unterwegs", "Prokrstination for the Win"];
+var titel = ["Die furiosen Fünf", "1, 2, 3 und 4", "Öfter unterwegs", "Prokrastination for the Win"];
 var mitgl = [[persons[0], persons[1], persons[2]], [persons[4], persons[1], persons[0], persons[5]], [persons[1], persons[4],persons[0]], [persons[2], persons[1], persons[0], persons[5]]];
 var max = [6,8,5,10];
 var med = [["WhatsApp", "Discord"], ["E-Mail"], ["Telegram"], ["SMS", "WhatsApp", "Discord"]];
