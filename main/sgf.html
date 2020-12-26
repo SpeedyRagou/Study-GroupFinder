@@ -12,6 +12,7 @@
     <link href="icons.css" type="text/css" rel="stylesheet" />
     <link href="colors.css" type="text/css" rel="stylesheet" />
     <link href="profile.css" type="text/css" rel="stylesheet" />
+    <link href="group.css" type="text/css" rel="stylesheet" />
 
     <link href="person.css" type="text/css" rel="stylesheet" />
     <script language="javascript" type="text/javascript" src="sgf.js"></script>
@@ -47,13 +48,11 @@
 
                 <div id="gruppen" class="tabinhalt">
 
-                    <button class="groupButton" onclick="openGroup(0)">Gr1</button>
-                    <button class="groupButton" onclick="openGroup(1)">Gr2</button>
-                    <button class="groupButton" onclick="openGroup(2)">Gr3</button>
-                    <button class="groupButton" onclick="openGroup(3)">Gr4</button>
-                    <button class="groupButton" onclick="openGroup(4)">Gr5</button>
-                    <button class="groupButton" onclick="openGroup(5)">Gr6</button>
-                    <button class="groupButton" onclick="openGroup(6)">Gr7</button>
+                    <button class="groupButton" onclick="loadGroup(0)">Die furiosen Fünf</button>
+                    <button class="groupButton" onclick="loadGroup(1)">1, 2, 3 und 4</button>
+                    <button class="groupButton" onclick="loadGroup(2)">Öfter unterwegs</button>
+                    <button class="groupButton" onclick="loadGroup(3)">Prokrastination for the Win</button>
+                    
                 </div>
 
                 <div id="chats" class="tabinhalt">
@@ -313,19 +312,19 @@
 
                         <div class="rowC">
                             <div class="textContainer"><label for="name" class="text">Name:</label></div>
-                            <input type="text" list="name" name="name" class="textInput innerText">
+                            <input type="text" id = "name" list="name" name="name" class="textInput innerText">
                             <div class="stern">*</div>
                         </div>
 
                         <div class="rowC">
                             <div class="textContainer"><label for="beschreibung" class="text">Beschreibung:</label>
                             </div>
-                            <input list="beschreibung" name="beschreibung" class="textInput innerText">
+                            <input id ="beschreibung" list="beschreibung" name="beschreibung" class="textInput innerText">
                         </div>
 
                         <div class="rowC">
                             <div class="textContainer"><label for="studiengang" class="text">Studiengang:</label></div>
-                            <input list="studiengang" name="studiengang" class="textInput innerText">
+                            <input id= "studiengang" list="studiengang" name="studiengang" class="textInput innerText">
                             <datalist id="studiengang">
                                 <option value="Informatik (B.Sc.)"></option>
                                 <option value="Informatik (M.Sc.)"></option>
@@ -338,7 +337,7 @@
 
                         <div class="rowC">
                             <div class="textContainer"><label for="modul" class="text">Modul:</label></div>
-                            <input list="modul" name="modul" class="textInput innerText">
+                            <input id="modulIn" list="modul" name="modul" class="textInput innerText">
                             <div class="stern">*</div>
                             <datalist id="modul">
                                 <option value="Grundlagen Digitaler Systeme"></option>
@@ -352,14 +351,14 @@
 
                         <div class="rowC">
                             <div class="textContainer"><label for="personzahl" class="text">Personzahl:</label></div>
-                            <input type="number" , id="personzahl" min="2" max="8" value="2"
+                            <input id = "person" type="number" , id="personzahl" min="2" max="8" value="2"
                                 class="numberInput innerText" />
                             <div class="stern">*</div>
                         </div>
 
                         <div class="rowC">
                             <div class="textContainer"><label for="orte" class="text">Orte:</label></div>
-                            <input type="text" name="orte" class="textInput innerText">
+                            <input id= "orte" type="text" name="orte" class="textInput innerText">
                         </div>
                         <div class="rowC">
                             <button class="timeButton innerText" onclick="selectTabC(1)">Zeiten</button>
@@ -368,7 +367,7 @@
 
                         <div class="rowC">
                             <div class="textContainer"><label for="semester" class="text">Semester:</label></div>
-                            <input type="number" , id="semester" min="1" value="1" class="numberInput innerText" />
+                            <input type="number" id="semester" min="1" value="1" class="numberInput innerText" />
                         </div>
 
                         <div class="text media">Media:</div>
@@ -377,25 +376,25 @@
                             <div class="mediaBar">
                                 <img src="icons/whatsapp.png" class="mediaicons">
                                 <label for="whatsApp" class="text">WhatsApp:</label>
-                                <input type="checkbox" id="whatsApp" class= />
+                                <input type="checkbox" id="WAin" class= />
                             </div>
 
                             <div class="mediaBar">
                                 <img src="icons/discord.png" class="mediaicons">
                                 <label for="discord" class="text">Discord:</label>
-                                <input type="checkbox" id="discord" class= />
+                                <input type="checkbox" id="disIn" class= />
                             </div>
 
                             <div class="mediaBar">
                                 <img src="icons/gmail.png" class="mediaicons">
                                 <label for="mail" class="text">E-Mail:</label>
-                                <input type="checkbox" id="mail" />
+                                <input type="checkbox" id="mailIn" />
                             </div>
 
                             <div class="mediaBar">
                                 <img src="icons/teams.png" class="mediaicons">
                                 <label for="teams" class="text">MS-Teams:</label>
-                                <input type="checkbox" id="teams" />
+                                <input type="checkbox" id="teamsIn" />
                             </div>
 
                         </div>
@@ -490,31 +489,40 @@
             </div>
         
         
-            <div id="workbench" name="gruppenWB" class="workbench">
-
-                <div class="groupNumber">
-                    <div class="row innerText">Info zur Gruppe 1</div>
+            <div id="groupbench" class="groupbench workbench">
+                <div id="groupname" class="titel"></div>
+                <div id="groupbody" class="groupbody">
+    
+                    <div id="personlist" class="personlist">
+                        <div class="persontitel">Mitglieder:</div>
+    
+                        <div id="personen" class="persontabinhalt"></div>
+                    </div>
+    
+                    <div class="informationcontainer">
+                        <div class="contl">
+                            <div class="container">
+                                <div id="mod" class="infotext">Modul: Analysis B</div>
+                                <div id="ort" class="infotext"></div>
+                            </div>
+                            <div class="container">
+                                <div id="media" class="infotext"></div>
+                                <div id="mitgliederanzahl" class="infotext"></div>
+                            </div>
+                        </div>
+                        
+    
+                        <button class="time">Zeiten</button>
+                        
+                        <div id="groupbeschreibung" class="groupbeschreibung">
+                            <div class="beschreibungtitel">Beschreibung:</div>
+                            <div id="beschreibunginhalt" class="beschreibunginhalt">BlaBlaBla</div>
+                        </div>
+                    </div>
+    
                 </div>
-                <div class="groupNumber">
-                    <div class="row innerText">Info zur Gruppe 2</div>
-                </div>
-                <div class="groupNumber">
-                    <div class="row innerText">Info zur Gruppe 3</div>
-                </div>
-                <div class="groupNumber">
-                    <div class="row innerText">Info zur Gruppe 4</div>
-                </div>
-                <div class="groupNumber">
-                    <div class="row innerText">Info zur Gruppe 5</div>
-                </div>
-                <div class="groupNumber">
-                    <div class="row innerText">Info zur Gruppe 6</div>
-                </div>
-                <div class="groupNumber">
-                    <div class="row innerText">Info zur Gruppe 7</div>
-                </div>
-
             </div>
+
             <div id="workbench" name="chatsWB" class="workbench">
 
                 <div class="chatNumber">
