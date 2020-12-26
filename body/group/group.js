@@ -42,6 +42,8 @@ for (let index = 0; index < names.length; index++) {
     persons.push(new Person(names[index]));
 }
 
+
+//Erstellt Testset an Gruppen
 var titel = ["Die furiosen Fünf", "1, 2, 3 und 4", "Öfter unterwegs", "Prokrastination for the Win"];
 var mitgl = [[persons[0], persons[1], persons[2]], [persons[4], persons[1], persons[0], persons[5]], [persons[1], persons[4],persons[0]], [persons[2], persons[1], persons[0], persons[5]]];
 var max = [6,8,5,10];
@@ -56,29 +58,36 @@ for (let index = 0; index < titel.length; index++) {
     
 }
 
-
+//pos ist der index im groups array
 function loadGroup(pos) {
     var group = groups[pos];
 
+    //Setzt den Namen der gruppe in der View
     var groupname = document.getElementById("groupname");
     groupname.innerHTML = group.name;
 
+    
     var personen = document.getElementById("personen");
+
+    //deletes all persons from view
     personen.innerHTML = '';
 
-    console.log(personen);
-
+    //adding all person from group to view
     group.mitglieder.forEach(element => {
         var el = document.createElement("div");
         el.innerHTML = element.name;
         personen.appendChild(el);
     });
 
+    //sets the modul of the group to the view
     var mod = document.getElementById("modul");
     mod.innerHTML = "Modul: " + group.fach;
 
+    // sets all the lernort of the view
     var ort = document.getElementById("ort");
     var msg = "";
+
+    //formats the data
     if(group.lernort.length <= 1){
         if(group.lernort.length == 0){
 
@@ -95,9 +104,13 @@ function loadGroup(pos) {
 
     ort.innerHTML = "Lernort: " + msg
 
+
+    //sets the media for the view
     var media = document.getElementById("media");
 
     msg = "";
+
+    //formats the media data
     if(group.media.length <= 1){
         if(group.media.length <= 0){
 
@@ -114,9 +127,12 @@ function loadGroup(pos) {
 
     media.innerHTML = "Media: " + msg;
 
+    //sets the max count of persons in the group to the view
     var anzahl = document.getElementById("mitgliederanzahl");
     anzahl.innerHTML = "Max. Mitglieder: " + group.max_mitglieder.toString();
 
+
+    // sets the description of the group in the view
     var bes = document.getElementById("beschreibunginhalt");
     bes.innerHTML = group.beschreibung;
 }
