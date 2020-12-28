@@ -52,7 +52,7 @@
                     <button class="groupButton" onclick="loadGroup(1)">1, 2, 3 und 4</button>
                     <button class="groupButton" onclick="loadGroup(2)">Öfter unterwegs</button>
                     <button class="groupButton" onclick="loadGroup(3)">Prokrastination for the Win</button>
-                    
+
                 </div>
 
                 <div id="chats" class="tabinhalt">
@@ -71,8 +71,8 @@
 
 
                     <div class="buttonContainer">
-                        <button class="selectButton selectButtonBorder" onclick="selectTab(0)">Groups</button>
-                        <button class="selectButton" onclick="selectTab(1)">Person</button>
+                        <button class="selectButton selectButtonBorder eck3" onclick="selectTab(0)">Groups</button>
+                        <button class="selectButton eck4" onclick="selectTab(1)">Person</button>
                     </div>
                     <div class="tabContent">
 
@@ -312,19 +312,20 @@
 
                         <div class="rowC">
                             <div class="textContainer"><label for="name" class="text">Name:</label></div>
-                            <input type="text" id = "name" list="name" name="name" class="textInput innerText">
+                            <input type="text" id="name" list="name" name="name" class="textInput innerText">
                             <div class="stern">*</div>
                         </div>
 
                         <div class="rowC">
                             <div class="textContainer"><label for="beschreibung" class="text">Beschreibung:</label>
                             </div>
-                            <input id ="beschreibung" list="beschreibung" name="beschreibung" class="textInput innerText">
+                            <input id="beschreibung" list="beschreibung" name="beschreibung"
+                                class="textInput innerText">
                         </div>
 
                         <div class="rowC">
                             <div class="textContainer"><label for="studiengang" class="text">Studiengang:</label></div>
-                            <input id= "studiengang" list="studiengang" name="studiengang" class="textInput innerText">
+                            <input id="studiengang" list="studiengang" name="studiengang" class="textInput innerText">
                             <datalist id="studiengang">
                                 <option value="Informatik (B.Sc.)"></option>
                                 <option value="Informatik (M.Sc.)"></option>
@@ -351,14 +352,14 @@
 
                         <div class="rowC">
                             <div class="textContainer"><label for="personzahl" class="text">Personzahl:</label></div>
-                            <input id = "person" type="number" , id="personzahl" min="2" max="8" value="2"
+                            <input id="person" type="number" , id="personzahl" min="2" max="8" value="2"
                                 class="numberInput innerText" />
                             <div class="stern">*</div>
                         </div>
 
                         <div class="rowC">
                             <div class="textContainer"><label for="orte" class="text">Orte:</label></div>
-                            <input id= "orte" type="text" name="orte" class="textInput innerText">
+                            <input id="orte" type="text" name="orte" class="textInput innerText">
                         </div>
                         <div class="rowC">
                             <button class="timeButton innerText" onclick="selectTabC(1)">Zeiten</button>
@@ -473,32 +474,32 @@
             <div id="workbench" name="profilWB" class="workbench">
                 <div class="content">
                     <h3>Profil</h3>
-                    <div class="flip-profilepic" >
+                    <div class="flip-profilepic">
                         <div class="flip-profilepic-inner">
                             <div class="flip-profilepic-front">
                                 <img src="pngs/image.jpg" alt="Profilbild" style="width:300px;height:300px;">
                             </div>
                             <div class="flip-profilepic-back">
-                                <h2>Profilbild:</h2> 
-                                <p>Bild ändern</p> 
+                                <h2>Profilbild:</h2>
+                                <p>Bild ändern</p>
                                 <p>Bild löschen</p>
                             </div>
                         </div>
-                    </div>       
+                    </div>
                 </div>
             </div>
-        
-        
+
+
             <div id="groupbench" class="groupbench workbench">
                 <div id="groupname" class="titel"></div>
                 <div id="groupbody" class="groupbody">
-    
+
                     <div id="personlist" class="personlist">
                         <div class="persontitel">Mitglieder:</div>
-    
+
                         <div id="personen" class="persontabinhalt"></div>
                     </div>
-    
+
                     <div class="informationcontainer">
                         <div class="contl">
                             <div class="groupContainer">
@@ -510,16 +511,16 @@
                                 <div id="mitgliederanzahl" class="infotext"></div>
                             </div>
                         </div>
-                        
-    
+
+
                         <button class="time">Zeiten</button>
-                        
+
                         <div id="groupbeschreibung" class="groupbeschreibung">
                             <div class="beschreibungtitel">Beschreibung:</div>
                             <div id="beschreibunginhalt" class="beschreibunginhalt">BlaBlaBla</div>
                         </div>
                     </div>
-    
+
                 </div>
             </div>
 
@@ -529,84 +530,90 @@
                     <div class="chats">
                         <h2>Chat Messages</h2>
 
-                        <div class="container left">
-                            <div class="user">
-                                <p>Avatar 1</p>
-                                <img src="pngs/avatar_1.png" alt="Avatar" style="width:100%;">
+                        <div class="chat1" id="chat1">
+                            <div class="container left">
+                                <div class="user">
+                                    <p>Avatar 1</p>
+                                    <img src="pngs/avatar_1.png" alt="Avatar" style="width:100%;">
+                                </div>
+                                <p>Hello. How are you today?</p>
+                                <span class="time-right">11:00</span>
                             </div>
-                            <p>Hello. How are you today?</p>
-                            <span class="time-right">11:00</span>
-                        </div>
 
-                        <div class="container darker right">
-                            <div class="user">
-                                <p>Avatar 2</p>
-                                <img src="pngs/avatar_2.png" alt="Avatar" class="right" style="width:100%;">
+                            <div class="container darker right">
+                                <div class="user">
+                                    <p>Avatar 2</p>
+                                    <img src="pngs/avatar_2.png" alt="Avatar" class="right" style="width:100%;">
+                                </div>
+                                <p>Hey! I'm fine. Thanks for asking!</p>
+                                <span class="time-left">11:01</span>
                             </div>
-                            <p>Hey! I'm fine. Thanks for asking!</p>
-                            <span class="time-left">11:01</span>
-                        </div>
 
-                        <div class="container left">
-                            <div class="user">
-                                <p>Avatar 1</p>
-                                <img src="pngs/avatar_1.png" alt="Avatar" style="width:100%;">
+                            <div class="container left">
+                                <div class="user">
+                                    <p>Avatar 1</p>
+                                    <img src="pngs/avatar_1.png" alt="Avatar" style="width:100%;">
+                                </div>
+                                <p>Sweet! So, what do you wanna do today?</p>
+                                <span class="time-right">11:02</span>
                             </div>
-                            <p>Sweet! So, what do you wanna do today?</p>
-                            <span class="time-right">11:02</span>
-                        </div>
 
-                        <div class="container darker right">
-                            <div class="user">
-                                <p>Avatar 2</p>
-                                <img src="pngs/avatar_1.png" alt="Avatar" class="right" style="width:100%;">
+                            <div class="container darker right">
+                                <div class="user">
+                                    <p>Avatar 2</p>
+                                    <img src="pngs/avatar_2.png" alt="Avatar" class="right" style="width:100%;">
+                                </div>
+                                <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+                                <span class="time-left">11:05</span>
                             </div>
-                            <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
-                            <span class="time-left">11:05</span>
                         </div>
 
                         <div class="container">
                             <input type="image" class="send"
-                                src="https://www.flaticon.com/svg/static/icons/svg/1621/1621595.svg" />
-                            <input name="studiengang" class="chatInput ">
+                                src="https://www.flaticon.com/svg/static/icons/svg/1621/1621595.svg"
+                                onclick="newMessage(1)" />
+                            <input name="studiengang" id="chatInput1" class="chatInput">
                         </div>
                     </div>
                 </div>
                 <div class="chatNumber">
                     <div class="chats">
                         <h2>Chat Messages</h2>
-
-                        <div class="container left">
-                            <div class="user">
-                                <p>Avatar 1</p>
-                                <img src="pngs/avatar_1.png" alt="Avatar" style="width:100%;">
+                        <div class="chat2" id="chat2">
+                            <div class="container left">
+                                <div class="user">
+                                    <p>Avatar 1</p>
+                                    <img src="pngs/avatar_1.png" alt="Avatar" style="width:100%;">
+                                </div>
+                                <p>Hier steht tatsächlich ein anderer Text</p>
+                                <span class="time-right">05:00</span>
                             </div>
-                            <p>Hier steht tatsächlich ein anderer Text</p>
-                            <span class="time-right">05:00</span>
-                        </div>
 
-                        <div class="container darker right">
-                            <div class="user">
-                                <p>Avatar 2</p>
-                                <img src="pngs/avatar_2.png" alt="Avatar" class="right" style="width:100%;">
+                            <div class="container darker right">
+                                <div class="user">
+                                    <p>Avatar 2</p>
+                                    <img src="pngs/avatar_2.png" alt="Avatar" class="right" style="width:100%;">
+                                </div>
+                                <p>Ja das stimmt, sogar die Uhrzeiten sind anders!</p>
+                                <span class="time-left">18:09</span>
                             </div>
-                            <p>Ja das stimmt, sogar die Uhrzeiten sind anders!</p>
-                            <span class="time-left">18:09</span>
-                        </div>
 
-                        <div class="container left">
-                            <div class="user">
-                                <p>Avatar 1</p>
-                                <img src="pngs/avatar_1.png" alt="Avatar" style="width:100%;">
+                            <div class="container left">
+                                <div class="user">
+                                    <p>Avatar 1</p>
+                                    <img src="pngs/avatar_1.png" alt="Avatar" style="width:100%;">
+                                </div>
+                                <p>Und die länge des Chats</p>
+                                <span class="time-right">23:07</span>
                             </div>
-                            <p>Und die länge des Chats</p>
-                            <span class="time-right">23:07</span>
+
                         </div>
 
                         <div class="container">
                             <input type="image" class="send"
-                                src="https://www.flaticon.com/svg/static/icons/svg/1621/1621595.svg" />
-                            <input name="studiengang" class="chatInput ">
+                                src="https://www.flaticon.com/svg/static/icons/svg/1621/1621595.svg"
+                                onclick="newMessage(2)" />
+                            <input name="studiengang" id="chatInput2" class="chatInput">
                         </div>
                     </div>
                 </div>
@@ -614,21 +621,14 @@
                 <div class="chatNumber">
                     <div class="chats">
                         <h2>Max Mustermann</h2>
+                                <div class="chat3" id ="chat3">
 
-                        <div class="container left" id="newMessage" style="display: none">
-                            <div class="user">
-                                <p>Avatar 1</p>
-                                <img src="pngs/avatar_1.png" alt="Avatar" style="width:100%;">
-                            </div>
-                            <p>Lamas sind geil</p>
-                            <span class="time-right">20:13</span>
-                        </div>
-
+                                </div>
                         <div class="container">
                             <input type="image" class="send"
                                 src="https://www.flaticon.com/svg/static/icons/svg/1621/1621595.svg"
-                                onclick="addMessage()" />
-                            <input class="chatInput " id="sent">
+                                onclick="newMessage(3)" />
+                            <input class="chatInput " id="chatInput3">
                         </div>
                     </div>
                 </div>
@@ -657,7 +657,7 @@
                             <div class="items">Gruppe 3</div>
                         </div>
                     </div>
-                    <input type="button" class="newChatButton" id="selectButton" onclick="openChat(2)" value="Chat">
+                    <input type="button" class="newChatButton" id="selectButton" onclick="openChat(2); addChat()" value="Chat">
                 </div>
             </div>
         </div>
