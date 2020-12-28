@@ -94,8 +94,21 @@ function openProfil() {
     selectKategorie(4)
 }
 
-function openPerson() {
+function openPerson(name) {
     selectKategorie(7);
+    console.log(name);
+    
+    var persons = document.querySelectorAll(".personNumber");
+
+    persons.forEach(function (node) {
+        node.style.display = "none";
+    });
+    
+    for(var i = 0; i < persons.length; i++){
+        if (persons[i].id == name) {
+            persons[i].style.display = "block";
+        }
+    }
 }
 
 function eingabePlaceholder(event) {
@@ -192,7 +205,9 @@ function showHelp(index) {
 }
 
 function searchPerson() {
+    
     selectKategorie(7);
+    openPerson("Max Mustermann");
 }
 
 function searchGroup() {
@@ -350,6 +365,10 @@ function loadGroup(pos) {
     group.mitglieder.forEach(element => {
         var el = document.createElement("div");
         el.innerHTML = element.name;
+        
+        el.onclick = function(){
+            openPerson(element.name)
+        };
         personen.appendChild(el);
     });
 

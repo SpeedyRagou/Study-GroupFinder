@@ -235,7 +235,7 @@
 
                         <button class="helpButton innerText" onclick="showHelp(2)">?</button>
                         <div class="helpContainer innerText" id="help">Klicken Sie auf den Button links neben dem
-                            Wochentag, wenn Sie den ganzen Tag haben oder geben Sie recht vom Wochentag einen
+                            Wochentag, wenn Sie den ganzen Tag Zeit haben oder geben Sie rechts vom Wochentag einen
                             spezifischen Zeitraum an</div>
 
                         <div class="rowdate">
@@ -307,8 +307,8 @@
                     <div class="tabContentC">
 
                         <button class="helpButton innerText" onclick="showHelpC(0)">?</button>
-                        <div class="helpContainerC innerText" id="help">Pflicht-Felder sind mit einem * gekennzeichnet.
-                            Um die Gruppe zu ertstellen, drücken Sie auf "Create Group"</div>
+                        <div class="helpContainerC innerText" id="help">Pflicht-Felder sind mit "*"  gekennzeichnet.
+                            Um die Gruppe zu erstellen, drücken Sie auf "Create Group"</div>
 
                         <div class="rowC">
                             <div class="textContainer"><label for="name" class="text">Name:</label></div>
@@ -412,7 +412,7 @@
 
                         <button class="helpButton innerText" onclick="showHelpC(1)">?</button>
                         <div class="helpContainerC innerText" id="help">Klicken Sie auf den Button links neben dem
-                            Wochentag, wenn Sie den ganzen Tag haben oder geben Sie recht vom Wochentag einen
+                            Wochentag, wenn Sie den ganzen Tag Zeit haben oder geben Sie rechts vom Wochentag einen
                             spezifischen Zeitraum an</div>
                         <div class="rowdate">
                             <input type="checkbox" name="montag" id="montag">
@@ -620,7 +620,7 @@
 
                 <div class="chatNumber">
                     <div class="chats">
-                        <h2>Max Mustermann</h2>
+                        <h2 style="cursor:pointer" onclick='openPerson("Max Mustermann")'>Max Mustermann</h2>
                                 <div class="chat3" id ="chat3">
 
                                 </div>
@@ -635,30 +635,87 @@
             </div>
 
             <div id="workbench" name="PersonWB" class="workbench">
-                <div class="content">
-                    <div class="row">
-                        <div class="col">
-                            <div class="items">Max Mustermann</div>
-                            <div class="items">🌵🦙🦙 Lama lover 🦙🦙🌵</div>
-                            <div class="items">Informatik (B.Sc.)</div>
-                            <div class="items">Semester: 1</div>
+                <div class="personNumber" id="Max Mustermann">
+                    <div class="content">
+                        <div class="row">
+                            <div class="col">
+                                <div class="items">Max Mustermann</div>
+                                <div class="items">🌵🦙🦙 Lama lover 🦙🦙🌵</div>
+                                <div class="items">Informatik (B.Sc.)</div>
+                                <div class="items">Semester: 1</div>
+                            </div>
+                            <div class="pic">
+                                <img src="pngs/Person_Icon.png" alt="Profilbild" height="300px">
+                                    </div>
                         </div>
-                        <div class="pic">
-                            <img src="pngs/Person_Icon.png" alt="Profilbild" height="300px">
-                        </div>
-                    </div>
-                    <div class="row"> <a href="http://lamas.vela.uberspace.de/Homepage/aktuelle-beitrage/"
+                        <div class="row"> <a href="http://lamas.vela.uberspace.de/Homepage/aktuelle-beitrage/"
                             target="_blank">Lama-Blog</a> </div>
-                    <div class="row">
-                        <div class="items">Gruppen:</div>
-                        <div>
-                            <div class="items">Gruppe 1</div>
-                            <div class="items">Gruppe 2</div>
-                            <div class="items">Gruppe 3</div>
+                        <div class="row">
+                            <div class="items">Gruppen:</div>
+                            <div>
+                                <div class="items">Gruppe 1</div>
+                                <div class="items">Gruppe 2</div>
+                                <div class="items">Gruppe 3</div>
+                            </div>
                         </div>
+                        <input type="button" class="newChatButton" id="selectButton" onclick="openChat(2); addChat()" value="Chat">
                     </div>
-                    <input type="button" class="newChatButton" id="selectButton" onclick="openChat(2); addChat()" value="Chat">
                 </div>
+                
+                <div class="personNumber" id="Malte Kuhlmann">
+                    <div class="content">
+                        <div class="row">
+                            <div class="col">
+                                <div class="items">Malte Kuhlmann</div>
+                                <div class="items"> </div>
+                                <div class="items">Informatik (B.Sc.)</div>
+                                <div class="items">Semester: 5</div>
+                            </div>
+                            <div class="pic">
+                                <img src="pngs/Person_Icon.png" alt="Profilbild" height="300px">
+                                    </div>
+                        </div>
+                        <div class="row"> <a href="http://lamas.vela.uberspace.de/Homepage/aktuelle-beitrage/"
+                            target="_blank">Lama-Blog</a> </div>
+                        <div class="row">
+                            <div class="items">Gruppen:</div>
+                            <div>
+                                <div class="items">Gruppe 1</div>
+                                <div class="items">Gruppe 2</div>
+                                <div class="items">Gruppe 3</div>
+                            </div>
+                        </div>
+                        <input type="button" class="newChatButton" id="selectButton" onclick="openChat(2); addChat()" value="Chat">
+                    </div>
+                </div>
+                
+                <div class="personNumber" id="Gustav Gans">
+                    <div class="content">
+                        <div class="row">
+                            <div class="col">
+                                <div class="items">Gustav Gans</div>
+                                <div class="items"> Samstag ist Gans-Tag </div>
+                                <div class="items">Informatik (B.Sc.)</div>
+                                <div class="items">Semester: 9</div>
+                            </div>
+                            <div class="pic">
+                                <img src="pngs/Person_Icon.png" alt="Profilbild" height="300px">
+                                    </div>
+                        </div>
+                        <div class="row"> <a href=""
+                            target="_blank"></a> </div>
+                        <div class="row">
+                            <div class="items">Gruppen:</div>
+                            <div>
+                                <div class="items">Gruppe 1</div>
+                                <div class="items">Gruppe 2</div>
+                                <div class="items">Gruppe 3</div>
+                            </div>
+                        </div>
+                        <input type="button" class="newChatButton" id="selectButton" onclick="openChat(2); addChat()" value="Chat">
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
