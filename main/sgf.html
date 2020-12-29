@@ -56,10 +56,15 @@
                 </div>
 
                 <div id="chats" class="tabinhalt">
-                    <button class="chatButton" onclick="openChat(2)" id="newChat" style="display: none">Max
-                        Mustermann</button>
-                    <button class="chatButton" onclick="openChat(0)">Chat1</button>
-                    <button class="chatButton" onclick="openChat(1)">Chat2</button>
+                    <button class="chatButton" onclick="openChat(2)" id="newChat2" style="display: none">Max Mustermann</button>
+                    <button class="chatButton" onclick="openChat(3)" id="newChat3" style="display: none">Malte Kuhlmann</button>
+                    <button class="chatButton" onclick="openChat(4)" id="newChat4" style="display: none">Gustav Gans</button>
+                    <button class="chatButton" onclick="openChat(5)" id="newChat5" style="display: none">Klaus Müller</button>
+                    <button class="chatButton" onclick="openChat(6)" id="newChat6" style="display: none">Daniel Bach</button>
+                    <button class="chatButton" onclick="openChat(7)" id="newChat7" style="display: none">Anna Mühlheim</button>
+                    
+                    <button class="chatButton" onclick="openChat(0)" id="newChat0">Chat1</button>
+                    <button class="chatButton" onclick="openChat(1)" id="newChat1">Chat2</button>
                 </div>
             </div>
 
@@ -632,6 +637,82 @@
                         </div>
                     </div>
                 </div>
+                
+                <div class="chatNumber">
+                    <div class="chats">
+                        <h2 style="cursor:pointer" onclick='openPerson("Malte Kuhlmann")'>Malte Kuhlmann</h2>
+                                <div class="chat4" id ="chat4">
+
+                                </div>
+                        <div class="container">
+                            <input type="image" class="send"
+                                src="https://www.flaticon.com/svg/static/icons/svg/1621/1621595.svg"
+                                onclick="newMessage(4)" />
+                            <input class="chatInput " id="chatInput4">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chatNumber">
+                    <div class="chats">
+                        <h2 style="cursor:pointer" onclick='openPerson("Gustav Gans")'>Gustav Gans</h2>
+                                <div class="chat5" id ="chat5">
+
+                                </div>
+                        <div class="container">
+                            <input type="image" class="send"
+                                src="https://www.flaticon.com/svg/static/icons/svg/1621/1621595.svg"
+                                onclick="newMessage(5)" />
+                            <input class="chatInput " id="chatInput5">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chatNumber">
+                    <div class="chats">
+                        <h2 style="cursor:pointer" onclick='openPerson("Klaus Müller")'>Klaus Müller</h2>
+                                <div class="chat6" id ="chat6">
+
+                                </div>
+                        <div class="container">
+                            <input type="image" class="send"
+                                src="https://www.flaticon.com/svg/static/icons/svg/1621/1621595.svg"
+                                onclick="newMessage(6)" />
+                            <input class="chatInput " id="chatInput6">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chatNumber">
+                    <div class="chats">
+                        <h2 style="cursor:pointer" onclick='openPerson("Daniel Bach")'>Daniel Bach</h2>
+                                <div class="chat7" id ="chat7">
+
+                                </div>
+                        <div class="container">
+                            <input type="image" class="send"
+                                src="https://www.flaticon.com/svg/static/icons/svg/1621/1621595.svg"
+                                onclick="newMessage(7)" />
+                            <input class="chatInput " id="chatInput7">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chatNumber">
+                    <div class="chats">
+                        <h2 style="cursor:pointer" onclick='openPerson("Anna Mühlheim")'>Anna Mühlheim</h2>
+                                <div class="chat8" id ="chat8">
+
+                                </div>
+                        <div class="container">
+                            <input type="image" class="send"
+                                src="https://www.flaticon.com/svg/static/icons/svg/1621/1621595.svg"
+                                onclick="newMessage(8)" />
+                            <input class="chatInput " id="chatInput8">
+                        </div>
+                    </div>
+                </div>
+                
             </div>
 
             <div id="workbench" name="PersonWB" class="workbench">
@@ -653,12 +734,10 @@
                         <div class="row">
                             <div class="items">Gruppen:</div>
                             <div>
-                                <div class="items">Gruppe 1</div>
-                                <div class="items">Gruppe 2</div>
-                                <div class="items">Gruppe 3</div>
+                                <div class="items"> - </div>
                             </div>
                         </div>
-                        <input type="button" class="newChatButton" id="selectButton" onclick="openChat(2); addChat()" value="Chat">
+                        <input type="button" class="newChatButton" id="selectButton" onclick="openChat(2)" value="Chat">
                     </div>
                 </div>
                 
@@ -676,16 +755,17 @@
                                     </div>
                         </div>
                         <div class="row"> <a href="http://lamas.vela.uberspace.de/Homepage/aktuelle-beitrage/"
-                            target="_blank">Lama-Blog</a> </div>
+                            target="_blank"></a> </div>
                         <div class="row">
                             <div class="items">Gruppen:</div>
                             <div>
-                                <div class="items">Gruppe 1</div>
-                                <div class="items">Gruppe 2</div>
-                                <div class="items">Gruppe 3</div>
+                                <div class="items">Die furiosen Fünf</div>
+                                <div class="items">1, 2, 3 und 4</div>
+                                <div class="items">Öfter unterwegs</div>
+                                <div class="items">Prokrastination for the Win</div>
                             </div>
                         </div>
-                        <input type="button" class="newChatButton" id="selectButton" onclick="openChat(2); addChat()" value="Chat">
+                        <input type="button" class="newChatButton" id="selectButton" onclick="openChat(3)" value="Chat">
                     </div>
                 </div>
                 
@@ -702,17 +782,96 @@
                                 <img src="pngs/Person_Icon.png" alt="Profilbild" height="300px">
                                     </div>
                         </div>
-                        <div class="row"> <a href=""
+                        <div class="row"><a href="http://trumpisafuckingidiot.com"
+                            target="_blank"> http://trumpisafuckingidiot.com</a> </div>
+                        <div class="row">
+                            <div class="items">Gruppen:</div>
+                            <div>
+                                <div class="items">Die furiosen Fünf</div>
+                                <div class="items">1, 2, 3 und 4</div>
+                                <div class="items">Öfter unterwegs</div>
+                                <div class="items">Prokrastination for the Win</div>
+                            </div>
+                        </div>
+                        <input type="button" class="newChatButton" id="selectButton" onclick="openChat(4)" value="Chat">
+                    </div>
+                </div>
+                
+                <div class="personNumber" id="Klaus Müller">
+                    <div class="content">
+                        <div class="row">
+                            <div class="col">
+                                <div class="items">Klaus Müller</div>
+                                <div class="items"> Weiß nicht was ich hier soll</div>
+                                <div class="items">Das Leben (M.Sc.)</div>
+                                <div class="items">Semester: 38</div>
+                            </div>
+                            <div class="pic">
+                                <img src="pngs/Person_Icon.png" alt="Profilbild" height="300px">
+                                    </div>
+                        </div>
+                        <div class="row"><a href="https://z5b2s6y7.rocketcdn.me/wp-content/uploads/2017/03/meme-beispiel.png"
+                            target="_blank"> Das ist ein Link</a> </div>
+                        <div class="row">
+                            <div class="items">Gruppen:</div>
+                            <div>
+                                <div class="items">Die furiosen Fünf</div>
+                                <div class="items">Prokrastination for the Win</div>
+                            </div>
+                        </div>
+                        <input type="button" class="newChatButton" id="selectButton" onclick="openChat(5)" value="Chat">
+                    </div>
+                </div>
+                
+                <div class="personNumber" id="Daniel Bach">
+                    <div class="content">
+                        <div class="row">
+                            <div class="col">
+                                <div class="items">Daniel Bach</div>
+                                <div class="items"> Würde gerne Johann Sebastian heißen</div>
+                                <div class="items">Triangel (M.Sc.)</div>
+                                <div class="items">Semester: 1</div>
+                            </div>
+                            <div class="pic">
+                                <img src="pngs/Person_Icon.png" alt="Profilbild" height="300px">
+                                    </div>
+                        </div>
+                        <div class="row"><a href=""
                             target="_blank"></a> </div>
                         <div class="row">
                             <div class="items">Gruppen:</div>
                             <div>
-                                <div class="items">Gruppe 1</div>
-                                <div class="items">Gruppe 2</div>
-                                <div class="items">Gruppe 3</div>
+                                <div class="items">1, 2, 3 und 4</div>
+                                <div class="items">Prokrastination for the Win</div>
                             </div>
                         </div>
-                        <input type="button" class="newChatButton" id="selectButton" onclick="openChat(2); addChat()" value="Chat">
+                        <input type="button" class="newChatButton" id="selectButton" onclick="openChat(6)" value="Chat">
+                    </div>
+                </div>
+                
+                <div class="personNumber" id="Anna Mühlheim">
+                    <div class="content">
+                        <div class="row">
+                            <div class="col">
+                                <div class="items">Anna Mühlheim</div>
+                                <div class="items"> normal</div>
+                                <div class="items"> Jura (M.Sc.)</div>
+                                <div class="items">Semester: 3</div>
+                            </div>
+                            <div class="pic">
+                                <img src="pngs/Person_Icon.png" alt="Profilbild" height="300px">
+                                    </div>
+                        </div>
+                        <div class="row"><a href=""
+                            target="_blank"></a> </div>
+                        <div class="row">
+                            <div class="items">Gruppen:</div>
+                            <div>
+                                <div class="items">1, 2, 3 und 4</div>
+                                <div class="items">Öfter unterwegs</div>
+                            </div>
+                        </div>
+                        <input type="button" class="newChatButton" id="selectButton" onclick="openChat(7)" value="Chat">
                     </div>
                 </div>
                 

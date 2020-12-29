@@ -63,20 +63,34 @@ function openChat(index) {
     });
     if (index != -1) {
         chats[index].style.display = "block";
+        
+        var idChatButton = "newChat" + index;
+        document.getElementById(idChatButton).style.display = "block";
     }
 }
 
-function addChat() {
-    document.getElementById("newChat").style.display = 'block';
-}
+
 
 function newMessage(index){
 
     var tmp = "#chat"+index;
     var chat = document.querySelector(tmp);
     var tmp2 = "chatInput"+index;
+    
+    var today = new Date();
+    var time;
+    if(today.getHours() < 10){
+        time = "0" + today.getHours() + ":";
+    } else {
+        time = today.getHours() + ":";
+    }
+    if(today.getMinutes() < 10){
+        time += "0" + today.getMinutes();
+    } else {
+        time += today.getMinutes();
+    }
       
-    var div = '<div class="container darker right"><div class="user"><p>Avatar 2</p><img src="pngs/avatar_2.png" alt="Avatar" class="right" style="width:100%;"></div><p>'+document.getElementById(tmp2).value+'</p><span class="time-left">11:01</span></div>'
+    var div = '<div class="container darker right"><div class="user"><p>Avatar 2</p><img src="pngs/avatar_2.png" alt="Avatar" class="right" style="width:100%;"></div><p>'+document.getElementById(tmp2).value+'</p><span class="time-left">'+time+'</span></div>';
     chat.innerHTML +=div;
     
     document.getElementById("chatInput" + index).value = "";
