@@ -69,7 +69,11 @@ function openChat(index) {
     }
 }
 
-
+function enter(index, e){
+    if(e.keyCode == 13){
+        newMessage(index);
+    }
+}
 
 function newMessage(index){
 
