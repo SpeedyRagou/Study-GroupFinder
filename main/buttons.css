@@ -80,10 +80,11 @@
 }
 
 .helpContainer, .helpContainerC {
-    background-color: white;
     width: 200px;
     height: auto;
     float: right;
+    border: 1px black solid;
+    padding:2px;
 }
 
 .helpButton {
