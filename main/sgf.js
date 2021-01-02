@@ -342,7 +342,7 @@ class Person {
 }
 
 var persons = [];
-var names = ["Malte Kuhlmann", "Gustav Gans", "Klaus Müller", "Lara Croft", "Anna Mühlheim", "Daniel Bach"];
+var names = ["Max Mustermann", "Gustav Gans", "Klaus Müller", "Lara Croft", "Anna Mühlheim", "Daniel Bach"];
 for (let index = 0; index < names.length; index++) {
     persons.push(new Person(names[index]));
 }
@@ -492,7 +492,7 @@ function createGroup() {
 
     var ortList = [o];
     var mediaList = [media];s
-    var person = new Person("Malte Kuhlmann");
+    var person = persons[0];
     var mit = [person];
     groups.push(new Group(mit, n, p, mediaList , ortList , m , b, zeiten[0]));
 
