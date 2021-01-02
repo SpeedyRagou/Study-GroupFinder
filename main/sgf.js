@@ -94,10 +94,18 @@ function newMessage(index){
         time += today.getMinutes();
     }
       
-    var div = '<div class="container darker right"><div class="user"><p>Avatar 2</p><img src="pngs/avatar_2.png" alt="Avatar" class="right" style="width:100%;"></div><p>'+document.getElementById(tmp2).value+'</p><span class="time-left">'+time+'</span></div>';
-    chat.innerHTML +=div;
+
+    if(document.getElementById(tmp2).value === ""){
+        
+    }else{
+
+        var div = '<div class="container darker right"><div class="user"><p>Avatar 2</p><img src="pngs/avatar_2.png" alt="Avatar" class="right" style="width:100%;"></div><p>'+document.getElementById(tmp2).value+'</p><span class="time-left">'+time+'</span></div>';
+        chat.innerHTML +=div;
     
-    document.getElementById("chatInput" + index).value = "";
+        document.getElementById("chatInput" + index).value = "";
+
+    }
+    
 }
 
 function newGroup() {
