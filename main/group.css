@@ -132,3 +132,28 @@
     word-wrap: normal;
     padding: 5px;
 }
+
+/*
+ ausgegraut und nicht klickbar weil bereits in gruppe 
+ */
+.joingroup {
+    position: absolute;
+    left: 80%;
+    
+    font-size: 30px;
+    margin-top: 15px;
+    color: #1e3d59;
+    
+    opacity: 60%;
+    cursor: default;
+    
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    background-color: #ff6e40;
+    width: 300px;
+    height: 50px;
+    box-shadow: 0px 0px 3px 1px grey inset;
+    
+    visibility: hidden;
+}
