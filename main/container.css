@@ -144,3 +144,8 @@ Alles im Aktionsleistenbereich
 .user {
     margin: -10px 0;
 }
+
+.linkTextContainer{
+    float:left;
+    width: 250px;
+}

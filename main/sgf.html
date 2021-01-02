@@ -476,17 +476,44 @@
 
             <div id="workbench" name="profilWB" class="workbench">
                 <div class="content">
-                    <h3>Profil</h3>
+                    <h2 class="profilHeader">Profil</h2>
                     <div class="flip-profilepic">
                         <div class="flip-profilepic-inner">
                             <div class="flip-profilepic-front">
-                                <img src="pngs/image.jpg" alt="Profilbild" style="width:300px;height:300px;">
+                                <img id="profilPic" src="pngs/image.jpg" alt="Profilbild" style="width:300px;height:300px;">
                             </div>
                             <div class="flip-profilepic-back">
-                                <h2>Profilbild:</h2>
-                                <p>Bild ändern</p>
-                                <p>Bild löschen</p>
+                                <div class="changePic">Bild ändern</div>
+                                <div class="deletePic" onlclick="deletePic()">Bild löschen</div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="items">Max Mustermann</div>
+                            <div class="items"><label>Beschreibung:</label></div>
+                            <textarea class="innerText textArea">🌵🦙🦙 Lama lover 🦙🦙🌵</textarea>
+                            <div class="items">Informatik (B.Sc.)</div>
+                            <div class="items">Semester: 1</div>
+                            <div class="items"><label>Links:</label></div>
+                            <div class="items" id="linksList"> <a href="http://lamas.vela.uberspace.de/Homepage/aktuelle-beitrage/"
+                                target="_blank" style="padding-left: 20px;">Lama-Blog</a> </div>
+
+                            <div class="items">Add Link:</div>
+                            <div class="items">
+                                <label for="linkIn" class="linkTextContainer" style="padding-left: 20px;">Link-Input:</label>
+                                <input id="linkIn" name="linkIn" class="linkInput innerText">
+                            </div>
+                            <div class="items">
+                                <label for="linkNameIn" class="linkTextContainer" style="padding-left: 20px;">Name des Links:</label>
+                                <input id="linkNameIn" name="linkNameIn" class="linkInput innerText">
+                            </div>
+                            
+                            <div class="items">
+                                <button class="linkButton" onclick="addLink()">Add Link</button>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>

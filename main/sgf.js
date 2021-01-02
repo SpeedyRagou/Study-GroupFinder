@@ -522,6 +522,25 @@ function createGroup() {
 }
 
 
+function addLink(){
+    var linkList = document.getElementById("linksList");
+
+    var link = document.querySelector("#linkIn").value;
+    var name = document.querySelector("#linkNameIn").value;
+
+    if(name === "" ||link === ""){
+
+    }else{
+        var tmp = ' <a href="'+link+'" target="_blank" style="padding-left: 20px;"> ,'+name+'</a>';
+        linkList.innerHTML += tmp;
+        
+        document.querySelector("#linkIn").value = "";
+        document.querySelector("#linkNameIn").value = "";
+
+    }
+}
+
+
 
 
 
