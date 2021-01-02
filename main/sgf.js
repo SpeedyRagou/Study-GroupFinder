@@ -492,7 +492,7 @@ function createGroup() {
 
     var ortList = [o];
     var mediaList = [media];s
-    var person = new Person("Max Musterman");
+    var person = new Person("Malte Kuhlmann");
     var mit = [person];
     groups.push(new Group(mit, n, p, mediaList , ortList , m , b, zeiten[0]));
 
