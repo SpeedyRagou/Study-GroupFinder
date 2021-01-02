@@ -2,3 +2,4 @@
 [1228/220324.006:ERROR:directory_reader_win.cc(43)] FindFirstFile: Das System kann den angegebenen Pfad nicht finden. (0x3)
 [0102/161228.133:ERROR:directory_reader_win.cc(43)] FindFirstFile: Das System kann den angegebenen Pfad nicht finden. (0x3)
 [0102/170111.521:ERROR:settings.cc(325)] Settings version is not 1
+[0102/171111.534:ERROR:directory_reader_win.cc(43)] FindFirstFile: Das System kann den angegebenen Pfad nicht finden. (0x3)
