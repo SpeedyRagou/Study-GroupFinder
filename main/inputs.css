@@ -8,6 +8,18 @@
     float:left;
 }
 
+.linkInput {
+    background-color: white;
+    border: none;
+    height: 30px;
+    outline: none;
+    width: 300px;
+    box-shadow: 0px 0px 3px 1px grey inset;
+    text-align: center;
+    float:left;
+    margin-right: 10px;
+}
+
 .numberInput {
     background-color: white;
     border: none;

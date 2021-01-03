@@ -1,7 +1,9 @@
 .flip-profilepic {
     width: 300px;
     height: 300px;
-    perspective: 1000px;    
+    perspective: 1000px;   
+    float:right;
+    margin-right:50px;
 }
 
 .flip-profilepic-inner {
@@ -33,4 +35,34 @@
     background-color: #1e3d59;
     color: #f5f0e1;
     text-align: center;
+    vertical-align: middle;
+}
+
+.profileName{
+
+    margin-left:50px;
+ 
+}
+
+.changePic{
+    margin-top:100px;
+    margin-bottom: 20px;
+}
+
+.changePic:hover,.deletePic:hover{
+
+    color: #ffc13b;
+    cursor:pointer;
+
+}
+
+.textArea{
+    min-height: 100px;
+    min-width: 60%;
+    max-width: 60%;
+}
+
+.profilHeader{
+    margin-bottom: -20px;
+    padding-left: 20px;
 }

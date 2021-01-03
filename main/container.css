@@ -151,5 +151,9 @@ Alles im Aktionsleistenbereich
     flex-direction: row;
     width: 100%;
     justify-content: center;
+}
 
+.linkTextContainer{
+    float:left;
+    width: 250px;
 }

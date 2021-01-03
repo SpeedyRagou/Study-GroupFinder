@@ -99,7 +99,7 @@ function newMessage(index){
         
     }else{
 
-        var div = '<div class="container darker right"><div class="user"><p>Avatar 2</p><img src="pngs/avatar_2.png" alt="Avatar" class="right" style="width:100%;"></div><p>'+document.getElementById(tmp2).value+'</p><span class="time-left">'+time+'</span></div>';
+        var div = '<div class="container darker right"><div class="user"><p>Max Mustermann</p><img src="pngs/avatar_2.png" alt="Avatar" class="right" style="width:100%;"></div><p>'+document.getElementById(tmp2).value+'</p><span class="time-left">'+time+'</span></div>';
         chat.innerHTML +=div;
     
         document.getElementById("chatInput" + index).value = "";
@@ -233,11 +233,13 @@ function showHelp(index) {
 function searchPerson() {
     
     selectKategorie(7);
-    openPerson("Max Mustermann");
+    openPerson("Klaus Müller");
 }
 
 function searchGroup() {
-    selectKategorie(2);
+    loadGroup(2);
+    //macht Gruppe beitreten button sichtbar
+    document.getElementById("joingroup").style.visibility = "visible";
 }
 
 
@@ -376,6 +378,9 @@ function loadGroup(pos) {
 
     selectKategorie(5);
     var group = groups[pos];
+    
+    //entfernt Gruppe beitreten button
+    document.getElementById("joingroup").style.visibility = "hidden";
 
     //Setzt den Namen der gruppe in der View
     var groupname = document.getElementById("groupname");
@@ -537,6 +542,25 @@ function createGroup() {
 
     
 
+}
+
+
+function addLink(){
+    var linkList = document.getElementById("linksList");
+
+    var link = document.querySelector("#linkIn").value;
+    var name = document.querySelector("#linkNameIn").value;
+
+    if(name === "" ||link === ""){
+
+    }else{
+        var tmp = ' <a href="'+link+'" target="_blank" style="padding-left: 20px;"> ,'+name+'</a>';
+        linkList.innerHTML += tmp;
+        
+        document.querySelector("#linkIn").value = "";
+        document.querySelector("#linkNameIn").value = "";
+
+    }
 }
 
 
