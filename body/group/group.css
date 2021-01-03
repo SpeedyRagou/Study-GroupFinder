@@ -126,18 +126,30 @@ body{
 
 }
 
-.time{
-    width: 20%;
-    padding: 25px;
-    font-size: 30px;
-    align-self: center;
-    background-color: #ff6e40;
+
+
+
+.timecontainer{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+
 }
 
-.time:hover{
-    cursor: pointer;
-    background-color: #ffc13b;
+.timetable{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
 }
+
+
+
+
+
+
 
 .infotext{
     margin: 5px;

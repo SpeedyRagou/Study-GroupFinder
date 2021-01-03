@@ -51,7 +51,7 @@ var med = [["WhatsApp", "Discord"], ["E-Mail"], ["Telegram"], ["SMS", "WhatsApp"
 var fach = ["It-Security", "Lineare Algebra 1", "Mensch-Computer-Interaktion", "Rechnerachitektur"];
 var lernort = [["Online"], ["Online"], ["Bibliothek", "Online"], ["Uni-Lernraum", "Bei Klaus zuhause"]];
 var beschreibung = ["Wir sind hier um furios zu sein. Genau so lernen wir auch. Deswegen suchen wir Personen die genau so furios sind!", "Alles was wir machen, machen wir um besser im Studium zu werden. Wir suchen fleißige Mitglieder, die genauso ergeizig sind wie wir!", "Wir lernen eher unregelmäßig, aber das soll uns ja nicht aufhalten :).", "Lasst uns gemeinsam Prokrastinieren!"];
-var zeiten = ["Fr", "Fr, 14:00 - 17:00", "Do, 12:00 - 13:00 | Mo, 12:00 - 16:00", "Di"];
+var zeiten = ["Freitag", "Freitag,14:00 - 17:00", "Donnerstag,12:00 - 13:00|Montag,12:00 - 16:00", "Dienstag"];
 var groups = [];
 for (let index = 0; index < titel.length; index++) {
     groups.push(new Group(mitgl[index], titel[index], max[index], med[index], lernort[index], fach[index], beschreibung[index], zeiten[index]));
@@ -130,6 +130,25 @@ function loadGroup(pos) {
     //sets the max count of persons in the group to the view
     var anzahl = document.getElementById("mitgliederanzahl");
     anzahl.innerHTML = "Max. Mitglieder: " + group.max_mitglieder.toString();
+
+    //sets the timetable
+    var zeiten = group.zeiten
+    var timecontainer = document.getElementById("timecontainer");
+    timecontainer.innerHTML = '';
+    zeiten.split("|").forEach(time => {
+        var new_str = time.split(",");
+        var el = document.createElement("div");
+        
+        el.innerHTML = new_str[0]
+        if(new_str.length > 1){
+            el.innerHTML += "<br>" + new_str[1];
+        }
+             
+        
+        el.className = "infotext"
+        timecontainer.appendChild(el);
+        
+    });
 
 
     // sets the description of the group in the view
