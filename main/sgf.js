@@ -450,6 +450,24 @@ function loadGroup(pos) {
     var anzahl = document.getElementById("mitgliederanzahl");
     anzahl.innerHTML = "Max. Mitglieder: " + group.max_mitglieder.toString();
 
+    //sets the timetable
+    var zeiten = group.zeiten
+    var timecontainer = document.getElementById("timecontainer");
+    timecontainer.innerHTML = '';
+    zeiten.split("|").forEach(time => {
+        var new_str = time.split(",");
+        var el = document.createElement("div");
+        
+        el.innerHTML = new_str[0]
+        if(new_str.length > 1){
+            el.innerHTML += "<br>" + new_str[1];
+        }
+             
+        
+        el.className = "infotext"
+        timecontainer.appendChild(el);
+        
+    });
 
     // sets the description of the group in the view
     var bes = document.getElementById("beschreibunginhalt");
