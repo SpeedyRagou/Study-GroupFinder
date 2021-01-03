@@ -144,3 +144,12 @@ Alles im Aktionsleistenbereich
 .user {
     margin: -10px 0;
 }
+
+/*Groups*/
+.timecontainer{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+
+}
