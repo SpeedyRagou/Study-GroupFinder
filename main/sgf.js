@@ -99,7 +99,7 @@ function newMessage(index){
         
     }else{
 
-        var div = '<div class="container darker right"><div class="user"><p>Max Mustermann</p><img src="pngs/avatar_2.png" alt="Avatar" class="right" style="width:100%;"></div><p>'+document.getElementById(tmp2).value+'</p><span class="time-left">'+time+'</span></div>';
+        var div = '<div class="container darker right"><div class="user"><p>Max Mustermann</p><img src="pngs/image.jpg" alt="Avatar" class="right" style="width:100%;"></div><p>'+document.getElementById(tmp2).value+'</p><span class="time-left">'+time+'</span></div>';
         chat.innerHTML +=div;
     
         document.getElementById("chatInput" + index).value = "";
