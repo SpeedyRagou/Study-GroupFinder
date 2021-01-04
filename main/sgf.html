@@ -123,11 +123,11 @@
                             <button class="timeButton innerText" onclick="selectTab(2)">Zeiten</button>
                         </div>
 
-                        
+
                         <div class="row">
                             <div class="textContainer"><label for="maxPerson" class="text">Max. Personen:</label></div>
-                            <input type="number" , id="maxPerson" min="2" max="20"
-                                class="numberInput innerText">
+                            <input type="number" , id="maxPerson" min="2" max="20" value="2"
+                                class="numberInput innerText" />
                         </div>
 
                         <div class="row">
@@ -521,9 +521,6 @@
 
 
             <div id="groupbench" class="groupbench workbench">
-                
-                <input type="button" id="joingroup" class="joingroup" value="Gruppe beitreten">
-                
                 <div id="groupname" class="titel"></div>
                 <div id="groupbody" class="groupbody">
 
@@ -546,17 +543,7 @@
                         </div>
 
 
-                        <div class="timetableconti" id="timetable">
-                            <h1 class="time">Zeiten</p>
-    
-                            <div id="timecontainer" class="timecontainer">
-                            
-                                <div class="infotext">Freitag, <br> 14:00 - 15:00</div>
-                                <div class="infotext">Freitag, <br> 14:00 - 15:00</div>
-    
-                            </div>
-    
-                        </div>
+                        <button class="time">Zeiten</button>
 
                         <div id="groupbeschreibung" class="groupbeschreibung">
                             <div class="beschreibungtitel">Beschreibung:</div>
@@ -585,7 +572,7 @@
 
                             <div class="container darker right">
                                 <div class="user">
-                                    <p>Max Mustermann</p>
+                                    <p>Avatar 2</p>
                                     <img src="pngs/avatar_2.png" alt="Avatar" class="right" style="width:100%;">
                                 </div>
                                 <p>Hey! I'm fine. Thanks for asking!</p>
@@ -603,7 +590,7 @@
 
                             <div class="container darker right">
                                 <div class="user">
-                                    <p>Max Mustermann</p>
+                                    <p>Avatar 2</p>
                                     <img src="pngs/avatar_2.png" alt="Avatar" class="right" style="width:100%;">
                                 </div>
                                 <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
@@ -634,7 +621,7 @@
 
                             <div class="container darker right">
                                 <div class="user">
-                                    <p>Max Mustermann</p>
+                                    <p>Avatar 2</p>
                                     <img src="pngs/avatar_2.png" alt="Avatar" class="right" style="width:100%;">
                                 </div>
                                 <p>Ja das stimmt, sogar die Uhrzeiten sind anders!</p>
@@ -772,10 +759,7 @@
                         <div class="row">
                             <div class="items">Gruppen:</div>
                             <div>
-                                <div class="items" style="cursor:pointer" onclick="loadGroup(0)">Die furiosen Fünf</div>
-                                <div class="items" style="cursor:pointer" onclick="loadGroup(1)">1, 2, 3 und 4</div>
-                                <div class="items" style="cursor:pointer" onclick="loadGroup(2)">Öfter unterwegs</div>
-                                <div class="items" style="cursor:pointer" onclick="loadGroup(3)">Prokrastination for the Win</div>
+                                <div class="items"> - </div>
                             </div>
                         </div>
                         <input type="button" class="newChatButton" id="selectButton" onclick="openChat(2)" value="Chat">
@@ -800,7 +784,10 @@
                         <div class="row">
                             <div class="items">Gruppen:</div>
                             <div>
-                                <div class="items"> - </div>
+                                <div class="items" style="cursor:pointer" onclick="loadGroup(0)">Die furiosen Fünf</div>
+                                <div class="items" style="cursor:pointer" onclick="loadGroup(1)">1, 2, 3 und 4</div>
+                                <div class="items" style="cursor:pointer" onclick="loadGroup(2)">Öfter unterwegs</div>
+                                <div class="items" style="cursor:pointer" onclick="loadGroup(3)">Prokrastination for the Win</div>
                             </div>
                         </div>
                         <input type="button" class="newChatButton" id="selectButton" onclick="openChat(3)" value="Chat">
