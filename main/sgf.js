@@ -63,49 +63,49 @@ function openChat(index) {
     });
     if (index != -1) {
         chats[index].style.display = "block";
-        
+
         var idChatButton = "newChat" + index;
         document.getElementById(idChatButton).style.display = "block";
     }
 }
 
-function enter(index, e){
-    if(e.keyCode == 13){
+function enter(index, e) {
+    if (e.keyCode == 13) {
         newMessage(index);
     }
 }
 
-function newMessage(index){
+function newMessage(index) {
 
-    var tmp = "#chat"+index;
+    var tmp = "#chat" + index;
     var chat = document.querySelector(tmp);
-    var tmp2 = "chatInput"+index;
-    
+    var tmp2 = "chatInput" + index;
+
     var today = new Date();
     var time;
-    if(today.getHours() < 10){
+    if (today.getHours() < 10) {
         time = "0" + today.getHours() + ":";
     } else {
         time = today.getHours() + ":";
     }
-    if(today.getMinutes() < 10){
+    if (today.getMinutes() < 10) {
         time += "0" + today.getMinutes();
     } else {
         time += today.getMinutes();
     }
-      
 
-    if(document.getElementById(tmp2).value === ""){
-        
-    }else{
 
-        var div = '<div class="container darker right"><div class="user"><p>Max Mustermann</p><img src="pngs/image.jpg" alt="Avatar" class="right" style="width:100%;"></div><p>'+document.getElementById(tmp2).value+'</p><span class="time-left">'+time+'</span></div>';
-        chat.innerHTML +=div;
-    
+    if (document.getElementById(tmp2).value === "") {
+
+    } else {
+
+        var div = '<div class="container darker right"><div class="user"><p>Max Mustermann</p><img src="pngs/image.jpg" alt="Avatar" class="right" style="width:100%;"></div><p>' + document.getElementById(tmp2).value + '</p><span class="time-left">' + time + '</span></div>';
+        chat.innerHTML += div;
+
         document.getElementById("chatInput" + index).value = "";
 
     }
-    
+
 }
 
 function newGroup() {
@@ -123,14 +123,14 @@ function openProfil() {
 function openPerson(name) {
     selectKategorie(7);
     console.log(name);
-    
+
     var persons = document.querySelectorAll(".personNumber");
 
     persons.forEach(function (node) {
         node.style.display = "none";
     });
-    
-    for(var i = 0; i < persons.length; i++){
+
+    for (var i = 0; i < persons.length; i++) {
         if (persons[i].id == name) {
             persons[i].style.display = "block";
         }
@@ -227,7 +227,7 @@ function showHelp(index) {
 }
 
 function searchPerson() {
-    
+
     selectKategorie(7);
     openPerson("Klaus Müller");
 }
@@ -376,7 +376,7 @@ function loadGroup(pos) {
 
     selectKategorie(5);
     var group = groups[pos];
-    
+
     //entfernt Gruppe beitreten button
     document.getElementById("joingroup").style.visibility = "hidden";
     document.getElementById("gruppeVerlassen").style.visibility = "visible";
@@ -395,8 +395,8 @@ function loadGroup(pos) {
     group.mitglieder.forEach(element => {
         var el = document.createElement("div");
         el.innerHTML = element.name;
-        
-        el.onclick = function(){
+
+        el.onclick = function () {
             openPerson(element.name)
         };
         personen.appendChild(el);
@@ -461,16 +461,16 @@ function loadGroup(pos) {
     zeiten.split("|").forEach(time => {
         var new_str = time.split(",");
         var el = document.createElement("div");
-        
+
         el.innerHTML = new_str[0]
-        if(new_str.length > 1){
+        if (new_str.length > 1) {
             el.innerHTML += "<br>" + new_str[1];
         }
-             
-        
+
+
         el.className = "infotext"
         timecontainer.appendChild(el);
-        
+
     });
 
     // sets the description of the group in the view
@@ -488,99 +488,104 @@ function createGroup() {
     var m = document.querySelector("#modulIn").value;
     var p = document.querySelector("#person").value;
     var o = document.querySelector("#orte").value;
-    var sem = document.querySelector("#semester").value; 
-    
+    var sem = document.querySelector("#semester").value;
+
     var media = "";
 
-    if(document.getElementById("WAin").checked === true){
-        media += "Whatsapp ";
-    }
-
-    if(document.getElementById("disIn").checked === true){
-        if(media === ""){
-            media += "Discord ";
-        }else{
-            media += ",Discord ";
-        } 
-    }
-
-    if(document.getElementById("mailIn").checked === true){
-        if(media === ""){
-            media += "E-Mail ";
-        }else{
-            media += ",E-Mail ";
+    if (n != "" && m != "" && p != "") {
+        if (document.getElementById("WAin").checked === true) {
+            media += "Whatsapp ";
         }
-    }
 
-    if(document.getElementById("teamsIn").checked === true){
-        if(media === ""){
-            media += "Teams ";
-        }else{
-            media += ",Teams ";
+        if (document.getElementById("disIn").checked === true) {
+            if (media === "") {
+                media += "Discord ";
+            } else {
+                media += ",Discord ";
+            }
         }
+
+        if (document.getElementById("mailIn").checked === true) {
+            if (media === "") {
+                media += "E-Mail ";
+            } else {
+                media += ",E-Mail ";
+            }
+        }
+
+        if (document.getElementById("teamsIn").checked === true) {
+            if (media === "") {
+                media += "Teams ";
+            } else {
+                media += ",Teams ";
+            }
+        }
+
+        var ortList = [o];
+        var mediaList = [media]; s
+        var person = persons[0];
+        var mit = [person];
+        groups.push(new Group(mit, n, p, mediaList, ortList, m, b, zeiten[0]));
+
+
+
+        var groupList = document.getElementById("gruppen");
+
+        var div = '<button class="groupButton" onclick="loadGroup(' + numberOfGroups + ')" id="group' + numberOfGroups + '">' + n + '</button>';
+
+
+        groupList.innerHTML += div;
+
+        loadGroup(numberOfGroups);
+
+        numberOfGroups += 1;
+    }else{
+        alert("Bitte füllen Sie alle Felder mit Stern aus");
     }
 
-    var ortList = [o];
-    var mediaList = [media];s
-    var person = persons[0];
-    var mit = [person];
-    groups.push(new Group(mit, n, p, mediaList , ortList , m , b, zeiten[0]));
 
 
-
-    var groupList = document.getElementById("gruppen");
-
-    var div = '<button class="groupButton" onclick="loadGroup('+ numberOfGroups+ ')" id="group'+numberOfGroups+'">'+n+'</button>';
-    
-
-    groupList.innerHTML += div;
-
-    loadGroup(numberOfGroups);
-
-    numberOfGroups +=1;
-
-    
 
 }
 
-function gruppeVerlassen(){
+function gruppeVerlassen() {
 
     var list = document.getElementById("gruppen");
     var tmp = 'group' + currentGroup;
     var removeGroup = document.getElementById(tmp);
     var node = list.removeChild(removeGroup);
 
-    
+
 
     selectKategorie(0);
 }
 
 
-function addLink(){
+function addLink() {
     var linkList = document.getElementById("linksList");
 
     var link = document.querySelector("#linkIn").value;
     var name = document.querySelector("#linkNameIn").value;
 
-    if(name === "" ||link === ""){
+    if (name === "" || link === "") {
 
-    }else{
-        var tmp = ' <a href="'+link+'" target="_blank" style="padding-left: 20px;"> ,'+name+'</a>';
+    } else {
+        var tmp = ' <a href="' + link + '" target="_blank" style="padding-left: 20px;"> ,' + name + '</a>';
         linkList.innerHTML += tmp;
-        
+
         document.querySelector("#linkIn").value = "";
         document.querySelector("#linkNameIn").value = "";
 
     }
 }
 
-function clearTime(index){
-    
+function clearTime(index) {
 
-    if(index == 1){
+
+    if (index == 1) {
         var times = document.querySelectorAll(".dateInput");
         var check = document.querySelectorAll(".checkDate");
-        
+
         times.forEach(function (node) {
             node.value = "";
         });
@@ -590,10 +595,10 @@ function clearTime(index){
         });
 
         selectTab(0);
-    }else if(index == 2){
+    } else if (index == 2) {
         var times = document.querySelectorAll(".dateInputC");
         var check = document.querySelectorAll(".checkDateC");
-        
+
         times.forEach(function (node) {
             node.value = "";
         });
@@ -604,15 +609,15 @@ function clearTime(index){
 
         selectTabC(0);
     }
-    
+
 }
 
-function deletePic(){
-    document.getElementById("profilPic").src = "pngs/Person_Icon.png";   
+function deletePic() {
+    document.getElementById("profilPic").src = "pngs/Person_Icon.png";
 }
 
-function changePic(){
-    
+function changePic() {
+
 }
 
 
