@@ -607,6 +607,14 @@ function clearTime(index){
     
 }
 
+function deletePic(){
+    document.getElementById("profilPic").src = "pngs/Person_Icon.png";   
+}
+
+function changePic(){
+    
+}
+
 
 
 

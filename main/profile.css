@@ -56,6 +56,14 @@
 
 }
 
+.deletePic, .changePic{
+    border: none;
+    background-color: #1e3d59;
+    color: #f5f0e1;
+    font-size: 30px;
+    outline: none;
+}
+
 .textArea{
     min-height: 100px;
     max-height: 100px;
