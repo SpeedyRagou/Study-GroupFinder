@@ -542,10 +542,6 @@ function createGroup() {
     }else{
         alert("Bitte füllen Sie alle Felder mit Stern aus");
     }
-
-
-
-
 }
 
 function gruppeVerlassen() {
@@ -617,7 +613,12 @@ function deletePic() {
 }
 
 function changePic() {
+    document.getElementById('fileid').click();
+}
 
+function change(file){
+    console.log(file[0].name);
+    document.getElementById("profilPic").src = "pngs/"+file[0].name;
 }
 
 
