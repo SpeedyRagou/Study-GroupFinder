@@ -227,3 +227,24 @@
 .linkButton:hover {
     background-color: #ffc13b;
 }
+
+.gruppeVerlassen{
+    float: right;
+    visibility: "visible";
+    position: absolute;
+    left: 80%;
+    
+    font-size: 30px;
+    margin-top: 15px;
+    color: #1e3d59;
+    
+    cursor: pointer;
+    
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    background-color: #ff6e40;
+    width: 300px;
+    height: 50px;
+
+}

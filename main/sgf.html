@@ -50,10 +50,10 @@
 
                 <div id="gruppen" class="tabinhalt">
 
-                    <button class="groupButton" onclick="loadGroup(0)">Die furiosen Fünf</button>
-                    <button class="groupButton" onclick="loadGroup(1)">1, 2, 3 und 4</button>
-                    <button class="groupButton" onclick="loadGroup(2)">Öfter unterwegs</button>
-                    <button class="groupButton" onclick="loadGroup(3)">Prokrastination for the Win</button>
+                    <button class="groupButton" onclick="loadGroup(0)" id="group0">Die furiosen Fünf</button>
+                    <button class="groupButton" onclick="loadGroup(1)"id="group1">1, 2, 3 und 4</button>
+                    <button class="groupButton" onclick="loadGroup(2)"id="group2">Öfter unterwegs</button>
+                    <button class="groupButton" onclick="loadGroup(3)"id="group3">Prokrastination for the Win</button>
 
                 </div>
 
@@ -248,54 +248,54 @@
                             spezifischen Zeitraum an</div>
 
                         <div class="rowdate">
-                            <input type="checkbox" name="montag" id="montag">
+                            <input type="checkbox" name="montag" id="montag" class="checkDate">
                             <div class="timeblock"><label for="mittwoch" class="text">Mo:</label></div>
                             <input type="time" name="montagStart" id="montagStart" class="dateInput">
                             <input type="time" name="montagEnd" id="montagEnd" class="dateInput">
                         </div>
 
                         <div class="rowdate">
-                            <input type="checkbox" name="dienstag" id="dienstag">
+                            <input type="checkbox" name="dienstag" id="dienstag" class="checkDate">
                             <div class="timeblock"><label for="mittwoch" class="text">Di:</label></div>
                             <input type="time" name="dienstagStart" id="dienstagStart" class="dateInput">
                             <input type="time" name="dienstagEnd" id="dienstagEnd" class="dateInput">
                         </div>
 
                         <div class="rowdate">
-                            <input type="checkbox" name="mittwoch" id="mittwoch">
+                            <input type="checkbox" name="mittwoch" id="mittwoch" class="checkDate">
                             <div class="timeblock"><label for="mittwoch" class="text">Mi:</label></div>
                             <input type="time" name="mittwochStart" id="mittwochStart" class="dateInput">
                             <input type="time" name="mittwochEnd" id="mittwochEnd" class="dateInput">
                         </div>
 
                         <div class="rowdate">
-                            <input type="checkbox" name="donnerstag" id="donnerstag">
+                            <input type="checkbox" name="donnerstag" id="donnerstag" class="checkDate">
                             <div class="timeblock"><label for="mittwoch" class="text">Do:</label></div>
                             <input type="time" name="donnerstagStart" id="donnerstagStart" class="dateInput">
                             <input type="time" name="donnerstagEnd" id="donnerstagEnd" class="dateInput">
                         </div>
 
                         <div class="rowdate">
-                            <input type="checkbox" name="freitag" id="freitag">
+                            <input type="checkbox" name="freitag" id="freitag" class="checkDate">
                             <div class="timeblock"><label for="mittwoch" class="text">Fr:</label></div>
                             <input type="time" name="freitagStart" id="freitagStart" class="dateInput">
                             <input type="time" name="freitagEnd" id="freitagEnd" class="dateInput">
                         </div>
 
                         <div class="rowdate">
-                            <input type="checkbox" name="samstag" id="samstag">
+                            <input type="checkbox" name="samstag" id="samstag" class="checkDate">
                             <div class="timeblock"><label for="mittwoch" class="text">Sa:</label></div>
                             <input type="time" name="samstagStart" id="samstagStart" class="dateInput">
                             <input type="time" name="samstagEnd" id="samstagEnd" class="dateInput">
                         </div>
 
                         <div class="rowdate">
-                            <input type="checkbox" name="sonntag" id="sonntag">
+                            <input type="checkbox" name="sonntag" id="sonntag" class="checkDate">
                             <div class="timeblock"><label for="mittwoch" class="text">So:</label></div>
                             <input type="time" name="sonntagStart" id="sonntagStart" class="dateInput">
                             <input type="time" name="sonntagEnd" id="sonntagEnd" class="dateInput">
                         </div>
-                        <button class="safeDate innerText" onclick="back()">back</button>
+                        <button class="safeDate innerText" onclick="clearTime(1)">back</button>
                         <button class="safeDate innerText" onclick="safeDate()">safe</button>
                     </div>
                 </div>
@@ -418,54 +418,54 @@
                             Wochentag, wenn Sie den ganzen Tag Zeit haben oder geben Sie rechts vom Wochentag einen
                             spezifischen Zeitraum an</div>
                         <div class="rowdate">
-                            <input type="checkbox" name="montag" id="montag">
+                            <input type="checkbox" name="montag" id="montag" class="checkDateC">
                             <div class="timeblock"><label for="mittwoch" class="text">Mo:</label></div>
-                            <input type="time" name="montagStart" id="montagStart" class="dateInput">
-                            <input type="time" name="montagEnd" id="montagEnd" class="dateInput">
+                            <input type="time" name="montagStart" id="montagStart" class="dateInputC">
+                            <input type="time" name="montagEnd" id="montagEnd" class="dateInputC">
                         </div>
 
                         <div class="rowdate">
-                            <input type="checkbox" name="dienstag" id="dienstag">
+                            <input type="checkbox" name="dienstag" id="dienstag" class="checkDateC">
                             <div class="timeblock"><label for="mittwoch" class="text">Di:</label></div>
-                            <input type="time" name="dienstagStart" id="dienstagStart" class="dateInput">
-                            <input type="time" name="dienstagEnd" id="dienstagEnd" class="dateInput">
+                            <input type="time" name="dienstagStart" id="dienstagStart" class="dateInputC">
+                            <input type="time" name="dienstagEnd" id="dienstagEnd" class="dateInputC">
                         </div>
 
                         <div class="rowdate">
-                            <input type="checkbox" name="mittwoch" id="mittwoch">
+                            <input type="checkbox" name="mittwoch" id="mittwoch" class="checkDateC">
                             <div class="timeblock"><label for="mittwoch" class="text">Mi:</label></div>
-                            <input type="time" name="mittwochStart" id="mittwochStart" class="dateInput">
-                            <input type="time" name="mittwochEnd" id="mittwochEnd" class="dateInput">
+                            <input type="time" name="mittwochStart" id="mittwochStart" class="dateInputC">
+                            <input type="time" name="mittwochEnd" id="mittwochEnd" class="dateInputC">
                         </div>
 
                         <div class="rowdate">
-                            <input type="checkbox" name="donnerstag" id="donnerstag">
+                            <input type="checkbox" name="donnerstag" id="donnerstag" class="checkDateC">
                             <div class="timeblock"><label for="mittwoch" class="text">Do:</label></div>
-                            <input type="time" name="donnerstagStart" id="donnerstagStart" class="dateInput">
-                            <input type="time" name="donnerstagEnd" id="donnerstagEnd" class="dateInput">
+                            <input type="time" name="donnerstagStart" id="donnerstagStart" class="dateInputC">
+                            <input type="time" name="donnerstagEnd" id="donnerstagEnd" class="dateInputC">
                         </div>
 
                         <div class="rowdate">
-                            <input type="checkbox" name="freitag" id="freitag">
+                            <input type="checkbox" name="freitag" id="freitag" class="checkDateC">
                             <div class="timeblock"><label for="mittwoch" class="text">Fr:</label></div>
-                            <input type="time" name="freitagStart" id="freitagStart" class="dateInput">
-                            <input type="time" name="freitagEnd" id="freitagEnd" class="dateInput">
+                            <input type="time" name="freitagStart" id="freitagStart" class="dateInputC">
+                            <input type="time" name="freitagEnd" id="freitagEnd" class="dateInputC">
                         </div>
 
                         <div class="rowdate">
-                            <input type="checkbox" name="samstag" id="samstag">
+                            <input type="checkbox" name="samstag" id="samstag" class="checkDateC">
                             <div class="timeblock"><label for="mittwoch" class="text">Sa:</label></div>
-                            <input type="time" name="samstagStart" id="samstagStart" class="dateInput">
-                            <input type="time" name="samstagEnd" id="samstagEnd" class="dateInput">
+                            <input type="time" name="samstagStart" id="samstagStart" class="dateInputC">
+                            <input type="time" name="samstagEnd" id="samstagEnd" class="dateInputC">
                         </div>
 
                         <div class="rowdate">
-                            <input type="checkbox" name="sonntag" id="sonntag">
+                            <input type="checkbox" name="sonntag" id="sonntag" class="checkDateC">
                             <div class="timeblock"><label for="mittwoch" class="text">So:</label></div>
-                            <input type="time" name="sonntagStart" id="sonntagStart" class="dateInput">
-                            <input type="time" name="sonntagEnd" id="sonntagEnd" class="dateInput">
+                            <input type="time" name="sonntagStart" id="sonntagStart" class="dateInputC">
+                            <input type="time" name="sonntagEnd" id="sonntagEnd" class="dateInputC">
                         </div>
-                        <button class="safeDate innerText" onclick="backC()">back</button>
+                        <button class="safeDate innerText" onclick="clearTime(2)">back</button>
                         <button class="safeDate innerText" onclick="safeDateC()">safe</button>
                     </div>
                 </div>
@@ -522,6 +522,7 @@
 
             <div id="groupbench" class="groupbench workbench">
                 <input type="button" id="joingroup" class="joingroup" value="Gruppe beitreten">
+                <input type="button" id="gruppeVerlassen" class="gruppeVerlassen" value="Gruppe verlassen" onclick="gruppeVerlassen()">
                 <div id="groupname" class="titel"></div>
                 <div id="groupbody" class="groupbody">
 

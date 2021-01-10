@@ -195,10 +195,6 @@ function safeDate() {
     selectTab(0);
 }
 
-function back() {
-    selectTab(0);
-}
-
 function showHelp(index) {
 
     var container = document.querySelectorAll(".helpContainer");
@@ -240,6 +236,7 @@ function searchGroup() {
     loadGroup(2);
     //macht Gruppe beitreten button sichtbar
     document.getElementById("joingroup").style.visibility = "visible";
+    document.getElementById("gruppeVerlassen").style.visibility = "hidden";
 }
 
 
@@ -275,9 +272,6 @@ function safeDateC() {
     selectTabC(0);
 }
 
-function backC() {
-    selectTabC(0);
-}
 
 function showHelpC(index) {
 
@@ -373,14 +367,19 @@ for (let index = 0; index < titel.length; index++) {
 
 }
 
+var currentGroup;
+
 //pos ist der index im groups array
 function loadGroup(pos) {
+
+    currentGroup = pos;
 
     selectKategorie(5);
     var group = groups[pos];
     
     //entfernt Gruppe beitreten button
     document.getElementById("joingroup").style.visibility = "hidden";
+    document.getElementById("gruppeVerlassen").style.visibility = "visible";
 
     //Setzt den Namen der gruppe in der View
     var groupname = document.getElementById("groupname");
@@ -531,7 +530,7 @@ function createGroup() {
 
     var groupList = document.getElementById("gruppen");
 
-    var div = '<button class="groupButton" onclick="loadGroup('+ numberOfGroups+ ')">'+n+'</button>';
+    var div = '<button class="groupButton" onclick="loadGroup('+ numberOfGroups+ ')" id="group'+numberOfGroups+'">'+n+'</button>';
     
 
     groupList.innerHTML += div;
@@ -542,6 +541,18 @@ function createGroup() {
 
     
 
+}
+
+function gruppeVerlassen(){
+
+    var list = document.getElementById("gruppen");
+    var tmp = 'group' + currentGroup;
+    var removeGroup = document.getElementById(tmp);
+    var node = list.removeChild(removeGroup);
+
+    
+
+    selectKategorie(0);
 }
 
 
@@ -561,6 +572,39 @@ function addLink(){
         document.querySelector("#linkNameIn").value = "";
 
     }
+}
+
+function clearTime(index){
+    
+
+    if(index == 1){
+        var times = document.querySelectorAll(".dateInput");
+        var check = document.querySelectorAll(".checkDate");
+        
+        times.forEach(function (node) {
+            node.value = "";
+        });
+
+        check.forEach(function (node) {
+            node.checked = 0;
+        });
+
+        selectTab(0);
+    }else if(index == 2){
+        var times = document.querySelectorAll(".dateInputC");
+        var check = document.querySelectorAll(".checkDateC");
+        
+        times.forEach(function (node) {
+            node.value = "";
+        });
+
+        check.forEach(function (node) {
+            node.checked = 0;
+        });
+
+        selectTabC(0);
+    }
+    
 }
 
 
