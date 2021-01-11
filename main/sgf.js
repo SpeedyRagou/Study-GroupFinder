@@ -70,8 +70,8 @@ function openChat(index) {
 }
 
 function openGroupChat() {
-    alert("Hallo");
-    openChat(4);
+    openChat(8+currentGroup);
+    tabopen(event, 'chats');
 }
 
 function enter(index, e) {
@@ -377,7 +377,7 @@ var currentGroup;
 
 //pos ist der index im groups array
 function loadGroup(pos) {
-
+    document.getElementById("gruppenbutton").click();
     currentGroup = pos;
 
     selectKategorie(5);
@@ -563,7 +563,8 @@ function gruppeVerlassen() {
 }
 
 function openGroupChat(){
-    
+    openChat(currentGroup+8);
+    document.getElementById("chatbutton").click();
 }
 
 
