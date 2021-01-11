@@ -65,6 +65,11 @@
                     <button class="chatButton" onclick="openChat(6)" id="newChat6" style="display: none">Daniel Bach</button>
                     <button class="chatButton" onclick="openChat(7)" id="newChat7" style="display: none">Anna Mühlheim</button>
                     
+                    <button class="chatButton" onclick="openChat(8)" id="newChat8" style="display: none">Die furiosen Fünf</button>
+                    <button class="chatButton" onclick="openChat(9)" id="newChat9" style="display: none">1, 2, 3 und 4</button>
+                    <button class="chatButton" onclick="openChat(10)" id="newChat10" style="display: none">Öfter unterwegs</button>
+                    <button class="chatButton" onclick="openChat(11)" id="newChat11" style="display: none">Prokrastination for the Win</button>
+                    
                     <button class="chatButton" onclick="openChat(0)" id="newChat0">Chat1</button>
                     <button class="chatButton" onclick="openChat(1)" id="newChat1">Chat2</button>
                 </div>
@@ -523,7 +528,7 @@
             <div id="groupbench" class="groupbench workbench">
                 <input type="button" id="joingroup" class="joingroup" value="Gruppe beitreten">
                 <input type="button" id="gruppeVerlassen" class="gruppeVerlassen" value="Gruppe verlassen" onclick="gruppeVerlassen()">
-                <input type="button" id="groupChat" class="groupChat" value="Chat" onclick="openGroupChat()">
+                <input type="button" id="groupChat" class="groupChat" value="Chat" onclick="openGroupChat();">
                 <div id="groupname" class="titel"></div>
                 <div id="groupbody" class="groupbody">
 
@@ -747,6 +752,66 @@
                                 src="https://www.flaticon.com/svg/static/icons/svg/1621/1621595.svg"
                                 onclick="newMessage(8)" />
                             <input class="chatInput " id="chatInput8" onkeypress='enter(8, event)'>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chatNumber">
+                    <div class="chats">
+                        <h2 style="cursor:pointer" onclick='loadGroup(0)'>Die furiosen Fünf</h2>
+                                <div class="chat9" id ="chat9">
+
+                                </div>
+                        <div class="container">
+                            <input type="image" class="send"
+                                src="https://www.flaticon.com/svg/static/icons/svg/1621/1621595.svg"
+                                onclick="newMessage(9)" />
+                            <input class="chatInput " id="chatInput9" onkeypress='enter(9, event)'>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chatNumber">
+                    <div class="chats">
+                        <h2 style="cursor:pointer" onclick='loadGroup(1)'>1, 2, 3 und 4</h2>
+                                <div class="chat10" id ="chat10">
+
+                                </div>
+                        <div class="container">
+                            <input type="image" class="send"
+                                src="https://www.flaticon.com/svg/static/icons/svg/1621/1621595.svg"
+                                onclick="newMessage(10)" />
+                            <input class="chatInput " id="chatInput10" onkeypress='enter(10, event)'>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chatNumber">
+                    <div class="chats">
+                        <h2 style="cursor:pointer" onclick='loadGroup(2)'>Öfter unterwegs</h2>
+                                <div class="chat11" id ="chat11">
+
+                                </div>
+                        <div class="container">
+                            <input type="image" class="send"
+                                src="https://www.flaticon.com/svg/static/icons/svg/1621/1621595.svg"
+                                onclick="newMessage(11)" />
+                            <input class="chatInput " id="chatInput11" onkeypress='enter(11, event)'>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chatNumber">
+                    <div class="chats">
+                        <h2 style="cursor:pointer" onclick='loadGroup(3)'>Prokrastination for the Win</h2>
+                                <div class="chat12" id ="chat12">
+
+                                </div>
+                        <div class="container">
+                            <input type="image" class="send"
+                                src="https://www.flaticon.com/svg/static/icons/svg/1621/1621595.svg"
+                                onclick="newMessage(12)" />
+                            <input class="chatInput " id="chatInput12" onkeypress='enter(12, event)'>
                         </div>
                     </div>
                 </div>

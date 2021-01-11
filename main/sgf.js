@@ -69,6 +69,11 @@ function openChat(index) {
     }
 }
 
+function openGroupChat() {
+    alert("Hallo");
+    openChat(4);
+}
+
 function enter(index, e) {
     if (e.keyCode == 13) {
         newMessage(index);
