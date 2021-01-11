@@ -237,6 +237,7 @@ function searchGroup() {
     //macht Gruppe beitreten button sichtbar
     document.getElementById("joingroup").style.visibility = "visible";
     document.getElementById("gruppeVerlassen").style.visibility = "hidden";
+    document.getElementById("groupChat").style.visibility = "hidden";
 }
 
 
@@ -380,7 +381,7 @@ function loadGroup(pos) {
     //entfernt Gruppe beitreten button
     document.getElementById("joingroup").style.visibility = "hidden";
     document.getElementById("gruppeVerlassen").style.visibility = "visible";
-
+    document.getElementById("groupChat").style.visibility = "visible";
     //Setzt den Namen der gruppe in der View
     var groupname = document.getElementById("groupname");
     groupname.innerHTML = group.name;
@@ -554,6 +555,10 @@ function gruppeVerlassen() {
 
 
     selectKategorie(0);
+}
+
+function openGroupChat(){
+    
 }
 
 
