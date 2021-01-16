@@ -133,12 +133,14 @@
 }
 
 .tabs {
+    border-top: 1px solid #ffc13b;
     overflow: hidden;
     justify-content: center;
     background-color: #f5f0e1;
 }
 
 .tabs button {
+    
     color: #f5f0e1;
     background-color: #1e3d59;
     float: left;
