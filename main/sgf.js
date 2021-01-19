@@ -70,7 +70,7 @@ function openChat(index) {
 }
 
 function openGroupChat() {
-    openChat(8+currentGroup);
+    openChat(8 + currentGroup);
     tabopen(event, 'chats');
 }
 
@@ -118,7 +118,7 @@ function newGroup() {
 }
 
 function search() {
-    selectKategorie(1)
+    selectKategorie(1)  
 }
 
 function openProfil() {
@@ -198,6 +198,7 @@ function getStud() {
 
 function safeDate() {
     selectTab(0);
+    document.getElementById("searchTime").style.visibility = "visible";
 }
 
 function showHelp(index) {
@@ -238,11 +239,48 @@ function searchPerson() {
 }
 
 function searchGroup() {
-    loadGroup(2);
-    //macht Gruppe beitreten button sichtbar
-    document.getElementById("joingroup").style.visibility = "visible";
-    document.getElementById("gruppeVerlassen").style.visibility = "hidden";
-    document.getElementById("groupChat").style.visibility = "hidden";
+
+    var modul = ["", "Informatik (B.Sc.)", "Informatik (M.Sc.)", "BWL (B.Sc.)", "BWL (M.Sc.)", "Chemie (B.Sc.)", "Chemie (M.Sc.)"];
+    var fachStud = ["", "Grundlagen Digitaler Systeme", "It-Sicherheit", "Lineare Algebra 1", "Lineare Algebra 2", "Mensch Comupter Interaktion", "Analysis 1"];
+
+    var mod = document.getElementById("searchMod");
+    var f = document.getElementById("sStud");
+
+    var check = false;
+
+    for (var i = 0; i < modul.length; i++) {
+        if (mod.value == modul[i]) {
+            check = true;
+            break;
+        }
+    }
+
+    if (!check) {
+        mod.value = "";
+        alert("Bitte geben Sie ein gültiges Modul an");
+    } else {
+        check = false;
+ 
+        for (var i = 0; i < fachStud.length; i++) {
+            if (f.value == fachStud[i]) {
+                check = true;
+                break;
+            }
+        }
+        
+        if(!check){
+            f.value = "";
+            alert("Bitte geben Sie einen gültigen Studiengang an");
+        }else{
+            loadGroup(2);
+            //macht Gruppe beitreten button sichtbar
+            document.getElementById("joingroup").style.visibility = "visible";
+            document.getElementById("gruppeVerlassen").style.visibility = "hidden";
+            document.getElementById("groupChat").style.visibility = "hidden";
+        }
+
+    }
+    
 }
 
 
@@ -276,6 +314,7 @@ function getStudC() {
 
 function safeDateC() {
     selectTabC(0);
+    document.getElementById("searchTimeC").style.visibility = "visible";
 }
 
 
@@ -363,7 +402,7 @@ var titel = ["Die furiosen Fünf", "1, 2, 3 und 4", "Öfter unterwegs", "Prokras
 var mitgl = [[persons[0], persons[1], persons[2]], [persons[4], persons[1], persons[0], persons[5]], [persons[1], persons[4], persons[0]], [persons[2], persons[1], persons[0], persons[5]]];
 var max = [6, 8, 5, 10];
 var med = [["WhatsApp", "Discord"], ["E-Mail"], ["Telegram"], ["SMS", "WhatsApp", "Discord"]];
-var fach = ["It-Security", "Lineare Algebra 1", "Mensch-Computer-Interaktion", "Rechnerachitektur"];
+var fach = ["Grundlagen Digitaler Systeme", "It-Sicherheit", "Lineare Algebra 1", "Lineare Algebra 2", "Mensch Comupter Interaktion", "Analysis 1"];
 var lernort = [["Online"], ["Online"], ["Bibliothek", "Online"], ["Uni-Lernraum", "Bei Klaus zuhause"]];
 var beschreibung = ["Wir sind hier um furios zu sein. Genau so lernen wir auch. Deswegen suchen wir Personen die genau so furios sind!", "Alles was wir machen, machen wir um besser im Studium zu werden. Wir suchen fleißige Mitglieder, die genauso ergeizig sind wie wir!", "Wir lernen eher unregelmäßig, aber das soll uns ja nicht aufhalten :).", "Lasst uns gemeinsam Prokrastinieren!"];
 var zeiten = ["Freitag", "Freitag, 14:00 - 17:00", "Donnerstag, 12:00 - 13:00|Montag, 12:00 - 16:00", "Dienstag"];
@@ -490,64 +529,73 @@ var numberOfGroups = 4;
 function createGroup() {
     var n = document.querySelector("#name").value;
     var b = document.querySelector("#beschreibung").value;
-    var s = document.querySelector("#studiengang").value;
+    var s = document.querySelector("#studiengangIn").value;
     var m = document.querySelector("#modulIn").value;
     var p = document.querySelector("#person").value;
     var o = document.querySelector("#orte").value;
     var sem = document.querySelector("#semester").value;
 
-    var media = "";
 
-    if (n != "" && m != "" && p != "") {
-        if (document.getElementById("WAin").checked === true) {
-            media += "Whatsapp ";
-        }
+    if (!checkStud() || !checkModul()) {
 
-        if (document.getElementById("disIn").checked === true) {
-            if (media === "") {
-                media += "Discord ";
-            } else {
-                media += ",Discord ";
+    } else {
+
+        var media = "";
+
+        if (n != "" && m != "" && p != "") {
+            if (document.getElementById("WAin").checked === true) {
+                media += "Whatsapp ";
             }
-        }
 
-        if (document.getElementById("mailIn").checked === true) {
-            if (media === "") {
-                media += "E-Mail ";
-            } else {
-                media += ",E-Mail ";
+            if (document.getElementById("disIn").checked === true) {
+                if (media === "") {
+                    media += "Discord ";
+                } else {
+                    media += ",Discord ";
+                }
             }
-        }
 
-        if (document.getElementById("teamsIn").checked === true) {
-            if (media === "") {
-                media += "Teams ";
-            } else {
-                media += ",Teams ";
+            if (document.getElementById("mailIn").checked === true) {
+                if (media === "") {
+                    media += "E-Mail ";
+                } else {
+                    media += ",E-Mail ";
+                }
             }
+
+            if (document.getElementById("teamsIn").checked === true) {
+                if (media === "") {
+                    media += "Teams ";
+                } else {
+                    media += ",Teams ";
+                }
+            }
+
+            var ortList = [o];
+            var mediaList = [media]; s
+            var person = persons[0];
+            var mit = [person];
+            groups.push(new Group(mit, n, p, mediaList, ortList, m, b, zeiten[0]));
+
+
+
+            var groupList = document.getElementById("gruppen");
+
+            var div = '<button class="groupButton" onclick="loadGroup(' + numberOfGroups + ')" id="group' + numberOfGroups + '">' + n + '</button>';
+
+
+            groupList.innerHTML += div;
+
+            loadGroup(numberOfGroups);
+
+            numberOfGroups += 1;
+        } else {
+            alert("Bitte füllen Sie alle Felder mit Stern aus");
         }
 
-        var ortList = [o];
-        var mediaList = [media]; s
-        var person = persons[0];
-        var mit = [person];
-        groups.push(new Group(mit, n, p, mediaList, ortList, m, b, zeiten[0]));
-
-
-
-        var groupList = document.getElementById("gruppen");
-
-        var div = '<button class="groupButton" onclick="loadGroup(' + numberOfGroups + ')" id="group' + numberOfGroups + '">' + n + '</button>';
-
-
-        groupList.innerHTML += div;
-
-        loadGroup(numberOfGroups);
-
-        numberOfGroups += 1;
-    }else{
-        alert("Bitte füllen Sie alle Felder mit Stern aus");
     }
+
+
 }
 
 function gruppeVerlassen() {
@@ -562,8 +610,8 @@ function gruppeVerlassen() {
     selectKategorie(0);
 }
 
-function openGroupChat(){
-    openChat(currentGroup+8);
+function openGroupChat() {
+    openChat(currentGroup + 8);
     document.getElementById("chatbutton").click();
 }
 
@@ -627,11 +675,74 @@ function changePic() {
     document.getElementById('fileid').click();
 }
 
-function change(file){
+function change(file) {
     console.log(file[0].name);
-    document.getElementById("profilPic").src = "pngs/"+file[0].name;
+    document.getElementById("profilPic").src = "pngs/" + file[0].name;
 }
 
+
+function scale(index) {
+
+    if (index == 1) {
+        tmp = document.getElementById("maxPerson")
+    } else if (index == 2) {
+        tmp = document.getElementById("person")
+    }
+
+    if (tmp.value > 20) {
+        tmp.value = "";
+        alert("Mehr als 20 Personen ist nicht möglich");
+    } else if (tmp.value < 2) {
+        tmp.value = "";
+        alert("Weniger als 2 Personen ist nicht möglich");
+    }
+}
+
+function checkModul() {
+
+
+    tmp = document.getElementById("modulIn");
+    var check = false;
+
+    for (var i = 0; i < fach.length; i++) {
+        if (tmp.value == fach[i]) {
+            check = true;
+            break;
+        }
+    }
+    if (!check) {
+        tmp.value = "";
+        alert("Bitte geben Sie ein gültiges Modul an");
+        return false;
+    }
+
+    return true;
+
+}
+
+
+function checkStud() {
+
+    var modul = ["", "Informatik (B.Sc.)", "Informatik (M.Sc.)", "BWL (B.Sc.)", "BWL (M.Sc.)", "Chemie (B.Sc.)", "Chemie (M.Sc.)"];
+
+    tmp = document.getElementById("studiengangIn");
+    var check = false;
+
+    for (var i = 0; i < modul.length; i++) {
+        if (tmp.value == modul[i]) {
+            check = true;
+            break;
+        }
+    }
+    if (!check) {
+        tmp.value = "";
+        alert("Bitte geben Sie einen gültigen Studiengang an");
+        return false;
+    }
+
+    return true;
+
+}
 
 
 

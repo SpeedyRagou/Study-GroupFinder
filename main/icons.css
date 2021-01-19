@@ -26,6 +26,13 @@
     width: auto;
 }
 
+.checkicon{
+    padding-left:20px;
+    height:35px;
+    width:auto;
+    visibility: hidden;
+}
+
 .container img {
     float: left;
     max-width: 60px;

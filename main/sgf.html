@@ -100,7 +100,7 @@
                         </div>
                         <div class="row">
                             <div class="textContainer"><label for="studiengang" class="text">Studiengang:</label></div>
-                            <input list="studiengang" name="studiengang" class="textInput innerText">
+                            <input id="sStud" list="studiengang" name="studiengang" class="textInput innerText">
                             <datalist id="studiengang">
                                 <option value="Informatik (B.Sc.)"></option>
                                 <option value="Informatik (M.Sc.)"></option>
@@ -113,7 +113,7 @@
 
                         <div class="row">
                             <div class="textContainer"><label for="modul" class="text">Modul:</label></div>
-                            <input list="modul" name="modul" class="textInput innerText">
+                            <input id = "searchMod" list="modul" name="modul" class="textInput innerText">
                             <datalist id="modul">
                                 <option value="Grundlagen Digitaler Systeme"></option>
                                 <option value="It-Sicherheit"></option>
@@ -126,13 +126,14 @@
 
                         <div class="row">
                             <button class="timeButton innerText" onclick="selectTab(2)">Zeiten</button>
+                            <img src = "pngs/checked.png" class = "checkicon" id ="searchTime">
                         </div>
 
 
                         <div class="row">
                             <div class="textContainer"><label for="maxPerson" class="text">Max. Personen:</label></div>
                             <input type="number" , id="maxPerson" min="2" max="20" value="2"
-                                class="numberInput innerText" />
+                                class="numberInput innerText" oninput = "scale(1)" />
                         </div>
 
                         <div class="row">
@@ -339,7 +340,7 @@
 
                         <div class="rowC">
                             <div class="textContainer"><label for="studiengang" class="text">Studiengang:</label></div>
-                            <input id="studiengang" list="studiengang" name="studiengang" class="textInput innerText">
+                            <input id="studiengangIn" list="studiengang" name="studiengang" class="textInput innerText">
                             <datalist id="studiengang">
                                 <option value="Informatik (B.Sc.)"></option>
                                 <option value="Informatik (M.Sc.)"></option>
@@ -366,7 +367,7 @@
 
                         <div class="rowC">
                             <div class="textContainer"><label for="personzahl" class="text">Personzahl:</label></div>
-                            <input id="person" type="number" , id="personzahl" min="2" max="20" value="" class="numberInput innerText" />
+                            <input id="person" type="number" , id="personzahl" min="2" max="20" value="" class="numberInput innerText" oninput="scale(2)"/>
                             <div class="stern">*</div>
                         </div>
 
@@ -376,6 +377,7 @@
                         </div>
                         <div class="rowC">
                             <button class="timeButton innerText" onclick="selectTabC(1)">Zeiten</button>
+                            <img src = "pngs/checked.png" class = "checkicon" id ="searchTimeC">
                         </div>
 
                         <div class="text media">Media:</div>
