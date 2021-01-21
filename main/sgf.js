@@ -315,6 +315,7 @@ function getStudC() {
 function safeDateC() {
     selectTabC(0);
     document.getElementById("searchTimeC").style.visibility = "visible";
+    timeTable = getTime();
 }
 
 
@@ -509,7 +510,7 @@ function loadGroup(pos) {
 
         el.innerHTML = new_str[0]
         if (new_str.length > 1) {
-            el.innerHTML += "<br>" + new_str[1];
+            el.innerHTML += "c" + new_str[1];
         }
 
 
@@ -523,9 +524,93 @@ function loadGroup(pos) {
     bes.innerHTML = group.beschreibung;
 }
 
+function getTime(){
+    var monS = document.getElementById("montagStartC").value;
+    var monE = document.getElementById("montagEndC").value;
+
+    var dieS = document.getElementById("dienstagStartC").value;
+    var dieE = document.getElementById("dienstagEndC").value;
+
+    var mitS = document.getElementById("mittwochStartC").value;
+    var mitE = document.getElementById("mittwochEndC").value;
+
+    var donS = document.getElementById("donnerstagStartC").value;
+    var donE = document.getElementById("donnerstagEndC").value;
+
+    var freS = document.getElementById("freitagStartC").value;
+    var freE = document.getElementById("freitagEndC").value;
+
+    var samS = document.getElementById("samstagStartC").value;
+    var samE = document.getElementById("samstagEndC").value;
+
+    var sonS = document.getElementById("sonntagStartC").value;
+    var sonE = document.getElementById("sonntagEndC").value;
+
+    var r = "";
+
+    if(monS != "" && monE != ""){
+        if(r!="") r+="|";
+        r += "Montag <br>" + monS + " - " + monE;
+    }else if(document.getElementById("montagC").checked === true){
+        if(r!="") r+="|";
+        r += "Montag";
+    }
+
+    if(dieS != "" && dieE != ""){
+        if(r!="") r+="|";
+        r += "Dienstag <br>" + dieS + " - " + dieE;
+    }else if(document.getElementById("dienstagC").checked === true){
+        if(r!="") r+="|";
+        r += "Dienstag";
+    }
+
+    if(mitS != "" && mitE != ""){
+        if(r!="") r+="|";
+        r += "Mittwoch <br>" + mitS + " - " + mitE;
+    }else if(document.getElementById("mittwochC").checked === true){
+        if(r!="") r+="|";
+        r += "Mittwoch";
+    }
+
+    if(donS != "" && donE != ""){
+        if(r!="") r+="|";
+        r += "Donnerstag <br>" + donS + " - " + donE;
+    }else if(document.getElementById("donnerstagC").checked === true){
+        if(r!="") r+="|";
+        r += "Donnerstag";
+    }
+
+    if(freS != "" && freE != ""){
+        if(r!="") r+="|";
+        r += "Freitag <br> " + freS + " - " + webkitConvertPointFromPageToNode;
+    }else if(document.getElementById("freitagC").checked === true){
+        if(r!="") r+="|";
+        r += "Freitag";
+    }
+
+    if(samS != "" && samE != ""){
+        if(r!="") r+="|";
+        r += "Samstag <br> " + samS + " - " + samE;
+    }else if(document.getElementById("samstagC").checked === true){
+        if(r!="") r+="|";
+        r += "Samstag";
+    }
+
+    if(sonS != "" && sonE != ""){
+        if(r!="") r+="|";
+        r += "Sonntag <br> " + sonS + " - " + sonE;
+    }else if(document.getElementById("sonntagC").checked === true){
+        if(r!="") r+="|";
+        r += "Sonntag";
+    }
+    
+    console.log(r);
+    return r;
+}
+
 
 var numberOfGroups = 4;
-
+var timeTable = "";
 function createGroup() {
     var n = document.querySelector("#name").value;
     var b = document.querySelector("#beschreibung").value;
@@ -575,7 +660,7 @@ function createGroup() {
             var mediaList = [media]; s
             var person = persons[0];
             var mit = [person];
-            groups.push(new Group(mit, n, p, mediaList, ortList, m, b, zeiten[0]));
+            groups.push(new Group(mit, n, p, mediaList, ortList, m, b, timeTable));
 
 
 
