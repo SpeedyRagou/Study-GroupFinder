@@ -118,7 +118,7 @@ function newGroup() {
 }
 
 function search() {
-    selectKategorie(1)  
+    selectKategorie(1)
 }
 
 function openProfil() {
@@ -260,18 +260,18 @@ function searchGroup() {
         alert("Bitte geben Sie ein gültiges Modul an");
     } else {
         check = false;
- 
+
         for (var i = 0; i < fachStud.length; i++) {
             if (f.value == fachStud[i]) {
                 check = true;
                 break;
             }
         }
-        
-        if(!check){
+
+        if (!check) {
             f.value = "";
             alert("Bitte geben Sie einen gültigen Studiengang an");
-        }else{
+        } else {
             loadGroup(2);
             //macht Gruppe beitreten button sichtbar
             document.getElementById("joingroup").style.visibility = "visible";
@@ -280,7 +280,7 @@ function searchGroup() {
         }
 
     }
-    
+
 }
 
 
@@ -524,7 +524,7 @@ function loadGroup(pos) {
     bes.innerHTML = group.beschreibung;
 }
 
-function getTime(){
+function getTime() {
     var monS = document.getElementById("montagStartC").value;
     var monE = document.getElementById("montagEndC").value;
 
@@ -548,69 +548,68 @@ function getTime(){
 
     var r = "";
 
-    if(monS != "" && monE != ""){
-        if(r!="") r+="|";
+    if (monS != "" && monE != "") {
+        if (r != "") r += "|";
         r += "Montag <br>" + monS + " - " + monE;
-    }else if(document.getElementById("montagC").checked === true){
-        if(r!="") r+="|";
+    } else if (document.getElementById("montagC").checked === true) {
+        if (r != "") r += "|";
         r += "Montag";
     }
 
-    if(dieS != "" && dieE != ""){
-        if(r!="") r+="|";
+    if (dieS != "" && dieE != "") {
+        if (r != "") r += "|";
         r += "Dienstag <br>" + dieS + " - " + dieE;
-    }else if(document.getElementById("dienstagC").checked === true){
-        if(r!="") r+="|";
+    } else if (document.getElementById("dienstagC").checked === true) {
+        if (r != "") r += "|";
         r += "Dienstag";
     }
 
-    if(mitS != "" && mitE != ""){
-        if(r!="") r+="|";
+    if (mitS != "" && mitE != "") {
+        if (r != "") r += "|";
         r += "Mittwoch <br>" + mitS + " - " + mitE;
-    }else if(document.getElementById("mittwochC").checked === true){
-        if(r!="") r+="|";
+    } else if (document.getElementById("mittwochC").checked === true) {
+        if (r != "") r += "|";
         r += "Mittwoch";
     }
 
-    if(donS != "" && donE != ""){
-        if(r!="") r+="|";
+    if (donS != "" && donE != "") {
+        if (r != "") r += "|";
         r += "Donnerstag <br>" + donS + " - " + donE;
-    }else if(document.getElementById("donnerstagC").checked === true){
-        if(r!="") r+="|";
+    } else if (document.getElementById("donnerstagC").checked === true) {
+        if (r != "") r += "|";
         r += "Donnerstag";
     }
 
-    if(freS != "" && freE != ""){
-        if(r!="") r+="|";
+    if (freS != "" && freE != "") {
+        if (r != "") r += "|";
         r += "Freitag <br> " + freS + " - " + webkitConvertPointFromPageToNode;
-    }else if(document.getElementById("freitagC").checked === true){
-        if(r!="") r+="|";
+    } else if (document.getElementById("freitagC").checked === true) {
+        if (r != "") r += "|";
         r += "Freitag";
     }
 
-    if(samS != "" && samE != ""){
-        if(r!="") r+="|";
+    if (samS != "" && samE != "") {
+        if (r != "") r += "|";
         r += "Samstag <br> " + samS + " - " + samE;
-    }else if(document.getElementById("samstagC").checked === true){
-        if(r!="") r+="|";
+    } else if (document.getElementById("samstagC").checked === true) {
+        if (r != "") r += "|";
         r += "Samstag";
     }
 
-    if(sonS != "" && sonE != ""){
-        if(r!="") r+="|";
+    if (sonS != "" && sonE != "") {
+        if (r != "") r += "|";
         r += "Sonntag <br> " + sonS + " - " + sonE;
-    }else if(document.getElementById("sonntagC").checked === true){
-        if(r!="") r+="|";
+    } else if (document.getElementById("sonntagC").checked === true) {
+        if (r != "") r += "|";
         r += "Sonntag";
     }
-    
     console.log(r);
     return r;
 }
 
 
 var numberOfGroups = 4;
-var timeTable = "";
+var timeTable = "Keine Zeitangabe";
 function createGroup() {
     var n = document.querySelector("#name").value;
     var b = document.querySelector("#beschreibung").value;
@@ -674,6 +673,56 @@ function createGroup() {
             loadGroup(numberOfGroups);
 
             numberOfGroups += 1;
+
+            //resets everything
+
+            document.querySelector("#name").value = "";
+            document.querySelector("#beschreibung").value = "";
+            document.querySelector("#studiengangIn").value = "";
+            document.querySelector("#modulIn").value = "";
+            document.querySelector("#person").value = "";
+            document.querySelector("#orte").value = "";
+            document.querySelector("#semester").value = "";
+
+            document.getElementById("WAin").checked = false;
+            document.getElementById("disIn").checked = false;
+            document.getElementById("mailIn").checked = false;
+            document.getElementById("teamsIn").checked = false;
+
+            timeTable = "Keine Zeitangabe";
+
+            document.getElementById("montagStartC").value = "";
+            document.getElementById("montagEndC").value = "";
+
+            document.getElementById("dienstagStartC").value = "";
+            document.getElementById("dienstagEndC").value = "";
+
+            document.getElementById("mittwochStartC").value = "";
+            document.getElementById("mittwochEndC").value = "";
+
+            document.getElementById("donnerstagStartC").value = "";
+            document.getElementById("donnerstagEndC").value = "";
+
+            document.getElementById("freitagStartC").value = "";
+            document.getElementById("freitagEndC").value = "";
+
+            document.getElementById("samstagStartC").value = "";
+            document.getElementById("samstagEndC").value = "";
+
+            document.getElementById("sonntagStartC").value = "";
+            document.getElementById("sonntagEndC").value = "";
+
+            document.getElementById("montagC").checked = false;
+            document.getElementById("dienstagC").checked = false;
+            document.getElementById("mittwochC").checked = false;
+            document.getElementById("donnerstagC").checked = false;
+            document.getElementById("freitagC").checked = false;
+            document.getElementById("samstagC").checked = false;
+            document.getElementById("sonntagC").checked = false;
+
+            document.getElementById("searchTimeC").style.visibility = "hidden";
+
+
         } else {
             alert("Bitte füllen Sie alle Felder mit Stern aus");
         }
