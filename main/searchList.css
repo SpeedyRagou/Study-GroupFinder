@@ -1,0 +1,53 @@
+.header {
+    font-size: 50px;
+    font-family: sans-serif;
+    color: #1e3d59;
+    margin: 20px;
+    margin-left: 30px;
+}
+
+.searchListItem {
+    font-size: 30px;
+    font-weight: lighter;
+    color: #1e3d59;
+    text-align: left;
+    line-height: 60px;
+    
+    margin: 10px;
+    margin-left: 30px;
+    padding: 5px;
+    
+    cursor: pointer;
+    border: 2px solid #1e3d59;
+    border-radius: 5px;
+    height: 60px;
+    
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
+.groupName {
+    width: 30%;
+    font-weight: normal;
+}
+
+.groupModul {
+    width: 50%;
+}
+
+.personAnzahl {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    width: 20%;
+    text-align: right;
+}
+
+.semesterNumber {
+    padding-right: 20px;
+    width: 20%;
+    text-align: right;
+}

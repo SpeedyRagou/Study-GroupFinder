@@ -15,6 +15,7 @@
     <link href="group.css" type="text/css" rel="stylesheet" />
 
     <link href="person.css" type="text/css" rel="stylesheet" />
+    <link href="searchList.css" type="text/css" rel="stylesheet" />
     <script language="javascript" type="text/javascript" src="sgf.js"></script>
 
     <meta charset="UTF-8">
@@ -78,6 +79,7 @@
             <div id="workbench" name="homeWB" class="workbench">
                 <img src="pngs/3_Personen_Icon_LL.png" width="100%">
             </div>
+            
             
             <div id="workbench" name="filterWB" class="workbench">
                 <div class="tabContainer">
@@ -825,7 +827,7 @@
                     <div class="content">
                         <div class="row">
                             <div class="col">
-                                <div class="items">Max Mustermann</div>
+                                <div class="items" style="font-weight:bold">Max Mustermann</div>
                                 <div class="items">🌵🦙🦙 Lama lover 🦙🦙🌵</div>
                                 <div class="items">Informatik (B.Sc.)</div>
                                 <div class="items">Semester: 1</div>
@@ -853,7 +855,7 @@
                     <div class="content">
                         <div class="row">
                             <div class="col">
-                                <div class="items">Malte Kuhlmann</div>
+                                <div class="items" style="font-weight:bold">Malte Kuhlmann</div>
                                 <div class="items"> </div>
                                 <div class="items">Informatik (B.Sc.)</div>
                                 <div class="items">Semester: 5</div>
@@ -878,7 +880,7 @@
                     <div class="content">
                         <div class="row">
                             <div class="col">
-                                <div class="items">Gustav Gans</div>
+                                <div class="items" style="font-weight:bold">Gustav Gans</div>
                                 <div class="items"> Samstag ist Gans-Tag </div>
                                 <div class="items">Informatik (B.Sc.)</div>
                                 <div class="items">Semester: 9</div>
@@ -906,7 +908,7 @@
                     <div class="content">
                         <div class="row">
                             <div class="col">
-                                <div class="items">Klaus Müller</div>
+                                <div class="items" style="font-weight:bold">Klaus Müller</div>
                                 <div class="items"> Weiß nicht was ich hier soll</div>
                                 <div class="items">Das Leben (M.Sc.)</div>
                                 <div class="items">Semester: 38</div>
@@ -932,7 +934,7 @@
                     <div class="content">
                         <div class="row">
                             <div class="col">
-                                <div class="items">Daniel Bach</div>
+                                <div class="items" style="font-weight:bold">Daniel Bach</div>
                                 <div class="items"> Würde gerne Johann Sebastian heißen</div>
                                 <div class="items">Triangel (M.Sc.)</div>
                                 <div class="items">Semester: 1</div>
@@ -958,7 +960,7 @@
                     <div class="content">
                         <div class="row">
                             <div class="col">
-                                <div class="items">Anna Mühlheim</div>
+                                <div class="items" style="font-weight:bold">Anna Mühlheim</div>
                                 <div class="items"> normal</div>
                                 <div class="items"> Jura (M.Sc.)</div>
                                 <div class="items">Semester: 3</div>
@@ -977,6 +979,78 @@
                             </div>
                         </div>
                         <input type="button" class="newChatButton" id="selectButton" onclick="openChat(7)" value="Chat">
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+            <div id="workbench" name="groupListWB" class="workbench">
+                <div class="header">
+                    Suchergebnisse
+                </div>
+                <div class="searchListItem" onclick="loadGroup(0)">
+                    <div class="groupName">
+                        Die furiosen Fünf
+                    </div>
+                    <div class="groupModul">
+                        Grundlagen digitaler Systeme
+                    </div>
+                    <div class="personAnzahl">
+                        <div> 3/6 </div>
+                        <div><img src="pngs/3_Personen_Icon.png" height="60px"></div>
+                    </div>
+                </div>
+                <div class="searchListItem" onclick="loadGroup(1)">
+                    <div class="groupName">
+                        1, 2, 3 und 4
+                    </div>
+                    <div class="groupModul">
+                        It-Sicherheit
+                    </div>
+                    <div class="personAnzahl">
+                        <div> 4/8 </div>
+                        <div><img src="pngs/3_Personen_Icon.png" height="60px"></div>
+                    </div>
+                </div>
+                <div class="searchListItem" onclick="loadGroup(2)">
+                    <div class="groupName">
+                        Öfter unterwegs
+                    </div>
+                    <div class="groupModul">
+                        Lineare Algebra 1
+                    </div>
+                    <div class="personAnzahl">
+                        <div> 3/5 </div>
+                        <div><img src="pngs/3_Personen_Icon.png" height="60px"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="workbench" name="personListWB" class="workbench">
+                <div class="header">
+                    Suchergebnisse
+                </div>
+                <div class="searchListItem" onclick='openPerson("Gustav Gans")'>
+                    <div class="groupName">
+                        Gustav Gans
+                    </div>
+                    <div class="groupModul">
+                        Informatik (B.Sc.)
+                    </div>
+                    <div class="semesterNumber">
+                        Semester: 9
+                    </div>
+                </div>
+                <div class="searchListItem" onclick='openPerson("Anna Mühlheim")'>
+                    <div class="groupName">
+                        Anna Mühlheim
+                    </div>
+                    <div class="groupModul">
+                        Jura (M.Sc.)
+                    </div>
+                    <div class="semesterNumber">
+                        Semester: 3
                     </div>
                 </div>
                 

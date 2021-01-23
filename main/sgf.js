@@ -42,7 +42,7 @@ function selectKategorie(index) {
 
 
     /*
-    Order: Home, Filter, Suchergebnisse, Neue Gruppe, Profil, Gruppen, Chats, Person
+    Order: Home, Filter, Suchergebnisse, Neue Gruppe, Profil, Gruppen, Chats, Person, Suchergebnisse Gruppe, Suchergebnisse Person
     */
     var kat = document.querySelectorAll(".kategorien");
     var workbenches = document.querySelectorAll(".workbench");
@@ -234,8 +234,8 @@ function showHelp(index) {
 
 function searchPerson() {
 
-    selectKategorie(7);
-    openPerson("Klaus Müller");
+    selectKategorie(9);
+    //openPerson("Klaus Müller");
 }
 
 function searchGroup() {
@@ -272,7 +272,8 @@ function searchGroup() {
             f.value = "";
             alert("Bitte geben Sie einen gültigen Studiengang an");
         } else {
-            loadGroup(2);
+            selectKategorie(8);
+            //loadGroup(2);
             //macht Gruppe beitreten button sichtbar
             document.getElementById("joingroup").style.visibility = "visible";
             document.getElementById("gruppeVerlassen").style.visibility = "hidden";
