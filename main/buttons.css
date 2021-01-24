@@ -2,7 +2,7 @@
 
 .buttonContainer {
     height: 10%;
-    background-color: #f5f0e1;
+    background-color: #e1e2e2;
     border-radius: 50px 0px 0px 0px;
 }
 
@@ -16,10 +16,10 @@
     font-size: 50px;
     font-family: sans-serif;
     background-color: #1e3d59;
-    color: #f5f0e1;
+    color: #e1e2e2;
     border: none;
-    border-top: 2px #f5f0e1 solid;
-    border-left: 2px #f5f0e1 solid;
+    border-top: 2px #e1e2e2 solid;
+    border-left: 2px #e1e2e2 solid;
 }
 
 .selectButtonBorder {
@@ -37,7 +37,7 @@
     border-radius: 25px;
     cursor: pointer;
     outline: none;
-    background-color: #ff6e40;
+    background-color: #fb8122;
     width: 300px;
     height: 50px;
     box-shadow: 0px 0px 3px 1px grey inset;
@@ -52,7 +52,7 @@
     border-radius: 25px;
     cursor: pointer;
     outline: none;
-    background-color: #ff6e40;
+    background-color: #fb8122;
     width: 150px;
     height: 50px;
     box-shadow: 0px 0px 3px 1px grey inset;
@@ -67,7 +67,7 @@
     margin-left: 20px;
     margin-top: -25px;
     border: none;
-    background-color: #ff6e40;
+    background-color: #fb8122;
     width: 60px;
     height: 30px;
     outline: none;
@@ -96,7 +96,7 @@
     border: none;
     width: 35px;
     height: 35px;
-    background-color: #ff6e40;
+    background-color: #fb8122;
     outline: none;
     cursor: pointer;
 }
@@ -108,7 +108,7 @@
     border-radius: 25px;
     cursor: pointer;
     outline: none;
-    background-color: #ff6e40;
+    background-color: #fb8122;
     box-shadow: 0px 0px 3px 1px grey inset;
 }
 
@@ -119,7 +119,7 @@
 .taskButton {
     margin: 10px;
     padding: 20px;
-    background-color: #ff6e40;
+    background-color: #fb8122;
     color: black;
     border: 1px solid black;
     box-sizing: border-box;
@@ -136,12 +136,12 @@
     border-top: 1px solid #ffc13b;
     overflow: hidden;
     justify-content: center;
-    background-color: #f5f0e1;
+    background-color: #e1e2e2;
 }
 
 .tabs button {
     
-    color: #f5f0e1;
+    color: #e1e2e2;
     background-color: #1e3d59;
     float: left;
     border: none;
@@ -163,7 +163,7 @@
 /* Create an active/current tablink class */
 
 .tabs button.active {
-    background-color: #f5f0e1;
+    background-color: #e1e2e2;
     color: #1e3d59;
 }
 
@@ -203,7 +203,7 @@
     text-align: center;
     margin: 5px;
     color: black;
-    background-color: #ff6e40;
+    background-color: #fb8122;
     border: 1px solid #1e3d59;
     width:95%;
     justify-content: center;
@@ -222,7 +222,7 @@
     border-radius: 25px;
     cursor: pointer;
     outline: none;
-    background-color: #ff6e40;
+    background-color: #fb8122;
     box-shadow: 0px 0px 3px 1px grey inset;
 }
 
@@ -245,7 +245,7 @@
     border: none;
     border-radius: 25px;
     outline: none;
-    background-color: #ff6e40;
+    background-color: #fb8122;
     width: 300px;
     height: 50px;
 
@@ -266,7 +266,7 @@
     border: none;
     border-radius: 25px;
     outline: none;
-    background-color: #ff6e40;
+    background-color: #fb8122;
     width: 100px;
     height: 50px;
 

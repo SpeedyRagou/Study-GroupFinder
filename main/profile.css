@@ -33,7 +33,7 @@
     height: 100%;
     backface-visibility: hidden;
     background-color: #1e3d59;
-    color: #f5f0e1;
+    color: #e1e2e2;
     text-align: center;
     vertical-align: middle;
 }
@@ -59,7 +59,7 @@
 .deletePic, .changePic{
     border: none;
     background-color: #1e3d59;
-    color: #f5f0e1;
+    color: #e1e2e2;
     font-size: 30px;
     outline: none;
 }

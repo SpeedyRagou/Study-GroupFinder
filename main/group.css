@@ -29,7 +29,7 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    background-color: #f5f0e1;
+    background-color: #e1e2e2;
     border: 1px solid #1e3d59;
     height: 100%;
     border-radius: 0px 0px 0px 0px;
@@ -41,7 +41,7 @@
 }
 
 .persontabinhalt {
-    background-color: #f5f0e1;
+    background-color: #e1e2e2;
     height: 100%;
     overflow-y: auto;
 }
@@ -53,7 +53,7 @@
     text-align: center;
     margin: 5px;
     color: #1e3d59;
-    background-color: #ff6e40;
+    background-color: #fb8122;
     border: 1px solid #1e3d59;
 }
 
@@ -95,7 +95,7 @@
     padding: 20px;
     text-align: center;
     font-size: 30px;
-    color: #ff6e40;
+    color: #e1e2e2;
     background-color: #1e3d59;
 }
 
@@ -149,7 +149,7 @@
     border: none;
     border-radius: 25px;
     outline: none;
-    background-color: #ff6e40;
+    background-color: #fb8122;
     width: 300px;
     height: 50px;
     box-shadow: 0px 0px 3px 1px grey inset;

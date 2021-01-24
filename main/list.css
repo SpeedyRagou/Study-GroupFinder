@@ -17,7 +17,7 @@ Alles im Körperbereich
 
 .tabinhalt {
     display: none;
-    background-color: #f5f0e1;
+    background-color: #e1e2e2;
     height: 89%;
     overflow-y: auto;
 }
@@ -29,7 +29,7 @@ Alles im Körperbereich
     text-align: center;
     margin: 5px;
     color: black;
-    background-color: #ff6e40;
+    background-color: #fb8122;
     border: 1px solid #1e3d59;
 }
 
