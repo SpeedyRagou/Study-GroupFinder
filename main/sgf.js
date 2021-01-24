@@ -248,8 +248,8 @@ function searchGroup() {
 
     var check = false;
 
-    for (var i = 0; i < modul.length; i++) {
-        if (mod.value == modul[i]) {
+    for (var i = 0; i < fachStud.length; i++) {
+        if (mod.value === fachStud[i]) {
             check = true;
             break;
         }
@@ -261,8 +261,8 @@ function searchGroup() {
     } else {
         check = false;
 
-        for (var i = 0; i < fachStud.length; i++) {
-            if (f.value == fachStud[i]) {
+        for (var i = 0; i < modul.length; i++) {
+            if (f.value === modul[i]) {
                 check = true;
                 break;
             }
@@ -515,7 +515,7 @@ function loadGroup(pos) {
         }
 
 
-        el.className = "infotext"
+        el.className = "infotext";
         timecontainer.appendChild(el);
 
     });
