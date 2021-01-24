@@ -511,7 +511,7 @@ function loadGroup(pos) {
 
         el.innerHTML = new_str[0]
         if (new_str.length > 1) {
-            el.innerHTML += "c" + new_str[1];
+            el.innerHTML += "<br>" + new_str[1];
         }
 
 
